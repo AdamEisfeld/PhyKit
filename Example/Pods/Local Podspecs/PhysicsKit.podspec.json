@@ -1,0 +1,24 @@
+{
+  "name": "PhysicsKit",
+  "version": "0.1.0",
+  "summary": "A short description of PhysicsKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AdamEisfeld/PhysicsKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AdamEisfeld": "adam.eisfeld@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/AdamEisfeld/PhysicsKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "public_header_files": "PhysicsKit/Release/PhysicsKit.framework/Headers/*.h",
+  "source_files": "PhysicsKit/Release/PhysicsKit.framework/Headers/*.h",
+  "vendored_frameworks": "PhysicsKit/Release/PhysicsKit.framework"
+}
