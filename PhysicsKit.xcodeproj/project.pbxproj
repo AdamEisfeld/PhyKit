@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3EE786F2498049F00F280BD /* PhysicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE786D2498049F00F280BD /* PhysicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE789E2498058400F280BD /* libBulletCollision_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE78922498054A00F280BD /* libBulletCollision_xcode4_x64_debug.a */; };
+		F3EE789F2498058400F280BD /* libBulletDynamics_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE787A2498054A00F280BD /* libBulletDynamics_xcode4_x64_debug.a */; };
+		F3EE78A02498058400F280BD /* libBulletFileLoader_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE78862498054A00F280BD /* libBulletFileLoader_xcode4_x64_debug.a */; };
+		F3EE78A12498058400F280BD /* libBulletWorldImporter_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE78802498054A00F280BD /* libBulletWorldImporter_xcode4_x64_debug.a */; };
+		F3EE78A22498058400F280BD /* libLinearMath_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE788C2498054A00F280BD /* libLinearMath_xcode4_x64_debug.a */; };
+		F3EE79502498073300F280BD /* PKBStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79132498073300F280BD /* PKBStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79512498073300F280BD /* PKBStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79142498073300F280BD /* PKBStructs+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE79522498073300F280BD /* NSValue+PKBStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79152498073300F280BD /* NSValue+PKBStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79532498073300F280BD /* PKBStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79162498073300F280BD /* PKBStructs.mm */; };
+		F3EE79542498073300F280BD /* NSValue+PKBStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79172498073300F280BD /* NSValue+PKBStructs.mm */; };
+		F3EE79552498073300F280BD /* PKBPhysicsTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79192498073300F280BD /* PKBPhysicsTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79562498073300F280BD /* PKBPhysicsTrigger.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE791A2498073300F280BD /* PKBPhysicsTrigger.mm */; };
+		F3EE79572498073300F280BD /* PKBPhysicsTrigger+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE791B2498073300F280BD /* PKBPhysicsTrigger+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE79582498073300F280BD /* PKBPhysicsWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE791D2498073300F280BD /* PKBPhysicsWorld.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79592498073300F280BD /* PKBPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE791E2498073300F280BD /* PKBPhysicsWorld.mm */; };
+		F3EE795A2498073300F280BD /* PKBDependencies+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE791F2498073300F280BD /* PKBDependencies+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE795B2498073300F280BD /* PKBCollisionShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79212498073300F280BD /* PKBCollisionShape.mm */; };
+		F3EE795C2498073300F280BD /* PKBCollisionShape+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79222498073300F280BD /* PKBCollisionShape+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE795D2498073300F280BD /* PKBCollisionShape.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79232498073300F280BD /* PKBCollisionShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE795E2498073300F280BD /* PKBMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79252498073300F280BD /* PKBMesh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE795F2498073300F280BD /* PKBVertex.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79262498073300F280BD /* PKBVertex.mm */; };
+		F3EE79602498073300F280BD /* PKBPolygon.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79272498073300F280BD /* PKBPolygon.mm */; };
+		F3EE79612498073300F280BD /* PKBGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79282498073300F280BD /* PKBGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79622498073300F280BD /* PKBMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79292498073300F280BD /* PKBMesh.mm */; };
+		F3EE79632498073300F280BD /* PKBVertex.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE792A2498073300F280BD /* PKBVertex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79642498073300F280BD /* PKBPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE792B2498073300F280BD /* PKBPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE79652498073300F280BD /* PKBGeometry+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE792C2498073300F280BD /* PKBGeometry+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE79662498073300F280BD /* PKBGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE792D2498073300F280BD /* PKBGeometry.mm */; };
+		F3EE79672498073300F280BD /* PKBRigidBody+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE792F2498073300F280BD /* PKBRigidBody+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F3EE79682498073300F280BD /* PKBRigidBody.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79302498073300F280BD /* PKBRigidBody.mm */; };
+		F3EE79692498073300F280BD /* PKBRigidBody.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE79312498073300F280BD /* PKBRigidBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EE796A2498073300F280BD /* PKTriggerPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79342498073300F280BD /* PKTriggerPair.swift */; };
+		F3EE796B2498073300F280BD /* PKTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79352498073300F280BD /* PKTrigger.swift */; };
+		F3EE796C2498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79372498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift */; };
+		F3EE796D2498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79382498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift */; };
+		F3EE796E2498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79392498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift */; };
+		F3EE796F2498073300F280BD /* PKPhysicsWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE793A2498073300F280BD /* PKPhysicsWorld.swift */; };
+		F3EE79702498073300F280BD /* PKCollisionPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE793C2498073300F280BD /* PKCollisionPair.swift */; };
+		F3EE79712498073300F280BD /* PKStructConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE793E2498073300F280BD /* PKStructConversions.swift */; };
+		F3EE79722498073300F280BD /* PKCollisionShapeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */; };
+		F3EE79732498073300F280BD /* PKCollisionShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79412498073300F280BD /* PKCollisionShape.swift */; };
+		F3EE79742498073300F280BD /* PKCollisionShapeCompound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */; };
+		F3EE79752498073300F280BD /* PKCollisionShapeCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */; };
+		F3EE79762498073300F280BD /* PKCollisionShapeGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */; };
+		F3EE79772498073300F280BD /* PKCollisionShapeSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79452498073300F280BD /* PKCollisionShapeSphere.swift */; };
+		F3EE79782498073300F280BD /* PKCollisionShapeFromData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79462498073300F280BD /* PKCollisionShapeFromData.swift */; };
+		F3EE79792498073300F280BD /* PKCollisionShapeStaticPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE79472498073300F280BD /* PKCollisionShapeStaticPlane.swift */; };
+		F3EE797B2498073300F280BD /* PKRigidBodyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE794B2498073300F280BD /* PKRigidBodyType.swift */; };
+		F3EE797C2498073300F280BD /* PKRigidBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE794C2498073300F280BD /* PKRigidBody.swift */; };
+		F3EE797D2498073300F280BD /* PKPhysicsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE794E2498073300F280BD /* PKPhysicsScene.swift */; };
+		F3EE797E2498073300F280BD /* PKPhysicsSceneUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE794F2498073300F280BD /* PKPhysicsSceneUpdateDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3EE78792498054A00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F8C29986D5C53A5029B3EB2;
+			remoteInfo = BulletDynamics;
+		};
+		F3EE787F2498054A00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE787B2498054A00F280BD /* BulletWorldImporter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DAD4BCA50EC6F4528705FE1;
+			remoteInfo = BulletWorldImporter;
+		};
+		F3EE78852498054A00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23BA358C12EC59050B031A68;
+			remoteInfo = BulletFileLoader;
+		};
+		F3EE788B2498054A00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78872498054A00F280BD /* LinearMath.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 721629091C2C2C63571D4D3B;
+			remoteInfo = LinearMath;
+		};
+		F3EE78912498054A00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2BD33E790CE950D6492B536F;
+			remoteInfo = BulletCollision;
+		};
+		F3EE78932498057D00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 412919817E5D4A2434AA4150;
+			remoteInfo = BulletCollision;
+		};
+		F3EE78952498057D00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C03687A3BEF77EA2E447BDC;
+			remoteInfo = BulletDynamics;
+		};
+		F3EE78972498057D00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D956E7957AA18A30FFD4FC1;
+			remoteInfo = BulletFileLoader;
+		};
+		F3EE78992498057D00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE787B2498054A00F280BD /* BulletWorldImporter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 513F1A792212071E6C6C318C;
+			remoteInfo = BulletWorldImporter;
+		};
+		F3EE789B2498057D00F280BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EE78872498054A00F280BD /* LinearMath.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 041D4C4B737D372F28857034;
+			remoteInfo = LinearMath;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3EE786A2498049F00F280BD /* PhysicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EE786D2498049F00F280BD /* PhysicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsKit.h; sourceTree = "<group>"; };
+		F3EE786E2498049F00F280BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletDynamics.xcodeproj; path = bulletLib_2_89/build3/xcode4/BulletDynamics.xcodeproj; sourceTree = "<group>"; };
+		F3EE787B2498054A00F280BD /* BulletWorldImporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletWorldImporter.xcodeproj; path = bulletLib_2_89/build3/xcode4/BulletWorldImporter.xcodeproj; sourceTree = "<group>"; };
+		F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletFileLoader.xcodeproj; path = bulletLib_2_89/build3/xcode4/BulletFileLoader.xcodeproj; sourceTree = "<group>"; };
+		F3EE78872498054A00F280BD /* LinearMath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinearMath.xcodeproj; path = bulletLib_2_89/build3/xcode4/LinearMath.xcodeproj; sourceTree = "<group>"; };
+		F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletCollision.xcodeproj; path = bulletLib_2_89/build3/xcode4/BulletCollision.xcodeproj; sourceTree = "<group>"; };
+		F3EE79132498073300F280BD /* PKBStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBStructs.h; sourceTree = "<group>"; };
+		F3EE79142498073300F280BD /* PKBStructs+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBStructs+Internal.h"; sourceTree = "<group>"; };
+		F3EE79152498073300F280BD /* NSValue+PKBStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+PKBStructs.h"; sourceTree = "<group>"; };
+		F3EE79162498073300F280BD /* PKBStructs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBStructs.mm; sourceTree = "<group>"; };
+		F3EE79172498073300F280BD /* NSValue+PKBStructs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSValue+PKBStructs.mm"; sourceTree = "<group>"; };
+		F3EE79192498073300F280BD /* PKBPhysicsTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBPhysicsTrigger.h; sourceTree = "<group>"; };
+		F3EE791A2498073300F280BD /* PKBPhysicsTrigger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBPhysicsTrigger.mm; sourceTree = "<group>"; };
+		F3EE791B2498073300F280BD /* PKBPhysicsTrigger+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBPhysicsTrigger+Internal.h"; sourceTree = "<group>"; };
+		F3EE791D2498073300F280BD /* PKBPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBPhysicsWorld.h; sourceTree = "<group>"; };
+		F3EE791E2498073300F280BD /* PKBPhysicsWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBPhysicsWorld.mm; sourceTree = "<group>"; };
+		F3EE791F2498073300F280BD /* PKBDependencies+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBDependencies+Internal.h"; sourceTree = "<group>"; };
+		F3EE79212498073300F280BD /* PKBCollisionShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBCollisionShape.mm; sourceTree = "<group>"; };
+		F3EE79222498073300F280BD /* PKBCollisionShape+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBCollisionShape+Internal.h"; sourceTree = "<group>"; };
+		F3EE79232498073300F280BD /* PKBCollisionShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBCollisionShape.h; sourceTree = "<group>"; };
+		F3EE79252498073300F280BD /* PKBMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBMesh.h; sourceTree = "<group>"; };
+		F3EE79262498073300F280BD /* PKBVertex.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBVertex.mm; sourceTree = "<group>"; };
+		F3EE79272498073300F280BD /* PKBPolygon.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBPolygon.mm; sourceTree = "<group>"; };
+		F3EE79282498073300F280BD /* PKBGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBGeometry.h; sourceTree = "<group>"; };
+		F3EE79292498073300F280BD /* PKBMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBMesh.mm; sourceTree = "<group>"; };
+		F3EE792A2498073300F280BD /* PKBVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBVertex.h; sourceTree = "<group>"; };
+		F3EE792B2498073300F280BD /* PKBPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBPolygon.h; sourceTree = "<group>"; };
+		F3EE792C2498073300F280BD /* PKBGeometry+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBGeometry+Internal.h"; sourceTree = "<group>"; };
+		F3EE792D2498073300F280BD /* PKBGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBGeometry.mm; sourceTree = "<group>"; };
+		F3EE792F2498073300F280BD /* PKBRigidBody+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKBRigidBody+Internal.h"; sourceTree = "<group>"; };
+		F3EE79302498073300F280BD /* PKBRigidBody.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PKBRigidBody.mm; sourceTree = "<group>"; };
+		F3EE79312498073300F280BD /* PKBRigidBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKBRigidBody.h; sourceTree = "<group>"; };
+		F3EE79342498073300F280BD /* PKTriggerPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKTriggerPair.swift; sourceTree = "<group>"; };
+		F3EE79352498073300F280BD /* PKTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKTrigger.swift; sourceTree = "<group>"; };
+		F3EE79372498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsWorldTriggerDelegate.swift; sourceTree = "<group>"; };
+		F3EE79382498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsWorldSimulationDelegate.swift; sourceTree = "<group>"; };
+		F3EE79392498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsWorldCollisionDelegate.swift; sourceTree = "<group>"; };
+		F3EE793A2498073300F280BD /* PKPhysicsWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsWorld.swift; sourceTree = "<group>"; };
+		F3EE793C2498073300F280BD /* PKCollisionPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionPair.swift; sourceTree = "<group>"; };
+		F3EE793E2498073300F280BD /* PKStructConversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKStructConversions.swift; sourceTree = "<group>"; };
+		F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeBox.swift; sourceTree = "<group>"; };
+		F3EE79412498073300F280BD /* PKCollisionShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShape.swift; sourceTree = "<group>"; };
+		F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeCompound.swift; sourceTree = "<group>"; };
+		F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeCapsule.swift; sourceTree = "<group>"; };
+		F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeGeometry.swift; sourceTree = "<group>"; };
+		F3EE79452498073300F280BD /* PKCollisionShapeSphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeSphere.swift; sourceTree = "<group>"; };
+		F3EE79462498073300F280BD /* PKCollisionShapeFromData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeFromData.swift; sourceTree = "<group>"; };
+		F3EE79472498073300F280BD /* PKCollisionShapeStaticPlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeStaticPlane.swift; sourceTree = "<group>"; };
+		F3EE794B2498073300F280BD /* PKRigidBodyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKRigidBodyType.swift; sourceTree = "<group>"; };
+		F3EE794C2498073300F280BD /* PKRigidBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKRigidBody.swift; sourceTree = "<group>"; };
+		F3EE794E2498073300F280BD /* PKPhysicsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsScene.swift; sourceTree = "<group>"; };
+		F3EE794F2498073300F280BD /* PKPhysicsSceneUpdateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKPhysicsSceneUpdateDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3EE78672498049F00F280BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EE789E2498058400F280BD /* libBulletCollision_xcode4_x64_debug.a in Frameworks */,
+				F3EE789F2498058400F280BD /* libBulletDynamics_xcode4_x64_debug.a in Frameworks */,
+				F3EE78A02498058400F280BD /* libBulletFileLoader_xcode4_x64_debug.a in Frameworks */,
+				F3EE78A12498058400F280BD /* libBulletWorldImporter_xcode4_x64_debug.a in Frameworks */,
+				F3EE78A22498058400F280BD /* libLinearMath_xcode4_x64_debug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3EE78602498049F00F280BD = {
+			isa = PBXGroup;
+			children = (
+				F3EE786C2498049F00F280BD /* PhysicsKit */,
+				F3EE786B2498049F00F280BD /* Products */,
+				F3EE789D2498058400F280BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3EE786B2498049F00F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE786A2498049F00F280BD /* PhysicsKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE786C2498049F00F280BD /* PhysicsKit */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79112498073300F280BD /* bridge */,
+				F3EE79322498073300F280BD /* swift */,
+				F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */,
+				F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */,
+				F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */,
+				F3EE787B2498054A00F280BD /* BulletWorldImporter.xcodeproj */,
+				F3EE78872498054A00F280BD /* LinearMath.xcodeproj */,
+				F3EE786D2498049F00F280BD /* PhysicsKit.h */,
+				F3EE786E2498049F00F280BD /* Info.plist */,
+			);
+			path = PhysicsKit;
+			sourceTree = "<group>";
+		};
+		F3EE78762498054900F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE787A2498054A00F280BD /* libBulletDynamics_xcode4_x64_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE787C2498054A00F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE78802498054A00F280BD /* libBulletWorldImporter_xcode4_x64_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE78822498054A00F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE78862498054A00F280BD /* libBulletFileLoader_xcode4_x64_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE78882498054A00F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE788C2498054A00F280BD /* libLinearMath_xcode4_x64_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE788E2498054A00F280BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE78922498054A00F280BD /* libBulletCollision_xcode4_x64_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EE789D2498058400F280BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3EE79112498073300F280BD /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE791C2498073300F280BD /* World */,
+				F3EE792E2498073300F280BD /* RigidBodies */,
+				F3EE79182498073300F280BD /* Triggers */,
+				F3EE79242498073300F280BD /* Geometry */,
+				F3EE79202498073300F280BD /* CollisionShapes */,
+				F3EE79122498073300F280BD /* DataStructures */,
+			);
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		F3EE79122498073300F280BD /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79132498073300F280BD /* PKBStructs.h */,
+				F3EE79142498073300F280BD /* PKBStructs+Internal.h */,
+				F3EE79152498073300F280BD /* NSValue+PKBStructs.h */,
+				F3EE79162498073300F280BD /* PKBStructs.mm */,
+				F3EE79172498073300F280BD /* NSValue+PKBStructs.mm */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		F3EE79182498073300F280BD /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79192498073300F280BD /* PKBPhysicsTrigger.h */,
+				F3EE791A2498073300F280BD /* PKBPhysicsTrigger.mm */,
+				F3EE791B2498073300F280BD /* PKBPhysicsTrigger+Internal.h */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
+		F3EE791C2498073300F280BD /* World */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE791D2498073300F280BD /* PKBPhysicsWorld.h */,
+				F3EE791E2498073300F280BD /* PKBPhysicsWorld.mm */,
+				F3EE791F2498073300F280BD /* PKBDependencies+Internal.h */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		F3EE79202498073300F280BD /* CollisionShapes */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79212498073300F280BD /* PKBCollisionShape.mm */,
+				F3EE79222498073300F280BD /* PKBCollisionShape+Internal.h */,
+				F3EE79232498073300F280BD /* PKBCollisionShape.h */,
+			);
+			path = CollisionShapes;
+			sourceTree = "<group>";
+		};
+		F3EE79242498073300F280BD /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79252498073300F280BD /* PKBMesh.h */,
+				F3EE79262498073300F280BD /* PKBVertex.mm */,
+				F3EE79272498073300F280BD /* PKBPolygon.mm */,
+				F3EE79282498073300F280BD /* PKBGeometry.h */,
+				F3EE79292498073300F280BD /* PKBMesh.mm */,
+				F3EE792A2498073300F280BD /* PKBVertex.h */,
+				F3EE792B2498073300F280BD /* PKBPolygon.h */,
+				F3EE792C2498073300F280BD /* PKBGeometry+Internal.h */,
+				F3EE792D2498073300F280BD /* PKBGeometry.mm */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		F3EE792E2498073300F280BD /* RigidBodies */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE792F2498073300F280BD /* PKBRigidBody+Internal.h */,
+				F3EE79302498073300F280BD /* PKBRigidBody.mm */,
+				F3EE79312498073300F280BD /* PKBRigidBody.h */,
+			);
+			path = RigidBodies;
+			sourceTree = "<group>";
+		};
+		F3EE79322498073300F280BD /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79362498073300F280BD /* World */,
+				F3EE794A2498073300F280BD /* RigidBodies */,
+				F3EE79332498073300F280BD /* Triggers */,
+				F3EE793F2498073300F280BD /* CollisionShapes */,
+				F3EE793B2498073300F280BD /* Collisions */,
+				F3EE793D2498073300F280BD /* Extensions */,
+				F3EE794D2498073300F280BD /* Scene */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		F3EE79332498073300F280BD /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79342498073300F280BD /* PKTriggerPair.swift */,
+				F3EE79352498073300F280BD /* PKTrigger.swift */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
+		F3EE79362498073300F280BD /* World */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79372498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift */,
+				F3EE79382498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift */,
+				F3EE79392498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift */,
+				F3EE793A2498073300F280BD /* PKPhysicsWorld.swift */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		F3EE793B2498073300F280BD /* Collisions */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE793C2498073300F280BD /* PKCollisionPair.swift */,
+			);
+			path = Collisions;
+			sourceTree = "<group>";
+		};
+		F3EE793D2498073300F280BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE793E2498073300F280BD /* PKStructConversions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3EE793F2498073300F280BD /* CollisionShapes */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */,
+				F3EE79412498073300F280BD /* PKCollisionShape.swift */,
+				F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */,
+				F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */,
+				F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */,
+				F3EE79452498073300F280BD /* PKCollisionShapeSphere.swift */,
+				F3EE79462498073300F280BD /* PKCollisionShapeFromData.swift */,
+				F3EE79472498073300F280BD /* PKCollisionShapeStaticPlane.swift */,
+			);
+			path = CollisionShapes;
+			sourceTree = "<group>";
+		};
+		F3EE794A2498073300F280BD /* RigidBodies */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE794B2498073300F280BD /* PKRigidBodyType.swift */,
+				F3EE794C2498073300F280BD /* PKRigidBody.swift */,
+			);
+			path = RigidBodies;
+			sourceTree = "<group>";
+		};
+		F3EE794D2498073300F280BD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE794E2498073300F280BD /* PKPhysicsScene.swift */,
+				F3EE794F2498073300F280BD /* PKPhysicsSceneUpdateDelegate.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3EE78652498049F00F280BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EE79522498073300F280BD /* NSValue+PKBStructs.h in Headers */,
+				F3EE795D2498073300F280BD /* PKBCollisionShape.h in Headers */,
+				F3EE786F2498049F00F280BD /* PhysicsKit.h in Headers */,
+				F3EE79552498073300F280BD /* PKBPhysicsTrigger.h in Headers */,
+				F3EE795A2498073300F280BD /* PKBDependencies+Internal.h in Headers */,
+				F3EE795E2498073300F280BD /* PKBMesh.h in Headers */,
+				F3EE795C2498073300F280BD /* PKBCollisionShape+Internal.h in Headers */,
+				F3EE79512498073300F280BD /* PKBStructs+Internal.h in Headers */,
+				F3EE79692498073300F280BD /* PKBRigidBody.h in Headers */,
+				F3EE79612498073300F280BD /* PKBGeometry.h in Headers */,
+				F3EE79572498073300F280BD /* PKBPhysicsTrigger+Internal.h in Headers */,
+				F3EE79502498073300F280BD /* PKBStructs.h in Headers */,
+				F3EE79652498073300F280BD /* PKBGeometry+Internal.h in Headers */,
+				F3EE79632498073300F280BD /* PKBVertex.h in Headers */,
+				F3EE79582498073300F280BD /* PKBPhysicsWorld.h in Headers */,
+				F3EE79642498073300F280BD /* PKBPolygon.h in Headers */,
+				F3EE79672498073300F280BD /* PKBRigidBody+Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3EE78692498049F00F280BD /* PhysicsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EE78722498049F00F280BD /* Build configuration list for PBXNativeTarget "PhysicsKit" */;
+			buildPhases = (
+				F3EE78652498049F00F280BD /* Headers */,
+				F3EE78662498049F00F280BD /* Sources */,
+				F3EE78672498049F00F280BD /* Frameworks */,
+				F3EE78682498049F00F280BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3EE78942498057D00F280BD /* PBXTargetDependency */,
+				F3EE78962498057D00F280BD /* PBXTargetDependency */,
+				F3EE78982498057D00F280BD /* PBXTargetDependency */,
+				F3EE789A2498057D00F280BD /* PBXTargetDependency */,
+				F3EE789C2498057D00F280BD /* PBXTargetDependency */,
+			);
+			name = PhysicsKit;
+			productName = PhysicsKit;
+			productReference = F3EE786A2498049F00F280BD /* PhysicsKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3EE78612498049F00F280BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = adameisfeld;
+				TargetAttributes = {
+					F3EE78692498049F00F280BD = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F3EE78642498049F00F280BD /* Build configuration list for PBXProject "PhysicsKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3EE78602498049F00F280BD;
+			productRefGroup = F3EE786B2498049F00F280BD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F3EE788E2498054A00F280BD /* Products */;
+					ProjectRef = F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */;
+				},
+				{
+					ProductGroup = F3EE78762498054900F280BD /* Products */;
+					ProjectRef = F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */;
+				},
+				{
+					ProductGroup = F3EE78822498054A00F280BD /* Products */;
+					ProjectRef = F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */;
+				},
+				{
+					ProductGroup = F3EE787C2498054A00F280BD /* Products */;
+					ProjectRef = F3EE787B2498054A00F280BD /* BulletWorldImporter.xcodeproj */;
+				},
+				{
+					ProductGroup = F3EE78882498054A00F280BD /* Products */;
+					ProjectRef = F3EE78872498054A00F280BD /* LinearMath.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F3EE78692498049F00F280BD /* PhysicsKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F3EE787A2498054A00F280BD /* libBulletDynamics_xcode4_x64_debug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletDynamics_xcode4_x64_debug.a;
+			remoteRef = F3EE78792498054A00F280BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3EE78802498054A00F280BD /* libBulletWorldImporter_xcode4_x64_debug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletWorldImporter_xcode4_x64_debug.a;
+			remoteRef = F3EE787F2498054A00F280BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3EE78862498054A00F280BD /* libBulletFileLoader_xcode4_x64_debug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletFileLoader_xcode4_x64_debug.a;
+			remoteRef = F3EE78852498054A00F280BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3EE788C2498054A00F280BD /* libLinearMath_xcode4_x64_debug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLinearMath_xcode4_x64_debug.a;
+			remoteRef = F3EE788B2498054A00F280BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3EE78922498054A00F280BD /* libBulletCollision_xcode4_x64_debug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletCollision_xcode4_x64_debug.a;
+			remoteRef = F3EE78912498054A00F280BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3EE78682498049F00F280BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3EE78662498049F00F280BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EE796E2498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift in Sources */,
+				F3EE797B2498073300F280BD /* PKRigidBodyType.swift in Sources */,
+				F3EE796B2498073300F280BD /* PKTrigger.swift in Sources */,
+				F3EE79532498073300F280BD /* PKBStructs.mm in Sources */,
+				F3EE797E2498073300F280BD /* PKPhysicsSceneUpdateDelegate.swift in Sources */,
+				F3EE79792498073300F280BD /* PKCollisionShapeStaticPlane.swift in Sources */,
+				F3EE79722498073300F280BD /* PKCollisionShapeBox.swift in Sources */,
+				F3EE79662498073300F280BD /* PKBGeometry.mm in Sources */,
+				F3EE79702498073300F280BD /* PKCollisionPair.swift in Sources */,
+				F3EE796A2498073300F280BD /* PKTriggerPair.swift in Sources */,
+				F3EE79712498073300F280BD /* PKStructConversions.swift in Sources */,
+				F3EE795F2498073300F280BD /* PKBVertex.mm in Sources */,
+				F3EE79772498073300F280BD /* PKCollisionShapeSphere.swift in Sources */,
+				F3EE79782498073300F280BD /* PKCollisionShapeFromData.swift in Sources */,
+				F3EE79562498073300F280BD /* PKBPhysicsTrigger.mm in Sources */,
+				F3EE797C2498073300F280BD /* PKRigidBody.swift in Sources */,
+				F3EE79752498073300F280BD /* PKCollisionShapeCapsule.swift in Sources */,
+				F3EE796D2498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift in Sources */,
+				F3EE796F2498073300F280BD /* PKPhysicsWorld.swift in Sources */,
+				F3EE79732498073300F280BD /* PKCollisionShape.swift in Sources */,
+				F3EE79592498073300F280BD /* PKBPhysicsWorld.mm in Sources */,
+				F3EE797D2498073300F280BD /* PKPhysicsScene.swift in Sources */,
+				F3EE79682498073300F280BD /* PKBRigidBody.mm in Sources */,
+				F3EE79762498073300F280BD /* PKCollisionShapeGeometry.swift in Sources */,
+				F3EE79742498073300F280BD /* PKCollisionShapeCompound.swift in Sources */,
+				F3EE79622498073300F280BD /* PKBMesh.mm in Sources */,
+				F3EE79542498073300F280BD /* NSValue+PKBStructs.mm in Sources */,
+				F3EE79602498073300F280BD /* PKBPolygon.mm in Sources */,
+				F3EE795B2498073300F280BD /* PKBCollisionShape.mm in Sources */,
+				F3EE796C2498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3EE78942498057D00F280BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletCollision;
+			targetProxy = F3EE78932498057D00F280BD /* PBXContainerItemProxy */;
+		};
+		F3EE78962498057D00F280BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletDynamics;
+			targetProxy = F3EE78952498057D00F280BD /* PBXContainerItemProxy */;
+		};
+		F3EE78982498057D00F280BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletFileLoader;
+			targetProxy = F3EE78972498057D00F280BD /* PBXContainerItemProxy */;
+		};
+		F3EE789A2498057D00F280BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletWorldImporter;
+			targetProxy = F3EE78992498057D00F280BD /* PBXContainerItemProxy */;
+		};
+		F3EE789C2498057D00F280BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LinearMath;
+			targetProxy = F3EE789B2498057D00F280BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F3EE78702498049F00F280BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3EE78712498049F00F280BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3EE78732498049F00F280BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QGQ8Y6XSTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhysicsKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = adameisfeld.PhysicsKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhysicsKit/bulletLib_2_89\"/**";
+			};
+			name = Debug;
+		};
+		F3EE78742498049F00F280BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QGQ8Y6XSTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhysicsKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = adameisfeld.PhysicsKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhysicsKit/bulletLib_2_89\"/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3EE78642498049F00F280BD /* Build configuration list for PBXProject "PhysicsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EE78702498049F00F280BD /* Debug */,
+				F3EE78712498049F00F280BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EE78722498049F00F280BD /* Build configuration list for PBXNativeTarget "PhysicsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EE78732498049F00F280BD /* Debug */,
+				F3EE78742498049F00F280BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3EE78612498049F00F280BD /* Project object */;
+}

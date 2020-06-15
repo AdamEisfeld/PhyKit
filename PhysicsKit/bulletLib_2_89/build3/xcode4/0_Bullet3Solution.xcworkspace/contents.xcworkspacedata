@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<FileRef
+		location = "group:App_BulletExampleBrowser.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletExampleBrowserLib.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_RobotSimulator.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_HelloBulletRobotics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:OpenGL_Window.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:gwen.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_HelloWorld.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServer_SharedMemory.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServer_SharedMemory_GUI.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServerSharedMemoryBridgeUDP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServerUDP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServerSharedMemoryBridgeTCP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_PhysicsServerTCP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:pybullet_testplugin.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:pybullet_vrSyncPlugin.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:pybullet_tinyRendererPlugin.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:pybullet_pdControlPlugin.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:pybullet_collisionFilterPlugin.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BussIK.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_SimpleOpenGL3.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_SharedMemoryPhysicsClient.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_PhysicsClientUDP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_PhysicsClientTCP.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_PhysicsServerLoopBack.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_PhysicsServerDirect.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_PhysicsServerInProcessExampleBrowser.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:clsocket.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_clsocket_EchoServer.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_clsocket_QueryDayTime.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:enet.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_enet_nat_punchthrough_client.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_enet_nat_punchthrough_server.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_enet_chat_client.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_enet_chat_server.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet3Common.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet3Geometry.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet3Collision.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet3Dynamics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet3OpenCL_clew.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Bullet2FileLoader.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:HACD.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:vhacd.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:test_vhacd.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:ConvexDecomposition.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletInverseDynamicsUtils.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletFileLoader.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletWorldImporter.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletXmlWorldImporter.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:App_obj2sdf.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletRobotics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_LinearMath.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:gtest.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_BulletCollision.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_BulletDynamics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_InverseDynamicsKinematics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_InverseDynamicsJacobian.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_InverseForwardDynamics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_OpenCL_Bullet3.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:Test_Gwen_OpenGL.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletInverseDynamics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletSoftBody.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletDynamics.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:BulletCollision.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:LinearMath.xcodeproj">
+	</FileRef>
+</Workspace>
