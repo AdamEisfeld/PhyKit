@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "11.0"
   },
-  "public_header_files": "PhysicsKit/Release/PhysicsKit.framework/Headers/*.h",
-  "source_files": "PhysicsKit/Release/PhysicsKit.framework/Headers/*.h",
-  "vendored_frameworks": "PhysicsKit/Release/PhysicsKit.framework"
+  "public_header_files": "PhysicsKit/release/PhysicsKit.framework/Headers/*.h",
+  "source_files": "PhysicsKit/release/PhysicsKit.framework/Headers/*.h",
+  "vendored_frameworks": "PhysicsKit/release/PhysicsKit.framework"
 }

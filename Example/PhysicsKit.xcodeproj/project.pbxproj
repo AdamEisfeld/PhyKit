@@ -273,7 +273,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PhysicsKit_Example/Pods-PhysicsKit_Example-frameworks.sh",
-				"${PODS_ROOT}/../../PhysicsKit/Release/PhysicsKit.framework",
+				"${PODS_ROOT}/../../PhysicsKit/release/PhysicsKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

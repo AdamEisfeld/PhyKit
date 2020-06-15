@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../PhysicsKit/Release"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../PhysicsKit/release"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -framework "PhysicsKit"
 PODS_BUILD_DIR = ${BUILD_DIR}

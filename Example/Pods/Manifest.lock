@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PhysicsKit: fef3fd4fcc92c280e06d6c12aa001871a82f2fe9
+  PhysicsKit: 2c62706cca518fe956a1e5c182c0b4e6a6641053
 
 PODFILE CHECKSUM: f5c66a0fbe4dd147ff217b5c104ba11d9cf5e950
 
