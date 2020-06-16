@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
 options: "5aaf8b31376f10573c0f889a1ce828f9"
-build_time: [1592336389, 460237000]
+build_time: [1592337325, 778150000]
 inputs:
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/World/PKPhysicsWorldCollisionDelegate.swift": [1592335209, 143601491]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/RigidBodies/PKRigidBodyType.swift": [1592335337, 800811596]
