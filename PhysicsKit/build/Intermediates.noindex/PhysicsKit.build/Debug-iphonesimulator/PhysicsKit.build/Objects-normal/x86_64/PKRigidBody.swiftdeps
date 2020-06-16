@@ -6,57 +6,96 @@ provides-nominal:
 provides-member:
 - ["10PhysicsKit11PKRigidBodyC", ""]
 provides-dynamic-lookup:
+- "uuid"
 depends-top-level:
 - "PKBRigidBody"
 - !private "PKBRigidBodyTypeDynamic"
 - "PKCollisionShape"
 - "PKRigidBody"
 - "PKRigidBodyType"
+- "String"
+- "UUID"
 depends-member:
 - !private ["s7CVarArgP", "PKBRigidBodyTypeDynamic"]
+- ["s7CVarArgP", "UUID"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "PKBRigidBodyTypeDynamic"]
+- ["s28CustomDebugStringConvertibleP", "UUID"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "uuidString"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "uuidString"]
 - !private ["s23CustomStringConvertibleP", "PKBRigidBodyTypeDynamic"]
+- ["s23CustomStringConvertibleP", "UUID"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "uuidString"]
+- ["Se", "init"]
+- ["Se", "uuidString"]
+- ["SE", "init"]
+- ["SE", "uuidString"]
 - !private ["SQ", "PKBRigidBodyTypeDynamic"]
+- ["SQ", "UUID"]
 - ["SQ", ""]
-- !private ["SQ", "init"]
+- ["SQ", "init"]
+- ["SQ", "uuidString"]
 - !private ["SH", "PKBRigidBodyTypeDynamic"]
+- ["SH", "UUID"]
 - ["SH", ""]
-- !private ["SH", "init"]
+- ["SH", "init"]
+- ["SH", "uuidString"]
 - !private ["So8NSObjectC", "PKBRigidBodyTypeDynamic"]
 - ["So8NSObjectC", "PKCollisionShape"]
 - ["So8NSObjectC", "PKRigidBodyType"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "uuid"]
 - !private ["So8NSObjectP", "PKBRigidBodyTypeDynamic"]
+- ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "init"]
 - !private ["So12PKBRigidBodyC", "PKBRigidBodyTypeDynamic"]
 - ["So12PKBRigidBodyC", "PKCollisionShape"]
 - ["So12PKBRigidBodyC", "PKRigidBodyType"]
+- ["So12PKBRigidBodyC", "String"]
+- ["So12PKBRigidBodyC", "UUID"]
 - ["So12PKBRigidBodyC", ""]
 - ["So12PKBRigidBodyC", "init"]
+- ["So12PKBRigidBodyC", "uuid"]
 - !private ["10PhysicsKit16PKCollisionShapeP", "internalShape"]
 - !private ["10PhysicsKit11PKRigidBodyC", "PKBRigidBodyTypeDynamic"]
 - ["10PhysicsKit11PKRigidBodyC", "PKCollisionShape"]
 - ["10PhysicsKit11PKRigidBodyC", "PKRigidBodyType"]
+- ["10PhysicsKit11PKRigidBodyC", "String"]
+- ["10PhysicsKit11PKRigidBodyC", "UUID"]
 - ["10PhysicsKit11PKRigidBodyC", "deinit"]
 - ["10PhysicsKit11PKRigidBodyC", "init"]
+- ["10PhysicsKit11PKRigidBodyC", "uuid"]
 - !private ["10PhysicsKit15PKRigidBodyTypeO", "mass"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- ["10Foundation4UUIDV", "init"]
+- ["10Foundation4UUIDV", "uuidString"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PKBRigidBodyTypeDynamic"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKBRigidBodyTypeDynamic"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "uuidString"]
 depends-nominal:
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
 - "SQ"
 - "SH"
 - "So8NSObjectC"
@@ -65,8 +104,11 @@ depends-nominal:
 - !private "10PhysicsKit16PKCollisionShapeP"
 - "10PhysicsKit11PKRigidBodyC"
 - !private "10PhysicsKit15PKRigidBodyTypeO"
+- "10Foundation20ReferenceConvertibleP"
+- "10Foundation4UUIDV"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
@@ -114,4 +156,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "015dcbdfb36dca4994232b4abc10d16f"
+interface-hash: "aaa20549f5885459c3edbc2afb1878cf"

@@ -9,53 +9,35 @@
 import Foundation
 import SceneKit
 
-
+/// PhysicsScene instances provide an easy mechanism for wiring the transform of a RigidBody to the
+/// transform of an SCNNode in SceneKit.
 public class PKPhysicsScene {
     
+    // MARK: - Public Properties
+    
+    /// An optional delegate for receiving callbacks as scenekit nodes are oriented to their associated rigid bodies
     public weak var delegate: PKPhysicsSceneUpdateDelegate?
     
-    private let scene: SCNScene
-    private let physicsWorld: PKPhysicsWorld
+    // MARK: - Private Properties
+    
     private var attachmentsNodeToRigidBodies: [SCNNode : PKRigidBody] = [:]
     private var attachmentsRigidBodiesToNodes: [PKRigidBody : SCNNode] = [:]
-    private var nodes: Set<SCNNode> = []
-    private var rigidBodies: Set<PKRigidBody> = []
     private let isMotionStateEnabled: Bool
     
-    public init(scene: SCNScene, physicsWorld: PKPhysicsWorld, isMotionStateEnabled: Bool) {
-        self.scene = scene
-        self.physicsWorld = physicsWorld
+    // MARK: - Public Functions
+    
+    /// Creates a new PhysicsScene
+    /// - Parameter isMotionStateEnabled: If true, nodes will automatically have their transforms updated as their
+    /// corresponding rigid bodies change their transform. If false, you must manually call
+    /// iterativelyOrientAllNodesToAttachedRigidBodies() to re-orient the attached SCNNodes.
+    public init(isMotionStateEnabled: Bool) {
         self.isMotionStateEnabled = isMotionStateEnabled
     }
     
-    public func add(_ node: SCNNode) {
-        if !nodes.contains(node) {
-            nodes.insert(node)
-            scene.rootNode.addChildNode(node)
-        }
-    }
-    
-    public func remove(_ node: SCNNode) {
-        nodes.remove(node)
-        node.removeFromParentNode()
-        detach(node)
-    }
-    
-    public func add(_ rigidBody: PKRigidBody) {
-        if !rigidBodies.contains(rigidBody) {
-            rigidBodies.insert(rigidBody)
-            physicsWorld.add(rigidBody, for: UUID().uuidString)
-        }
-    }
-    
-    public func remove(_ rigidBody: PKRigidBody) {
-        rigidBodies.remove(rigidBody)
-        physicsWorld.remove(rigidBody)
-        if let node = attachmentsRigidBodiesToNodes[rigidBody] {
-            remove(node)
-        }
-    }
-    
+    /// Attaches a rigid body to a scenekit node
+    /// - Parameters:
+    ///   - rigidBody: The rigid body to use as the source transform for the scenekit node
+    ///   - node: The node to re-orient as the rigid body's transform changes
     public func attach(_ rigidBody: PKRigidBody, to node: SCNNode) {
         attachmentsNodeToRigidBodies[node] = rigidBody
         attachmentsRigidBodiesToNodes[rigidBody] = node
@@ -75,6 +57,8 @@ public class PKPhysicsScene {
         }
     }
     
+    /// Detaches a rigid body from a scenekit node
+    /// - Parameter node: The node to detach
     public func detach(_ node: SCNNode) {
         if let rigidBody = attachmentsNodeToRigidBodies[node] {
             attachmentsRigidBodiesToNodes[rigidBody] = nil
@@ -84,6 +68,7 @@ public class PKPhysicsScene {
         attachmentsNodeToRigidBodies[node] = nil
     }
     
+    /// Iterates over all nodes currently attached to rigid bodies in this scene, re-orienting them to their corresponding rigid body's transform
     public func iterativelyOrientAllNodesToAttachedRigidBodies() {
         delegate?.physicsSceneWillIterativelyUpdate(self)
         for (displayNode, rigidBody) in attachmentsNodeToRigidBodies {

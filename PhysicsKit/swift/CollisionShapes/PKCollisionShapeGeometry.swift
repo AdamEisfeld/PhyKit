@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import SceneKit
 
-
+/// A collision shape constructed from custom geometry
 public class PKCollisionShapeGeometry: PKCollisionShape {
     
     public enum PKCollisionShapeGeometryType {

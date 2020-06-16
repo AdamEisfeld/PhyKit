@@ -410,8 +410,8 @@
 		F3EE79332498073300F280BD /* Triggers */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79342498073300F280BD /* PKTriggerPair.swift */,
 				F3EE79352498073300F280BD /* PKTrigger.swift */,
+				F3EE79342498073300F280BD /* PKTriggerPair.swift */,
 			);
 			path = Triggers;
 			sourceTree = "<group>";
@@ -419,10 +419,10 @@
 		F3EE79362498073300F280BD /* World */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79372498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift */,
+				F3EE793A2498073300F280BD /* PKPhysicsWorld.swift */,
 				F3EE79382498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift */,
 				F3EE79392498073300F280BD /* PKPhysicsWorldCollisionDelegate.swift */,
-				F3EE793A2498073300F280BD /* PKPhysicsWorld.swift */,
+				F3EE79372498073300F280BD /* PKPhysicsWorldTriggerDelegate.swift */,
 			);
 			path = World;
 			sourceTree = "<group>";
@@ -446,14 +446,14 @@
 		F3EE793F2498073300F280BD /* CollisionShapes */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */,
 				F3EE79412498073300F280BD /* PKCollisionShape.swift */,
-				F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */,
-				F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */,
-				F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */,
 				F3EE79452498073300F280BD /* PKCollisionShapeSphere.swift */,
-				F3EE79462498073300F280BD /* PKCollisionShapeFromData.swift */,
+				F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */,
+				F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */,
 				F3EE79472498073300F280BD /* PKCollisionShapeStaticPlane.swift */,
+				F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */,
+				F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */,
+				F3EE79462498073300F280BD /* PKCollisionShapeFromData.swift */,
 			);
 			path = CollisionShapes;
 			sourceTree = "<group>";

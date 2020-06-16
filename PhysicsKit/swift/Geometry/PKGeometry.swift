@@ -9,10 +9,16 @@
 import Foundation
 import SceneKit
 
+/// Geometry instances represent a relationship of vertices->polygons->meshs that build up a 3D model
 public class PKGeometry {
     
+    /// The internal geometry to pass around objc land
     public let internalGeometry: PKBGeometry
     
+    
+    /// Initialized a new geometry instance from the provided scenekit geometry.
+    /// Currently PKGeometry only supports geometry containing geometry elements with a primitiveType of either .polygon or .triangle.
+    /// - Parameter scnGeometry: The scenekit geometry to construct this geometry from
     public init(scnGeometry: SCNGeometry) {
         internalGeometry = PKGeometry.getGeometry(scnGeometry)
     }

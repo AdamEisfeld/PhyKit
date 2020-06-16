@@ -9,85 +9,93 @@
 import Foundation
 import SceneKit
 
-
+/**
+ PhysicsWorlds are responsible for running the actual bullet simulation and managing which
+ physics bodies are attached to the world.
+ */
 public class PKPhysicsWorld: PKBPhysicsWorld {
     
+    // MARK: Public Properties
+    
+    /// An optional delegate for receiving callbacks as the simulation steps forward in time
     public weak var simulationDelegate: PKPhysicsWorldSimulationDelegate?
+    
+    /// An optional delegate for receiving callbacks as rigid bodies collide in the simulation
     public weak var collisionDelegate: PKPhysicsWorldCollisionDelegate?
+    
+    /// An optional delegate for receiving callbacks as rigid bodies enter / exit trigger zones
     public weak var triggerDelegate: PKPhysicsWorldTriggerDelegate?
     
-    private var identifiersToRigidBodies: [String : PKRigidBody] = [:]
-    private var rigidBodiesToIdentifiers: [PKRigidBody : String] = [:]
-    
-    private var identifiersToTriggers: [String : PKTrigger] = [:]
-    private var triggersToIdentifiers: [PKTrigger : String] = [:]
-    
-    private var collisionPairs: [String : PKCollisionPair] = [:]
-    private var previousCollisionPairs: [String : PKCollisionPair] = [:]
-    
-    private var triggerPairs: [String : PKTriggerPair] = [:]
-    private var previousTriggerPairs: [String : PKTriggerPair] = [:]
-    
+    /// The current time of the simulation. Increasing this value will cause the simulation to step forward in time.
     public var simulationTime: TimeInterval = 0 {
         didSet {
             stepSimulation(simulationTime)
         }
     }
     
+    // MARK: Private Properties
+
+    private var rigidBodies: Set<PKRigidBody> = []
+    private var triggers: Set<PKTrigger> = []
+
+    private var collisionPairs: [String : PKCollisionPair] = [:]
+    private var previousCollisionPairs: [String : PKCollisionPair] = [:]
     
+    private var triggerPairs: [String : PKTriggerPair] = [:]
+    private var previousTriggerPairs: [String : PKTriggerPair] = [:]
     
+    // MARK: Public Functions - Rigid Bodies
     
-    public func add(_ rigidBody: PKRigidBody, for identifier: String) {
-        identifiersToRigidBodies[identifier] = rigidBody
-        rigidBodiesToIdentifiers[rigidBody] = identifier
+    /// Adds a rigid body to the simulation
+    /// - Parameters:
+    ///   - rigidBody: The rigid body to add
+    public func add(_ rigidBody: PKRigidBody) {
+        rigidBodies.insert(rigidBody)
         internalAdd(rigidBody)
     }
     
+    /// Removes a rigid body from the simulation
+    /// - Parameter rigidBody: The rigid body to remove from the simulation
     public func remove(_ rigidBody: PKRigidBody) {
-        if let identifier = rigidBodiesToIdentifiers[rigidBody] {
-            identifiersToRigidBodies[identifier] = nil
-        }
-        rigidBodiesToIdentifiers[rigidBody] = nil
+        rigidBodies.remove(rigidBody)
         internalRemove(rigidBody)
     }
+
+    // MARK: Public Functions - Triggers
     
-    public func getRigidBodyForIdentifier(_ identifier: String) -> PKRigidBody? {
-        return identifiersToRigidBodies[identifier]
-    }
-    
-    public func getIdentifierForRigidBody(_ rigidBody: PKRigidBody) -> String? {
-        return rigidBodiesToIdentifiers[rigidBody]
-    }
-    
-    
-    
-    
-    
-    public func add(_ trigger: PKTrigger, for identifier: String) {
-        identifiersToTriggers[identifier] = trigger
-        triggersToIdentifiers[trigger] = identifier
+    /// Adds a trigger to the simulation
+    /// - Parameters:
+    ///   - trigger: The trigger to add to the simulation
+    public func add(_ trigger: PKTrigger) {
+        triggers.insert(trigger)
         internalAdd(trigger)
     }
     
+    /// Removes a trigger from the simulation
+    /// - Parameter trigger: The trigger to remove from the simulation
     public func remove(_ trigger: PKTrigger) {
-        if let identifier = triggersToIdentifiers[trigger] {
-            identifiersToTriggers[identifier] = nil
-        }
-        triggersToIdentifiers[trigger] = nil
+        triggers.remove(trigger)
         internalRemove(trigger)
     }
     
-    public func getPhysicsTriggerForIdentifier(_ identifier: String) -> PKTrigger? {
-        return identifiersToTriggers[identifier]
+    // MARK: Public Functions - State
+    
+    public func reset() {
+        simulationTime = 0
+        for rigidBody in rigidBodies {
+            remove(rigidBody)
+        }
+        for trigger in triggers {
+            remove(trigger)
+        }
+        internalReset()
+        rigidBodies = []
+        triggers = []
+        collisionPairs = [:]
+        previousCollisionPairs = [:]
     }
-    
-    public func getIdentifierForPhysicsTrigger(_ trigger: PKTrigger) -> String? {
-        return triggersToIdentifiers[trigger]
-    }
-    
-    
-    
-    
+
+    // MARK: Private Functions
     
     private func stepSimulation(_ time: TimeInterval) {
         simulationDelegate?.physicsWorld(self, willSimulateAtTime: time)
@@ -127,17 +135,13 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
         previousTriggerPairs = triggerPairs
         triggerPairs = [:]
         
-        for (_, trigger) in identifiersToTriggers {
+        for trigger in triggers {
             
             let collidingRigidBodies = trigger.getCollidingRigidBodies()
             for collidingRigidBody in collidingRigidBodies {
                 
-                guard
-                    let identifierA = getIdentifierForRigidBody(collidingRigidBody),
-                    let identifierB = getIdentifierForPhysicsTrigger(trigger)
-                    else {
-                    return
-                }
+                let identifierA = collidingRigidBody.uuid
+                let identifierB = trigger.uuid
                 
                 let combinedIdentifier: String
                 if identifierA.hashValue < identifierB.hashValue {
@@ -172,7 +176,7 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
         }
     }
     
-    public override func internalCollisionDidOccur(_ internalRigidBodyA: PKBRigidBody, localPositionA: SCNVector3, internalRigidBodyB: PKBRigidBody, localPositionB: SCNVector3) {
+    public override func internalCollisionDidOccur(_ internalRigidBodyA: PKBRigidBody, localPositionA: PKVector3, internalRigidBodyB: PKBRigidBody, localPositionB: PKVector3) {
         
         guard
             let rigidBodyA = internalRigidBodyA as? PKRigidBody,
@@ -180,12 +184,8 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
             return
         }
         
-        guard
-            let identifierA = getIdentifierForRigidBody(rigidBodyA),
-            let identifierB = getIdentifierForRigidBody(rigidBodyB)
-            else {
-            return
-        }
+        let identifierA = rigidBodyA.uuid
+        let identifierB = rigidBodyB.uuid
         
         let combinedIdentifier: String
         if identifierA.hashValue < identifierB.hashValue {
@@ -203,18 +203,6 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
             }
         }
         
-    }
-    
-    public func reset() {
-        simulationTime = 0
-        for rigidBody in identifiersToRigidBodies.values {
-            remove(rigidBody)
-        }
-        internalReset()
-        identifiersToRigidBodies = [:]
-        rigidBodiesToIdentifiers = [:]
-        collisionPairs = [:]
-        previousCollisionPairs = [:]
     }
     
 }

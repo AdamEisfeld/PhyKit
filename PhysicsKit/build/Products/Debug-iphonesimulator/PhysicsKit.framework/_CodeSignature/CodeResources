@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/PKBPhysicsWorld.h</key>
 		<data>
-		oDXNsji57pR3yPoQZIDS8CSE/MU=
+		QRtVLdDw3Cv8fh+xMXltAmtaC4M=
 		</data>
 		<key>Headers/PKBPolygon.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/PhysicsKit-Swift.h</key>
 		<data>
-		OtEsec0sulKF7JN/aW1Q5TKTtvw=
+		sxUakEge5vI1tcIclkZ5PBgNMmU=
 		</data>
 		<key>Headers/PhysicsKit.h</key>
 		<data>
@@ -58,27 +58,27 @@
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		9RIW+eNjEFbOajC9RBbStaqJtXs=
+		6/cpwPt8hexb6ENYD7Dqjh0qZjw=
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		9RIW+eNjEFbOajC9RBbStaqJtXs=
+		6/cpwPt8hexb6ENYD7Dqjh0qZjw=
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		tmUyUUt8sfWqPYCBGUUKVpeStiM=
+		8EkIIG/vnLz+UU78uvBTiwOleA0=
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Tfl6aHaP2zRfqKaaMZur4PU1Eb4=
+		AGuO0j7Zid5L1rWfArZgLK/hUT0=
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		tmUyUUt8sfWqPYCBGUUKVpeStiM=
+		8EkIIG/vnLz+UU78uvBTiwOleA0=
 		</data>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Tfl6aHaP2zRfqKaaMZur4PU1Eb4=
+		AGuO0j7Zid5L1rWfArZgLK/hUT0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -150,7 +150,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zk38swKFeOLYs35V1bv/mUIqYT+lr3UCY5H+r5FUZsM=
+			f/0VkBDNHAQlfErBEADlROhq/Bx38qFWiE+RutFYsa8=
 			</data>
 		</dict>
 		<key>Headers/PKBPolygon.h</key>
@@ -185,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YouqPhW9blL5+P+rhYOiiCgIb1uJ6Lorp6lm2nSoTbU=
+			Wppbc9eLpgH8VXDt4uRUOI6aYJq3nCUZ1hxfJapyPvc=
 			</data>
 		</dict>
 		<key>Headers/PhysicsKit.h</key>
@@ -199,42 +199,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UuaegjtnGu6EKXCvB2Vcg9Jk0Xhm7nCaCNVCgU2l4qw=
+			4EwRFVoGo/qZbmeoYDTXxvaYgP/uI2Dm4flzBKm0BZw=
 			</data>
 		</dict>
 		<key>Modules/PhysicsKit.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UuaegjtnGu6EKXCvB2Vcg9Jk0Xhm7nCaCNVCgU2l4qw=
+			4EwRFVoGo/qZbmeoYDTXxvaYgP/uI2Dm4flzBKm0BZw=
 			</data>
 		</dict>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k5oSEfCuVa0wwA7S6YJjq2A1waiXWsNB45NV9xHlCTY=
+			VgtOme9yleCG6tYRogs504+ZEn4Qd3jzQGYyozPD39o=
 			</data>
 		</dict>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gd/QVeckallQf94VZFmUnjEtu6wTOIiQIXnEq/4BP6c=
+			x1an6zKQoiYc9x1B12Ghj5e0YaD6oFxjFV8cawtda7w=
 			</data>
 		</dict>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k5oSEfCuVa0wwA7S6YJjq2A1waiXWsNB45NV9xHlCTY=
+			VgtOme9yleCG6tYRogs504+ZEn4Qd3jzQGYyozPD39o=
 			</data>
 		</dict>
 		<key>Modules/PhysicsKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gd/QVeckallQf94VZFmUnjEtu6wTOIiQIXnEq/4BP6c=
+			x1an6zKQoiYc9x1B12Ghj5e0YaD6oFxjFV8cawtda7w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -11,6 +11,7 @@
 
 @class PKBRigidBody;
 @class PKBPhysicsTrigger;
+struct PKVector3;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)internalStepSimulation: (NSTimeInterval)time;
 - (void)internalCheckCollisions;
-- (void)internalCollisionDidOccur: (PKBRigidBody *)internalRigidBodyA localPositionA: (SCNVector3 )pointA internalRigidBodyB: (PKBRigidBody *)internalRigidBodyB localPositionB: (SCNVector3 )pointB;
+- (void)internalCollisionDidOccur: (PKBRigidBody *)internalRigidBodyA localPositionA: (struct PKVector3 )pointA internalRigidBodyB: (PKBRigidBody *)internalRigidBodyB localPositionB: (struct PKVector3 )pointB;
 - (void)internalReset;
 
 @end

@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/// A delegate for receiving callbacks as a PKPhysicsWorld detects collisions in it's simulation
 public protocol PKPhysicsWorldCollisionDelegate: class {
     
     func physicsWorld(_ physicsWorld: PKPhysicsWorld, collisionDidBeginAtTime time: TimeInterval, with collisionPair: PKCollisionPair)

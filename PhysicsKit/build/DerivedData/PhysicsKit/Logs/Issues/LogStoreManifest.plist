@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>0EDF41EC-0FF0-4AA4-B54A-B12902B50FB5</key>
+		<key>169826E6-593D-4C38-914C-A0201269C537</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>0EDF41EC-0FF0-4AA4-B54A-B12902B50FB5.xcactivitylog</string>
+			<string>169826E6-593D-4C38-914C-A0201269C537.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,71 +26,15 @@
 			<key>signature</key>
 			<string>BulletCollision-apnpxmdgaolqxqflebcrsjklmapi</string>
 			<key>timeStartedRecording</key>
-			<real>614023261.62443697</real>
+			<real>614029275.770468</real>
 			<key>timeStoppedRecording</key>
-			<real>614023261.73628294</real>
+			<real>614029275.96205294</real>
 			<key>title</key>
 			<string>Build target BulletCollision</string>
 			<key>uniqueIdentifier</key>
-			<string>0EDF41EC-0FF0-4AA4-B54A-B12902B50FB5</string>
+			<string>169826E6-593D-4C38-914C-A0201269C537</string>
 		</dict>
-		<key>4AF50836-2614-4C31-ADE2-FF59A1916F79</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
-			<key>fileName</key>
-			<string>4AF50836-2614-4C31-ADE2-FF59A1916F79.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>PhysicsKit-Aggregate-gwonfwasqspdpedqvqjhluulhzty</string>
-			<key>timeStartedRecording</key>
-			<real>614023292.95732498</real>
-			<key>timeStoppedRecording</key>
-			<real>614023304.53933001</real>
-			<key>title</key>
-			<string>Build target PhysicsKit-Aggregate</string>
-			<key>uniqueIdentifier</key>
-			<string>4AF50836-2614-4C31-ADE2-FF59A1916F79</string>
-		</dict>
-		<key>5876EA7E-937B-4634-B6E4-16A12266051C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>5876EA7E-937B-4634-B6E4-16A12266051C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>PhysicsKit-gwonfwasqspdpedqvqjhluulhzty</string>
-			<key>timeStartedRecording</key>
-			<real>614023261.73819399</real>
-			<key>timeStoppedRecording</key>
-			<real>614023269.19162798</real>
-			<key>title</key>
-			<string>Build target PhysicsKit</string>
-			<key>uniqueIdentifier</key>
-			<string>5876EA7E-937B-4634-B6E4-16A12266051C</string>
-		</dict>
-		<key>65927DAD-DB71-478E-9F45-D05F6653BBA5</key>
+		<key>1B71CE87-04E7-4A44-94CA-4B41C27BDE6A</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -99,7 +43,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>65927DAD-DB71-478E-9F45-D05F6653BBA5.xcactivitylog</string>
+			<string>1B71CE87-04E7-4A44-94CA-4B41C27BDE6A.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -110,15 +54,15 @@
 			<key>signature</key>
 			<string>BulletWorldImporter-auyxqcfjgsryhveozmlcmldcebem</string>
 			<key>timeStartedRecording</key>
-			<real>614023261.62100506</real>
+			<real>614029275.96297002</real>
 			<key>timeStoppedRecording</key>
-			<real>614023261.63570201</real>
+			<real>614029275.99083602</real>
 			<key>title</key>
 			<string>Build target BulletWorldImporter</string>
 			<key>uniqueIdentifier</key>
-			<string>65927DAD-DB71-478E-9F45-D05F6653BBA5</string>
+			<string>1B71CE87-04E7-4A44-94CA-4B41C27BDE6A</string>
 		</dict>
-		<key>BE78988C-68E4-49FC-9DA4-261FB930265E</key>
+		<key>8F47F2BA-812E-4E5D-9D54-B87EF3FEFD00</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -127,35 +71,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>BE78988C-68E4-49FC-9DA4-261FB930265E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>BulletDynamics-dnurlntmedeibtbfxrrgzzjaoyzv</string>
-			<key>timeStartedRecording</key>
-			<real>614023261.61766803</real>
-			<key>timeStoppedRecording</key>
-			<real>614023261.70565999</real>
-			<key>title</key>
-			<string>Build target BulletDynamics</string>
-			<key>uniqueIdentifier</key>
-			<string>BE78988C-68E4-49FC-9DA4-261FB930265E</string>
-		</dict>
-		<key>D2A0B1AA-E115-4DCA-839A-BE43ADF1D655</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>D2A0B1AA-E115-4DCA-839A-BE43ADF1D655.xcactivitylog</string>
+			<string>8F47F2BA-812E-4E5D-9D54-B87EF3FEFD00.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -166,15 +82,71 @@
 			<key>signature</key>
 			<string>BulletFileLoader-boblwdoiycbxefbsihnmqlwkioej</string>
 			<key>timeStartedRecording</key>
-			<real>614023261.61994803</real>
+			<real>614029276.16953802</real>
 			<key>timeStoppedRecording</key>
-			<real>614023261.62934697</real>
+			<real>614029276.18287504</real>
 			<key>title</key>
 			<string>Build target BulletFileLoader</string>
 			<key>uniqueIdentifier</key>
-			<string>D2A0B1AA-E115-4DCA-839A-BE43ADF1D655</string>
+			<string>8F47F2BA-812E-4E5D-9D54-B87EF3FEFD00</string>
 		</dict>
-		<key>D5CFD804-6B3F-477C-99A7-366229AB3520</key>
+		<key>A1C144E1-01A7-40A3-97DB-CD046626B1AC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>A1C144E1-01A7-40A3-97DB-CD046626B1AC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>PhysicsKit-gwonfwasqspdpedqvqjhluulhzty</string>
+			<key>timeStartedRecording</key>
+			<real>614029276.183321</real>
+			<key>timeStoppedRecording</key>
+			<real>614029278.30048299</real>
+			<key>title</key>
+			<string>Build target PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>A1C144E1-01A7-40A3-97DB-CD046626B1AC</string>
+		</dict>
+		<key>AD48BBD2-6D5B-4DE5-95D5-79CD1DE2FBB3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<key>fileName</key>
+			<string>AD48BBD2-6D5B-4DE5-95D5-79CD1DE2FBB3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>PhysicsKit-Aggregate-gwonfwasqspdpedqvqjhluulhzty</string>
+			<key>timeStartedRecording</key>
+			<real>614029284.92471802</real>
+			<key>timeStoppedRecording</key>
+			<real>614029304.45317197</real>
+			<key>title</key>
+			<string>Build target PhysicsKit-Aggregate</string>
+			<key>uniqueIdentifier</key>
+			<string>AD48BBD2-6D5B-4DE5-95D5-79CD1DE2FBB3</string>
+		</dict>
+		<key>C031E435-6B8E-4514-851C-7F2AC8AA025D</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -183,7 +155,35 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
-			<string>D5CFD804-6B3F-477C-99A7-366229AB3520.xcactivitylog</string>
+			<string>C031E435-6B8E-4514-851C-7F2AC8AA025D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>BulletDynamics-dnurlntmedeibtbfxrrgzzjaoyzv</string>
+			<key>timeStartedRecording</key>
+			<real>614029276.01836503</real>
+			<key>timeStoppedRecording</key>
+			<real>614029276.16891205</real>
+			<key>title</key>
+			<string>Build target BulletDynamics</string>
+			<key>uniqueIdentifier</key>
+			<string>C031E435-6B8E-4514-851C-7F2AC8AA025D</string>
+		</dict>
+		<key>E18FD7D8-E01E-464E-A345-F0EE0E1DDB8D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>E18FD7D8-E01E-464E-A345-F0EE0E1DDB8D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -194,13 +194,13 @@
 			<key>signature</key>
 			<string>LinearMath-brknoqpkmzbwdxddwqykwusjnptv</string>
 			<key>timeStartedRecording</key>
-			<real>614023261.62239504</real>
+			<real>614029275.99156106</real>
 			<key>timeStoppedRecording</key>
-			<real>614023261.63694298</real>
+			<real>614029276.01757598</real>
 			<key>title</key>
 			<string>Build target LinearMath</string>
 			<key>uniqueIdentifier</key>
-			<string>D5CFD804-6B3F-477C-99A7-366229AB3520</string>
+			<string>E18FD7D8-E01E-464E-A345-F0EE0E1DDB8D</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

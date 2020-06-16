@@ -9,6 +9,7 @@
 import Foundation
 
 
+/// A delegate for receiving callbacks as a PKPhysicsWorld steps forward in it's simulation
 public protocol PKPhysicsWorldSimulationDelegate: class {
     
     func physicsWorld(_ physicsWorld: PKPhysicsWorld, willSimulateAtTime time: TimeInterval)

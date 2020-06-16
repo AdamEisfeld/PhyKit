@@ -9,8 +9,16 @@
 import Foundation
 
 
+/// RigidBody instances are attached to PhysicsWorlds to represent a rigid body in the simulation.
 public class PKRigidBody: PKBRigidBody {
     
+    /// A unique identifier for this rigid body, used internally
+    public let uuid: String = UUID().uuidString
+    
+    /// Creates a new rigid body
+    /// - Parameters:
+    ///   - type: The type of rigid body to create
+    ///   - shape: The shape to use for collision detections for this rigid body
     public init(type: PKRigidBodyType, shape: PKCollisionShape) {
         super.init(collisionShape: shape.internalShape, rigidBodyType: PKBRigidBodyTypeDynamic, mass: type.mass)
     }

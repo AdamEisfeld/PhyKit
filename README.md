@@ -47,7 +47,7 @@ let dynamicBody = PKRigidBody(type: .dynamic, shape: dynamicCollisionShape)
 dynamicBody.restitution = 0.8
 
 // Add the rigid body to the physics world
-physicsWorld.add(dynamicBody, for: "box")
+physicsWorld.add(dynamicBody)
 
 ```
 
@@ -81,7 +81,7 @@ let staticCollisionShape = PKCollisionShapeBox(width: 100, height: 0.01, length:
 let staticBody = PKRigidBody(type: .static, shape: staticCollisionShape)
 
 // Add the rigid body to the physics world
-physicsWorld.add(staticBody, for: "ground")
+physicsWorld.add(staticBody)
 ```
 
 ### Step the Physics Simulation
@@ -123,7 +123,7 @@ Sometimes it is useful to detect when a given rigid body enters an area within t
 ```swift
 let triggerShape = PKCollisionShapeSphere(radius: 1.0)
 let trigger = PKTrigger(shape: triggerShape)
-physicsWorld.add(trigger, for: "someZone")
+physicsWorld.add(trigger)
 ```
 
 ## Connecting PhysicsKit to SceneKit
@@ -135,9 +135,7 @@ The PhysicsScene class provides a mechanism for wiring a PKRigidBody to a SCNNod
 ### Create a PhysicsScene
 
 ```swift
-let physicsWorld: PKPhysicsWorld = ...
-let scene: SCNScene = ...
-let physicsScene = PKPhysicsScene(scene: scene, physicsWorld: physicsWorld, isMotionStateEnabled: true)
+let physicsScene = PKPhysicsScene(isMotionStateEnabled: true)
 ```
 
 ### Add / Attach PKRigidBodies and SCNNodes
@@ -146,9 +144,11 @@ let physicsScene = PKPhysicsScene(scene: scene, physicsWorld: physicsWorld, isMo
 
 let node: SCNNode = ...
 let rigidBody: PKRigidBody = ...
+let physicsWorld: PKPhysicsWorld = ...
+let scene: SCNScene = ...
 
-physicsScene.add(node)
-physicsScene.add(rigidBody)
+scene.rootNode.addChildNode(node)
+physicsWorld.add(rigidBody)
 physicsScene.attach(rigidBody, to: node)
 
 ```

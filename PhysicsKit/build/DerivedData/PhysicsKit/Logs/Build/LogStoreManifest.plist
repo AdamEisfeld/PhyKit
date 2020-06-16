@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C</key>
+		<key>159078F3-042F-4DC8-8F02-F565EAA475C0</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,41 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C.xcactivitylog</string>
+			<string>159078F3-042F-4DC8-8F02-F565EAA475C0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614028713.35237396</real>
+			<key>timeStoppedRecording</key>
+			<real>614028715.35443795</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>159078F3-042F-4DC8-8F02-F565EAA475C0</string>
+		</dict>
+		<key>24A92174-BEFD-429A-9D17-9B6B3E90DE06</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>24A92174-BEFD-429A-9D17-9B6B3E90DE06.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +66,149 @@
 			<key>signature</key>
 			<string>Build PhysicsKit</string>
 			<key>timeStartedRecording</key>
-			<real>614023260.83642197</real>
+			<real>614029189.04915702</real>
 			<key>timeStoppedRecording</key>
-			<real>614023269.22789502</real>
+			<real>614029191.25502002</real>
 			<key>title</key>
 			<string>Build PhysicsKit</string>
 			<key>uniqueIdentifier</key>
-			<string>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C</string>
+			<string>24A92174-BEFD-429A-9D17-9B6B3E90DE06</string>
+		</dict>
+		<key>336B619D-5522-49CE-A459-218DDB15B34E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>336B619D-5522-49CE-A459-218DDB15B34E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614029275.23511004</real>
+			<key>timeStoppedRecording</key>
+			<real>614029278.31862795</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>336B619D-5522-49CE-A459-218DDB15B34E</string>
+		</dict>
+		<key>534148BE-1504-4EE3-B019-EB63735D195E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>534148BE-1504-4EE3-B019-EB63735D195E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614027717.44989204</real>
+			<key>timeStoppedRecording</key>
+			<real>614027719.72585595</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>534148BE-1504-4EE3-B019-EB63735D195E</string>
+		</dict>
+		<key>74DF9BE8-1C5F-42F2-B0AD-EB962FB4C94D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>74DF9BE8-1C5F-42F2-B0AD-EB962FB4C94D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614028762.916026</real>
+			<key>timeStoppedRecording</key>
+			<real>614028768.98000598</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>74DF9BE8-1C5F-42F2-B0AD-EB962FB4C94D</string>
+		</dict>
+		<key>83EA8C94-5A88-435B-A07B-B8D130596CFA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>83EA8C94-5A88-435B-A07B-B8D130596CFA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit-Aggregate</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>timeStartedRecording</key>
+			<real>614029227.72505605</real>
+			<key>timeStoppedRecording</key>
+			<real>614029249.09571397</real>
+			<key>title</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>uniqueIdentifier</key>
+			<string>83EA8C94-5A88-435B-A07B-B8D130596CFA</string>
 		</dict>
 		<key>957AF0E4-A594-43FA-8DB6-1069B1FFE15D</key>
 		<dict>
@@ -73,6 +243,278 @@
 			<string>Build PhysicsKit-Aggregate</string>
 			<key>uniqueIdentifier</key>
 			<string>957AF0E4-A594-43FA-8DB6-1069B1FFE15D</string>
+		</dict>
+		<key>9D44ED22-17B9-421C-9244-519C225117AC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9D44ED22-17B9-421C-9244-519C225117AC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit-Aggregate</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>timeStartedRecording</key>
+			<real>614029284.89750695</real>
+			<key>timeStoppedRecording</key>
+			<real>614029304.45888698</real>
+			<key>title</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>uniqueIdentifier</key>
+			<string>9D44ED22-17B9-421C-9244-519C225117AC</string>
+		</dict>
+		<key>ABEEB37E-627C-4BFF-8526-70652C4B0D53</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ABEEB37E-627C-4BFF-8526-70652C4B0D53.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614028793.01753604</real>
+			<key>timeStoppedRecording</key>
+			<real>614028796.019907</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>ABEEB37E-627C-4BFF-8526-70652C4B0D53</string>
+		</dict>
+		<key>B0EE1607-A75F-4C33-BFEE-1E88F6DE12D8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B0EE1607-A75F-4C33-BFEE-1E88F6DE12D8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614028783.11145604</real>
+			<key>timeStoppedRecording</key>
+			<real>614028785.52474201</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>B0EE1607-A75F-4C33-BFEE-1E88F6DE12D8</string>
+		</dict>
+		<key>C2E2AA7E-E69E-4BAF-96FC-83BB39A9B237</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C2E2AA7E-E69E-4BAF-96FC-83BB39A9B237.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614029165.33050895</real>
+			<key>timeStoppedRecording</key>
+			<real>614029169.24972606</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>C2E2AA7E-E69E-4BAF-96FC-83BB39A9B237</string>
+		</dict>
+		<key>C8F4FE31-4CE1-4D5C-84FC-D9E4F88AA008</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8F4FE31-4CE1-4D5C-84FC-D9E4F88AA008.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614028699.40813804</real>
+			<key>timeStoppedRecording</key>
+			<real>614028702.73315001</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>C8F4FE31-4CE1-4D5C-84FC-D9E4F88AA008</string>
+		</dict>
+		<key>D9BD0E5A-3ADD-445F-BA5D-CE42903A7E9D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D9BD0E5A-3ADD-445F-BA5D-CE42903A7E9D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614027683.29523897</real>
+			<key>timeStoppedRecording</key>
+			<real>614027686.59618795</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>D9BD0E5A-3ADD-445F-BA5D-CE42903A7E9D</string>
+		</dict>
+		<key>E72439AA-F42D-4484-B293-5EC3B2E2BDAF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E72439AA-F42D-4484-B293-5EC3B2E2BDAF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614027860.45700097</real>
+			<key>timeStoppedRecording</key>
+			<real>614027862.12438905</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>E72439AA-F42D-4484-B293-5EC3B2E2BDAF</string>
+		</dict>
+		<key>F3665719-4B7B-4F23-93EB-2BDF9927282C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F3665719-4B7B-4F23-93EB-2BDF9927282C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614027722.46719694</real>
+			<key>timeStoppedRecording</key>
+			<real>614027725.90503895</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>F3665719-4B7B-4F23-93EB-2BDF9927282C</string>
 		</dict>
 	</dict>
 </dict>

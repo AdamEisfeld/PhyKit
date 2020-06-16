@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/// A collision shape an infinite plane. These collision shapes should only be used for static rigid bodies.
 public class PKCollisionShapeStaticPlane: PKCollisionShape {
     
     public let internalShape: PKBCollisionShape

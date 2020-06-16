@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var sceneTime: TimeInterval?
     
     let physicsWorld = PKPhysicsWorld()
-    lazy var physicsScene = PKPhysicsScene(scene: sceneView.scene!, physicsWorld: physicsWorld, isMotionStateEnabled: false)
+    lazy var physicsScene = PKPhysicsScene(isMotionStateEnabled: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,8 +81,8 @@ class ViewController: UIViewController {
         rigidBody.position = position
         rigidBody.orientation = orientation
         
-        physicsScene.add(displayNode)
-        physicsScene.add(rigidBody)
+        physicsWorld.add(rigidBody)
+        sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
     }
     
@@ -104,8 +104,8 @@ class ViewController: UIViewController {
         rigidBody.orientation = orientation
         rigidBody.restitution = 0.8
         
-        physicsScene.add(displayNode)
-        physicsScene.add(rigidBody)
+        physicsWorld.add(rigidBody)
+        sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
     }
@@ -129,8 +129,8 @@ class ViewController: UIViewController {
         rigidBody.orientation = orientation
         rigidBody.restitution = 0.8
         
-        physicsScene.add(displayNode)
-        physicsScene.add(rigidBody)
+        physicsWorld.add(rigidBody)
+        sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
 
     }
@@ -149,8 +149,8 @@ class ViewController: UIViewController {
         //rigidBody.orientation = orientation
         rigidBody.restitution = 0.8
         
-        physicsScene.add(displayNode)
-        physicsScene.add(rigidBody)
+        physicsWorld.add(rigidBody)
+        sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
     }

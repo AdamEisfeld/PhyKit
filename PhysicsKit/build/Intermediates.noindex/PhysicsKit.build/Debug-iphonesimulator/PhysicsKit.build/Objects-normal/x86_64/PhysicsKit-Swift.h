@@ -186,7 +186,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import SceneKit;
 #endif
 
 #import <PhysicsKit/PhysicsKit.h>
@@ -208,14 +207,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class PKBRigidBody;
 
+/// PhysicsWorlds are responsible for running the actual bullet simulation and managing which
+/// physics bodies are attached to the world.
 SWIFT_CLASS("_TtC10PhysicsKit14PKPhysicsWorld")
 @interface PKPhysicsWorld : PKBPhysicsWorld
-- (void)internalCollisionDidOccur:(PKBRigidBody * _Nonnull)internalRigidBodyA localPositionA:(SCNVector3)localPositionA internalRigidBodyB:(PKBRigidBody * _Nonnull)internalRigidBodyB localPositionB:(SCNVector3)localPositionB;
+- (void)internalCollisionDidOccur:(PKBRigidBody * _Nonnull)internalRigidBodyA localPositionA:(struct PKVector3)localPositionA internalRigidBodyB:(PKBRigidBody * _Nonnull)internalRigidBodyB localPositionB:(struct PKVector3)localPositionB;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class PKBCollisionShape;
 
+/// RigidBody instances are attached to PhysicsWorlds to represent a rigid body in the simulation.
 SWIFT_CLASS("_TtC10PhysicsKit11PKRigidBody")
 @interface PKRigidBody : PKBRigidBody
 - (nonnull instancetype)initWithCollisionShape:(PKBCollisionShape * _Nonnull)collisionShape rigidBodyType:(PKBRigidBodyType)rigidBodyType mass:(float)mass SWIFT_UNAVAILABLE;
@@ -224,6 +226,7 @@ SWIFT_CLASS("_TtC10PhysicsKit11PKRigidBody")
 @end
 
 
+/// Trigger instances are attached to PhysicsWorlds to represent a geometric shape that a RigidBody can enter/exit to trigger additional logic
 SWIFT_CLASS("_TtC10PhysicsKit9PKTrigger")
 @interface PKTrigger : PKBPhysicsTrigger
 - (nonnull instancetype)initWithCollisionShape:(PKBCollisionShape * _Nonnull)collisionShape SWIFT_UNAVAILABLE;

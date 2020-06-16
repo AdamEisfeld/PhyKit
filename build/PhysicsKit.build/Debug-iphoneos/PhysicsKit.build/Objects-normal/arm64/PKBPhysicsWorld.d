@@ -1,6 +1,7 @@
 dependencies: \
   /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/World/PKBPhysicsWorld.mm \
   /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/World/PKBPhysicsWorld.h \
+  /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/DataStructures/PKBStructs.h \
   /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/RigidBodies/PKBRigidBody.h \
   /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/RigidBodies/PKBRigidBody+Internal.h \
   /Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/World/PKBDependencies+Internal.h \

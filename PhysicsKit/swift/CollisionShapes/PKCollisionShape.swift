@@ -9,16 +9,10 @@
 import Foundation
 
 
+/// An abstract protocol used by the various supported collision shapes. Collision shapes are used in detecting intersections within the physics simulation.
 public protocol PKCollisionShape {
     
+    /// The internal shape to pass around objc land
     var internalShape: PKBCollisionShape { get }
-    
-}
-
-public extension PKCollisionShape {
-    
-    func serialize() -> Data {
-        return internalShape.serialize()
-    }
     
 }

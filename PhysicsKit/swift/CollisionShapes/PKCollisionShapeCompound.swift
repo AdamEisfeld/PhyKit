@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/// A collision shape comprised of other collision shapes
 public class PKCollisionShapeCompound: PKCollisionShape {
     
     public let internalShape: PKBCollisionShape

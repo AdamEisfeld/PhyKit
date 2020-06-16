@@ -9,7 +9,6 @@
 import Foundation
 import SceneKit
 
-
 public extension PKVector3 {
     
     var scnVector3: SCNVector3 {

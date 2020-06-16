@@ -14,10 +14,10 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "PKCollisionPair"
 - "PKRigidBody"
-- "SCNVector3"
+- "PKVector3"
 depends-member:
 - ["10PhysicsKit15PKCollisionPairC", "PKRigidBody"]
-- ["10PhysicsKit15PKCollisionPairC", "SCNVector3"]
+- ["10PhysicsKit15PKCollisionPairC", "PKVector3"]
 - ["10PhysicsKit15PKCollisionPairC", "deinit"]
 - ["10PhysicsKit15PKCollisionPairC", "init"]
 - ["10PhysicsKit15PKCollisionPairC", "localPositionA"]
@@ -73,4 +73,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a7508e08ed92c82c71b04072ee27d015"
+interface-hash: "0f243d9b6f36c84f6ba03ed0aa8db2e9"

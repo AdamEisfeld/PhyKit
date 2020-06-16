@@ -7,17 +7,21 @@ provides-member:
 - ["10PhysicsKit9PKTriggerC", ""]
 provides-dynamic-lookup:
 - "getCollidingRigidBodies"
+- "uuid"
 depends-top-level:
 - !private "CastingPrecedence"
 - "PKBPhysicsTrigger"
 - "PKCollisionShape"
 - "PKRigidBody"
 - "PKTrigger"
+- "String"
+- "UUID"
 depends-member:
 - !private ["Sa", "compactMap"]
 - !private ["Sa", "map"]
 - !private ["SK", "compactMap"]
 - !private ["SK", "map"]
+- ["s7CVarArgP", "UUID"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "compactMap"]
 - !private ["s7CVarArgP", "init"]
@@ -27,67 +31,95 @@ depends-member:
 - !private ["Sl", "map"]
 - !private ["10Foundation15ContiguousBytesP", "compactMap"]
 - !private ["10Foundation15ContiguousBytesP", "map"]
+- ["s28CustomDebugStringConvertibleP", "UUID"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "compactMap"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "internalGetCollidingRigidBodies"]
 - !private ["s28CustomDebugStringConvertibleP", "map"]
+- ["s28CustomDebugStringConvertibleP", "uuidString"]
 - !private ["s17CustomReflectableP", "compactMap"]
+- ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "map"]
+- ["s17CustomReflectableP", "uuidString"]
+- ["s23CustomStringConvertibleP", "UUID"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "compactMap"]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "internalGetCollidingRigidBodies"]
 - !private ["s23CustomStringConvertibleP", "map"]
+- ["s23CustomStringConvertibleP", "uuidString"]
 - !private ["10Foundation12DataProtocolP", "compactMap"]
 - !private ["10Foundation12DataProtocolP", "map"]
 - !private ["Se", "compactMap"]
+- ["Se", "init"]
 - !private ["Se", "map"]
+- ["Se", "uuidString"]
 - !private ["SE", "compactMap"]
+- ["SE", "init"]
 - !private ["SE", "map"]
+- ["SE", "uuidString"]
+- ["SQ", "UUID"]
 - ["SQ", ""]
 - !private ["SQ", "compactMap"]
-- !private ["SQ", "init"]
+- ["SQ", "init"]
 - !private ["SQ", "internalGetCollidingRigidBodies"]
 - !private ["SQ", "map"]
+- ["SQ", "uuidString"]
 - !private ["s25ExpressibleByArrayLiteralP", "compactMap"]
 - !private ["s25ExpressibleByArrayLiteralP", "map"]
+- ["SH", "UUID"]
 - ["SH", ""]
 - !private ["SH", "compactMap"]
-- !private ["SH", "init"]
+- ["SH", "init"]
 - !private ["SH", "internalGetCollidingRigidBodies"]
 - !private ["SH", "map"]
+- ["SH", "uuidString"]
 - !private ["SM", "compactMap"]
 - !private ["SM", "map"]
 - !private ["10Foundation19MutableDataProtocolP", "compactMap"]
 - !private ["10Foundation19MutableDataProtocolP", "map"]
 - ["So8NSObjectC", "PKCollisionShape"]
 - ["So8NSObjectC", "PKRigidBody"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "getCollidingRigidBodies"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "internalGetCollidingRigidBodies"]
+- ["So8NSObjectC", "uuid"]
+- ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "internalGetCollidingRigidBodies"]
 - ["So17PKBPhysicsTriggerC", "PKCollisionShape"]
 - ["So17PKBPhysicsTriggerC", "PKRigidBody"]
+- ["So17PKBPhysicsTriggerC", "String"]
+- ["So17PKBPhysicsTriggerC", "UUID"]
 - ["So17PKBPhysicsTriggerC", ""]
 - ["So17PKBPhysicsTriggerC", "getCollidingRigidBodies"]
 - ["So17PKBPhysicsTriggerC", "init"]
 - !private ["So17PKBPhysicsTriggerC", "internalGetCollidingRigidBodies"]
+- ["So17PKBPhysicsTriggerC", "uuid"]
 - !private ["10PhysicsKit16PKCollisionShapeP", "internalShape"]
 - ["10PhysicsKit9PKTriggerC", "PKCollisionShape"]
 - ["10PhysicsKit9PKTriggerC", "PKRigidBody"]
+- ["10PhysicsKit9PKTriggerC", "String"]
+- ["10PhysicsKit9PKTriggerC", "UUID"]
 - ["10PhysicsKit9PKTriggerC", "deinit"]
 - ["10PhysicsKit9PKTriggerC", "getCollidingRigidBodies"]
 - ["10PhysicsKit9PKTriggerC", "init"]
 - !private ["10PhysicsKit9PKTriggerC", "internalGetCollidingRigidBodies"]
+- ["10PhysicsKit9PKTriggerC", "uuid"]
 - !private ["Sk", "compactMap"]
 - !private ["Sk", "map"]
 - !private ["Sm", "compactMap"]
 - !private ["Sm", "map"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "uuidString"]
 - !private ["ST", "compactMap"]
 - !private ["ST", "map"]
+- ["10Foundation4UUIDV", "init"]
+- ["10Foundation4UUIDV", "uuidString"]
 - !private ["s14_ArrayProtocolP", "compactMap"]
 - !private ["s14_ArrayProtocolP", "map"]
 - !private ["s24_DestructorSafeContainerP", "compactMap"]
@@ -96,14 +128,18 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "map"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "compactMap"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "internalGetCollidingRigidBodies"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "internalGetCollidingRigidBodies"]
 - !private ["s21_ObjectiveCBridgeableP", "compactMap"]
+- ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "map"]
+- ["s21_ObjectiveCBridgeableP", "uuidString"]
 depends-nominal:
 - !private "Sa"
 - !private "SK"
@@ -111,11 +147,11 @@ depends-nominal:
 - !private "Sl"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s17CustomReflectableP"
+- "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
-- !private "Se"
-- !private "SE"
+- "Se"
+- "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - "SH"
@@ -128,14 +164,16 @@ depends-nominal:
 - "10PhysicsKit9PKTriggerC"
 - !private "Sk"
 - !private "Sm"
+- "10Foundation20ReferenceConvertibleP"
 - !private "ST"
+- "10Foundation4UUIDV"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
-- !private "s21_ObjectiveCBridgeableP"
+- "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
@@ -153,6 +191,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/GLKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SceneKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/World/PKBPhysicsWorld.h"
 - "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/CollisionShapes/PKBCollisionShape.h"
@@ -182,4 +221,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "6144575b1aaf4c739bb12f861a702809"
+interface-hash: "ac8208ca6208679e659d16bb51ccdac5"

@@ -8,6 +8,7 @@
 
 #import "PKBPhysicsWorld.h"
 
+#import "PKBStructs.h"
 #import "PKBRigidBody.h"
 #import "PKBRigidBody+Internal.h"
 #import "PKBPhysicsTrigger.h"
@@ -117,8 +118,8 @@
             // Compute Local Positions
             btVector3 c_localPositionA = contactPoint.m_localPointA;
             btVector3 c_localPositionB = contactPoint.m_localPointB;
-            SCNVector3 localPositionA = SCNVector3Make(c_localPositionA.x(), c_localPositionA.y(), c_localPositionA.z());
-            SCNVector3 localPositionB = SCNVector3Make(c_localPositionB.x(), c_localPositionB.y(), c_localPositionB.z());
+            PKVector3 localPositionA = PKVector3Make(c_localPositionA.x(), c_localPositionA.y(), c_localPositionA.z());
+            PKVector3 localPositionB = PKVector3Make(c_localPositionB.x(), c_localPositionB.y(), c_localPositionB.z());
             
             // Extract the user pointers from these collision objects so we can derive the
             // associated PKBRigidBodys
@@ -134,7 +135,7 @@
     
 }
 
-- (void)internalCollisionDidOccur:(PKBRigidBody *)internalRigidBodyA localPositionA:(SCNVector3)pointA internalRigidBodyB:(PKBRigidBody *)internalRigidBodyB localPositionB:(SCNVector3)pointB {
+- (void)internalCollisionDidOccur:(PKBRigidBody *)internalRigidBodyA localPositionA:(struct PKVector3)pointA internalRigidBodyB:(PKBRigidBody *)internalRigidBodyB localPositionB:(struct PKVector3)pointB {
     // Subclass overrides
 }
 

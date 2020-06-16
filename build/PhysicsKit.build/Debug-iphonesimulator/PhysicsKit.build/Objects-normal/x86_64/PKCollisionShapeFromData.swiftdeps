@@ -5,6 +5,8 @@ provides-nominal:
 - "10PhysicsKit24PKCollisionShapeFromDataC"
 provides-member:
 - ["10PhysicsKit24PKCollisionShapeFromDataC", ""]
+- ["10PhysicsKit16PKCollisionShapeP", ""]
+- ["10PhysicsKit16PKCollisionShapeP", "serialize"]
 provides-dynamic-lookup:
 - "internalShape"
 depends-top-level:
@@ -15,23 +17,35 @@ depends-top-level:
 - "PKCollisionShapeFromData"
 depends-member:
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "serialize"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "serialize"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "serialize"]
 - !private ["SQ", "init"]
+- !private ["SQ", "serialize"]
 - !private ["SH", "init"]
+- !private ["SH", "serialize"]
 - !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "serialize"]
 - !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "serialize"]
 - !private ["So17PKBCollisionShapeC", "init"]
+- !private ["So17PKBCollisionShapeC", "serialize"]
+- ["10PhysicsKit16PKCollisionShapeP", "Data"]
 - !private ["10PhysicsKit16PKCollisionShapeP", "PKBCollisionShape"]
 - ["10PhysicsKit16PKCollisionShapeP", ""]
 - ["10PhysicsKit16PKCollisionShapeP", "internalShape"]
+- ["10PhysicsKit16PKCollisionShapeP", "serialize"]
 - ["10PhysicsKit24PKCollisionShapeFromDataC", "Data"]
 - ["10PhysicsKit24PKCollisionShapeFromDataC", "PKBCollisionShape"]
 - ["10PhysicsKit24PKCollisionShapeFromDataC", "deinit"]
 - ["10PhysicsKit24PKCollisionShapeFromDataC", "init"]
 - ["10PhysicsKit24PKCollisionShapeFromDataC", "internalShape"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "serialize"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "serialize"]
 depends-nominal:
 - !private "s7CVarArgP"
 - !private "s28CustomDebugStringConvertibleP"
@@ -92,4 +106,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0e49b58676f4051c9d41d1a3b0913dad"
+interface-hash: "8dac98e2542c07c62ecc8b13036a427e"
