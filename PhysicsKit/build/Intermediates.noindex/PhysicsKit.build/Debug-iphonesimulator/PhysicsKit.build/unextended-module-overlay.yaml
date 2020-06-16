@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/build/Intermediates.noindex/PhysicsKit.build/Debug-iphonesimulator/PhysicsKit.build/unextended-module.modulemap",
+    }]
+  }]
+}

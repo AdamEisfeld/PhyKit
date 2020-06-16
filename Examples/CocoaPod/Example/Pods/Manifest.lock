@@ -1,0 +1,16 @@
+PODS:
+  - PhysicsKit (0.1.0)
+
+DEPENDENCIES:
+  - PhysicsKit (from `../../../`)
+
+EXTERNAL SOURCES:
+  PhysicsKit:
+    :path: "../../../"
+
+SPEC CHECKSUMS:
+  PhysicsKit: 3566b9b2fa029d33425bd41096e19913c9a060b6
+
+PODFILE CHECKSUM: 6ad20f70115bdf5b5ac83b4a285c4fdff28efdbb
+
+COCOAPODS: 1.9.3

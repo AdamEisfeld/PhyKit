@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3D42D2D24990C4C00A2D4AC /* PKGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */; };
 		F3EE786F2498049F00F280BD /* PhysicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE786D2498049F00F280BD /* PhysicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3EE789E2498058400F280BD /* libBulletCollision_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE78922498054A00F280BD /* libBulletCollision_xcode4_x64_debug.a */; };
 		F3EE789F2498058400F280BD /* libBulletDynamics_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE787A2498054A00F280BD /* libBulletDynamics_xcode4_x64_debug.a */; };
@@ -135,6 +136,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGeometry.swift; sourceTree = "<group>"; };
 		F3EE786A2498049F00F280BD /* PhysicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EE786D2498049F00F280BD /* PhysicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsKit.h; sourceTree = "<group>"; };
 		F3EE786E2498049F00F280BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3D42D2B24990C3800A2D4AC /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
 		F3EE78602498049F00F280BD = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +237,7 @@
 		F3EE786C2498049F00F280BD /* PhysicsKit */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79112498073300F280BD /* bridge */,
+				F3EE79112498073300F280BD /* objc */,
 				F3EE79322498073300F280BD /* swift */,
 				F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */,
 				F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */,
@@ -287,7 +297,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3EE79112498073300F280BD /* bridge */ = {
+		F3EE79112498073300F280BD /* objc */ = {
 			isa = PBXGroup;
 			children = (
 				F3EE791C2498073300F280BD /* World */,
@@ -297,7 +307,7 @@
 				F3EE79202498073300F280BD /* CollisionShapes */,
 				F3EE79122498073300F280BD /* DataStructures */,
 			);
-			path = bridge;
+			path = objc;
 			sourceTree = "<group>";
 		};
 		F3EE79122498073300F280BD /* DataStructures */ = {
@@ -374,6 +384,7 @@
 				F3EE79362498073300F280BD /* World */,
 				F3EE794A2498073300F280BD /* RigidBodies */,
 				F3EE79332498073300F280BD /* Triggers */,
+				F3D42D2B24990C3800A2D4AC /* Geometry */,
 				F3EE793F2498073300F280BD /* CollisionShapes */,
 				F3EE793B2498073300F280BD /* Collisions */,
 				F3EE793D2498073300F280BD /* Extensions */,
@@ -628,6 +639,7 @@
 				F3EE79562498073300F280BD /* PKBPhysicsTrigger.mm in Sources */,
 				F3EE797C2498073300F280BD /* PKRigidBody.swift in Sources */,
 				F3EE79752498073300F280BD /* PKCollisionShapeCapsule.swift in Sources */,
+				F3D42D2D24990C4C00A2D4AC /* PKGeometry.swift in Sources */,
 				F3EE796D2498073300F280BD /* PKPhysicsWorldSimulationDelegate.swift in Sources */,
 				F3EE796F2498073300F280BD /* PKPhysicsWorld.swift in Sources */,
 				F3EE79732498073300F280BD /* PKCollisionShape.swift in Sources */,
@@ -815,6 +827,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhysicsKit/bulletLib_2_89\"/**";
 			};
@@ -840,6 +853,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = build;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhysicsKit/bulletLib_2_89\"/**";
 			};

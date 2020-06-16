@@ -1,0 +1,117 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PKRigidBody"
+provides-nominal:
+- "10PhysicsKit11PKRigidBodyC"
+provides-member:
+- ["10PhysicsKit11PKRigidBodyC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "PKBRigidBody"
+- !private "PKBRigidBodyTypeDynamic"
+- "PKCollisionShape"
+- "PKRigidBody"
+- "PKRigidBodyType"
+depends-member:
+- !private ["s7CVarArgP", "PKBRigidBodyTypeDynamic"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "PKBRigidBodyTypeDynamic"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "PKBRigidBodyTypeDynamic"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["SQ", "PKBRigidBodyTypeDynamic"]
+- ["SQ", ""]
+- !private ["SQ", "init"]
+- !private ["SH", "PKBRigidBodyTypeDynamic"]
+- ["SH", ""]
+- !private ["SH", "init"]
+- !private ["So8NSObjectC", "PKBRigidBodyTypeDynamic"]
+- ["So8NSObjectC", "PKCollisionShape"]
+- ["So8NSObjectC", "PKRigidBodyType"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectP", "PKBRigidBodyTypeDynamic"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "init"]
+- !private ["So12PKBRigidBodyC", "PKBRigidBodyTypeDynamic"]
+- ["So12PKBRigidBodyC", "PKCollisionShape"]
+- ["So12PKBRigidBodyC", "PKRigidBodyType"]
+- ["So12PKBRigidBodyC", ""]
+- ["So12PKBRigidBodyC", "init"]
+- !private ["10PhysicsKit16PKCollisionShapeP", "internalShape"]
+- !private ["10PhysicsKit11PKRigidBodyC", "PKBRigidBodyTypeDynamic"]
+- ["10PhysicsKit11PKRigidBodyC", "PKCollisionShape"]
+- ["10PhysicsKit11PKRigidBodyC", "PKRigidBodyType"]
+- ["10PhysicsKit11PKRigidBodyC", "deinit"]
+- ["10PhysicsKit11PKRigidBodyC", "init"]
+- !private ["10PhysicsKit15PKRigidBodyTypeO", "mass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKBRigidBodyTypeDynamic"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKBRigidBodyTypeDynamic"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So12PKBRigidBodyC"
+- !private "10PhysicsKit16PKCollisionShapeP"
+- "10PhysicsKit11PKRigidBodyC"
+- !private "10PhysicsKit15PKRigidBodyTypeO"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ModelIO.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/GLKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SceneKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/World/PKBPhysicsWorld.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/CollisionShapes/PKBCollisionShape.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/Geometry/PKBMesh.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/Geometry/PKBPolygon.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/Triggers/PKBPhysicsTrigger.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/DataStructures/NSValue+PKBStructs.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/DataStructures/PKBStructs.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/PhysicsKit.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/Geometry/PKBVertex.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/RigidBodies/PKBRigidBody.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/objc/Geometry/PKBGeometry.h"
+- "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/build/Intermediates.noindex/PhysicsKit.build/Debug-iphonesimulator/PhysicsKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/ModelIO.framework/Headers/ModelIO.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/GLKit.framework/Headers/GLKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "015dcbdfb36dca4994232b4abc10d16f"
