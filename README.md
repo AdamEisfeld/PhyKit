@@ -15,6 +15,12 @@ it, simply add the following line to your Podfile:
 pod 'PhysicsKit'
 ```
 
+Then, import it into your Swift source:
+
+```swift
+import PhysicsKit
+```
+
 ## Example Usage
 
 ### Create a Physics World to run your simulation
