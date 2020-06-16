@@ -46,43 +46,43 @@
 
 /* Begin PBXFileReference section */
 		1067D23E442A99FEC2FE4D180E2EA3D7 /* Pods-PhysicsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhysicsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		157E1268959376EA7B190B6C2D629114 /* PKBStructs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBStructs.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBStructs.h"; sourceTree = "<group>"; };
+		110C2F7C2E012310DFC648249882FB9F /* PKBPhysicsTrigger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPhysicsTrigger.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBPhysicsTrigger.h"; sourceTree = "<group>"; };
+		1212B393287CFF0EF035ABF55382B943 /* PKBMesh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBMesh.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBMesh.h"; sourceTree = "<group>"; };
+		13CBBE30BB5A5B36096182CA4337E4D9 /* PKBRigidBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBRigidBody.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBRigidBody.h"; sourceTree = "<group>"; };
 		1D50EEB042980039031163DF902E6707 /* Pods-PhysicsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhysicsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		1E14588ABD1B0D12732BC52490C00BF3 /* PhysicsKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhysicsKit.debug.xcconfig; sourceTree = "<group>"; };
+		24E228DF21D53E85BE219D264DEAC2A8 /* PKBCollisionShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBCollisionShape.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBCollisionShape.h"; sourceTree = "<group>"; };
+		274B01BD217D57AAB708A876ED60F2AB /* PKBGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBGeometry.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBGeometry.h"; sourceTree = "<group>"; };
 		2E94E02002736139BDFAD6C641797D6F /* Pods-PhysicsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhysicsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3598AA1A27CAC69E6FBA618DFA4D1638 /* PhysicsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhysicsKit.framework; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework"; sourceTree = "<group>"; };
-		36478D3E90F60A0582001F3AA295239D /* PhysicsKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhysicsKit.debug.xcconfig; sourceTree = "<group>"; };
-		3921EEF400924AF7BABA6D9B167D643E /* PhysicsKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhysicsKit.release.xcconfig; sourceTree = "<group>"; };
-		3FB30E6849164963E42A0AAB4606CC4F /* PhysicsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PhysicsKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		35401BFF38CC6517DB2E7BB9E59B2165 /* NSValue+PKBStructs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+PKBStructs.h"; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/NSValue+PKBStructs.h"; sourceTree = "<group>"; };
+		3BE4E267E3F11DEC5F9EDD3DC737E61B /* PKBPhysicsWorld.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPhysicsWorld.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBPhysicsWorld.h"; sourceTree = "<group>"; };
+		41059D9E448027D56EC9D415E3899BC2 /* PhysicsKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PhysicsKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		43B78806AD072C3595BDEE1C9B90FDF3 /* PhysicsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhysicsKit.framework; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework"; sourceTree = "<group>"; };
+		458276639D3B4B3C15A250B8F29C3FB6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		481095554987434646FB9E72DB3A56EB /* Pods-PhysicsKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhysicsKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4BF8CCF4726BF132D1A98572B33D8459 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4D4FA2A9E2D652A6D7BD5F8BBF5E90A9 /* Pods-PhysicsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhysicsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5062195F1EFCF5E9F20257B34C5C001B /* Pods_PhysicsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhysicsKit_Example.framework; path = "Pods-PhysicsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51EAF4D4EF582D043045B5446CA7A6CB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5EC52334BD3F46D15B21B0C4FF192A59 /* PKBCollisionShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBCollisionShape.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBCollisionShape.h"; sourceTree = "<group>"; };
+		5FA9790654358EE74EE56FBCFA3DAE93 /* PhysicsKit-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PhysicsKit-Swift.h"; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PhysicsKit-Swift.h"; sourceTree = "<group>"; };
 		6A217A915A6567CD53FA794FE569DA0C /* Pods-PhysicsKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhysicsKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		6AAA8D49BBBB4CA77A866F2FC502DCA4 /* Pods-PhysicsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhysicsKit_Example-dummy.m"; sourceTree = "<group>"; };
 		73D1D09384906FF651DDE53638727DF9 /* Pods-PhysicsKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhysicsKit_Example-Info.plist"; sourceTree = "<group>"; };
+		73D65CF75A6CE95D88EA14D60B4BF028 /* PKBStructs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBStructs.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBStructs.h"; sourceTree = "<group>"; };
 		744CE427DDDF0C05010698FCA457A6A3 /* Pods-PhysicsKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhysicsKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B607346542134BDA3571CD30C51873D /* Pods-PhysicsKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhysicsKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7FC6437B8C633974BDAF295A6107DDD0 /* Pods-PhysicsKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhysicsKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		811D8097B806E3F4075CF71A1ACA44A5 /* PhysicsKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PhysicsKit.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PhysicsKit.h"; sourceTree = "<group>"; };
-		8FFE1B92E6CC140947B14090192BD67E /* PKBPhysicsWorld.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPhysicsWorld.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBPhysicsWorld.h"; sourceTree = "<group>"; };
 		96836251551E5615117F3E7679C9EFEB /* Pods-PhysicsKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhysicsKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9CBCD3819CC089A0AEF195588D3C8FFC /* PhysicsKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PhysicsKit.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A72E24E3C955678DBC167EB9CC9D2EFB /* PKBMesh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBMesh.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBMesh.h"; sourceTree = "<group>"; };
 		B6D1FE2D456F101A52999EF44ED4A953 /* Pods_PhysicsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhysicsKit_Tests.framework; path = "Pods-PhysicsKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B94B7A5BD047DD5D9229409F8D64E308 /* PKBPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPolygon.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBPolygon.h"; sourceTree = "<group>"; };
+		BAD6ED303B182759D3AD9ACE4D7672A8 /* PhysicsKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PhysicsKit.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PhysicsKit.h"; sourceTree = "<group>"; };
 		BF4F6953C8C61A9E6C9E2029EF28E5C2 /* Pods-PhysicsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhysicsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C61853814B80A9E9F8358A0CC2D9AF41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		D05209D865B3930C996DFDB6965B1749 /* PKBRigidBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBRigidBody.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBRigidBody.h"; sourceTree = "<group>"; };
-		D2BE5C368513991B30EB27C5E4AD0980 /* PhysicsKit-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PhysicsKit-Swift.h"; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PhysicsKit-Swift.h"; sourceTree = "<group>"; };
-		DE1C33D9D5C3A15DBCC60DA9C9244B46 /* PKBPhysicsTrigger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPhysicsTrigger.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBPhysicsTrigger.h"; sourceTree = "<group>"; };
+		CE3835B79ED99AA958128AE05E59F5BB /* PKBPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBPolygon.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBPolygon.h"; sourceTree = "<group>"; };
 		E1066F773ADEB3EFA9CD58DAE85B89C8 /* Pods-PhysicsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhysicsKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		E5D5C2444B783FC63E7096F67811E0C5 /* PKBVertex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBVertex.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBVertex.h"; sourceTree = "<group>"; };
-		F27FF4C26A3309AA26144D61C9E29CF2 /* PKBGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBGeometry.h; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/PKBGeometry.h"; sourceTree = "<group>"; };
+		F3565E3CB33F57FD457D3215D6FEDB4B /* PKBVertex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKBVertex.h; path = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/PKBVertex.h"; sourceTree = "<group>"; };
 		F8C255F9AE474759628F456F441A7C3B /* Pods-PhysicsKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhysicsKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F99858EDE96AC33CD954D29BC507E196 /* Pods-PhysicsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhysicsKit_Example.modulemap"; sourceTree = "<group>"; };
-		FB6A0A6511282EE0F9A70D40AC6928E2 /* NSValue+PKBStructs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+PKBStructs.h"; path = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/NSValue+PKBStructs.h"; sourceTree = "<group>"; };
 		FF6D3C7E11F0847C22969197010761CB /* Pods-PhysicsKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhysicsKit_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,16 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21177AC1BCD7A7BFDE9510E9991629FA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				36478D3E90F60A0582001F3AA295239D /* PhysicsKit.debug.xcconfig */,
-				3921EEF400924AF7BABA6D9B167D643E /* PhysicsKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Examples/CocoaPod/Example/Pods/Target Support Files/PhysicsKit";
-			sourceTree = "<group>";
-		};
 		222279CD0C7BE50B86B299E8CD05CE44 /* Pods-PhysicsKit_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,12 +123,27 @@
 			path = "Target Support Files/Pods-PhysicsKit_Example";
 			sourceTree = "<group>";
 		};
-		22260000E697D5B8EF23479F2290B7E3 /* Frameworks */ = {
+		25EF804F3DF34D1A13BB70F725A797E4 /* PhysicsKit */ = {
 			isa = PBXGroup;
 			children = (
-				3598AA1A27CAC69E6FBA618DFA4D1638 /* PhysicsKit.framework */,
+				35401BFF38CC6517DB2E7BB9E59B2165 /* NSValue+PKBStructs.h */,
+				BAD6ED303B182759D3AD9ACE4D7672A8 /* PhysicsKit.h */,
+				5FA9790654358EE74EE56FBCFA3DAE93 /* PhysicsKit-Swift.h */,
+				24E228DF21D53E85BE219D264DEAC2A8 /* PKBCollisionShape.h */,
+				274B01BD217D57AAB708A876ED60F2AB /* PKBGeometry.h */,
+				1212B393287CFF0EF035ABF55382B943 /* PKBMesh.h */,
+				110C2F7C2E012310DFC648249882FB9F /* PKBPhysicsTrigger.h */,
+				3BE4E267E3F11DEC5F9EDD3DC737E61B /* PKBPhysicsWorld.h */,
+				CE3835B79ED99AA958128AE05E59F5BB /* PKBPolygon.h */,
+				13CBBE30BB5A5B36096182CA4337E4D9 /* PKBRigidBody.h */,
+				73D65CF75A6CE95D88EA14D60B4BF028 /* PKBStructs.h */,
+				F3565E3CB33F57FD457D3215D6FEDB4B /* PKBVertex.h */,
+				E2CCBE1D0ABA08D19158EB9AA10FE2F1 /* Frameworks */,
+				E95C3E7C3A1302A38A8440112DB97241 /* Pod */,
+				F05BF1945D5D6DB20CCD30C06A5918C7 /* Support Files */,
 			);
-			name = Frameworks;
+			name = PhysicsKit;
+			path = ../../../..;
 			sourceTree = "<group>";
 		};
 		59EC11B0566D1B3041CDC3FF5C7B4328 /* Pods-PhysicsKit_Tests */ = {
@@ -178,42 +183,9 @@
 		7017E7E0F26626DC1F26DE631DE197A4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				74C5C49B6A269300B92B9B387F7CA643 /* PhysicsKit */,
+				25EF804F3DF34D1A13BB70F725A797E4 /* PhysicsKit */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		74C5C49B6A269300B92B9B387F7CA643 /* PhysicsKit */ = {
-			isa = PBXGroup;
-			children = (
-				FB6A0A6511282EE0F9A70D40AC6928E2 /* NSValue+PKBStructs.h */,
-				811D8097B806E3F4075CF71A1ACA44A5 /* PhysicsKit.h */,
-				D2BE5C368513991B30EB27C5E4AD0980 /* PhysicsKit-Swift.h */,
-				5EC52334BD3F46D15B21B0C4FF192A59 /* PKBCollisionShape.h */,
-				F27FF4C26A3309AA26144D61C9E29CF2 /* PKBGeometry.h */,
-				A72E24E3C955678DBC167EB9CC9D2EFB /* PKBMesh.h */,
-				DE1C33D9D5C3A15DBCC60DA9C9244B46 /* PKBPhysicsTrigger.h */,
-				8FFE1B92E6CC140947B14090192BD67E /* PKBPhysicsWorld.h */,
-				B94B7A5BD047DD5D9229409F8D64E308 /* PKBPolygon.h */,
-				D05209D865B3930C996DFDB6965B1749 /* PKBRigidBody.h */,
-				157E1268959376EA7B190B6C2D629114 /* PKBStructs.h */,
-				E5D5C2444B783FC63E7096F67811E0C5 /* PKBVertex.h */,
-				22260000E697D5B8EF23479F2290B7E3 /* Frameworks */,
-				8BC9E4C9C3395895E3D65AE4EC84AE42 /* Pod */,
-				21177AC1BCD7A7BFDE9510E9991629FA /* Support Files */,
-			);
-			name = PhysicsKit;
-			path = ../../../..;
-			sourceTree = "<group>";
-		};
-		8BC9E4C9C3395895E3D65AE4EC84AE42 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				51EAF4D4EF582D043045B5446CA7A6CB /* LICENSE */,
-				3FB30E6849164963E42A0AAB4606CC4F /* PhysicsKit.podspec */,
-				C61853814B80A9E9F8358A0CC2D9AF41 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -241,6 +213,34 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2CCBE1D0ABA08D19158EB9AA10FE2F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43B78806AD072C3595BDEE1C9B90FDF3 /* PhysicsKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E95C3E7C3A1302A38A8440112DB97241 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4BF8CCF4726BF132D1A98572B33D8459 /* LICENSE */,
+				41059D9E448027D56EC9D415E3899BC2 /* PhysicsKit.podspec */,
+				458276639D3B4B3C15A250B8F29C3FB6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F05BF1945D5D6DB20CCD30C06A5918C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E14588ABD1B0D12732BC52490C00BF3 /* PhysicsKit.debug.xcconfig */,
+				9CBCD3819CC089A0AEF195588D3C8FFC /* PhysicsKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Examples/CocoaPod/Example/Pods/Target Support Files/PhysicsKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,7 +553,7 @@
 		};
 		810A02A892085A932A1A689721BAADDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36478D3E90F60A0582001F3AA295239D /* PhysicsKit.debug.xcconfig */;
+			baseConfigurationReference = 1E14588ABD1B0D12732BC52490C00BF3 /* PhysicsKit.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -568,7 +568,7 @@
 		};
 		88EE98C74B2A0BEF9C5C6EB1F3A55BE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3921EEF400924AF7BABA6D9B167D643E /* PhysicsKit.release.xcconfig */;
+			baseConfigurationReference = 9CBCD3819CC089A0AEF195588D3C8FFC /* PhysicsKit.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

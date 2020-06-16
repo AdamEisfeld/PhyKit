@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "11.0"
   },
-  "public_header_files": "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/*.h",
-  "source_files": "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/*.h",
-  "vendored_frameworks": "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework"
+  "public_header_files": "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/*.h",
+  "source_files": "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/*.h",
+  "vendored_frameworks": "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework"
 }

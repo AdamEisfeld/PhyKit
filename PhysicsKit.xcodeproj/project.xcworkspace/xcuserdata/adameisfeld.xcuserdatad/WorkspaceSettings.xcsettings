@@ -11,7 +11,7 @@
 	<key>CustomBuildProductsPath</key>
 	<string>PhysicsKit/build/Products</string>
 	<key>DerivedDataCustomLocation</key>
-	<string>DerivedData</string>
+	<string>PhysicsKit/build/DerivedData</string>
 	<key>DerivedDataLocationStyle</key>
 	<string>WorkspaceRelativePath</string>
 	<key>IssueFilterStyle</key>

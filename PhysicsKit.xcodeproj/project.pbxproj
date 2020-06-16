@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F3409E4A24992C3400F1099C /* PhysicsKit-Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F3409E4B24992C3400F1099C /* Build configuration list for PBXAggregateTarget "PhysicsKit-Aggregate" */;
+			buildPhases = (
+				F3409E4E24992D0900F1099C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "PhysicsKit-Aggregate";
+			productName = "PhysicsKit-Aggregate";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		F3D42D2D24990C4C00A2D4AC /* PKGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */; };
 		F3EE786F2498049F00F280BD /* PhysicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE786D2498049F00F280BD /* PhysicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -500,6 +514,7 @@
 				F3EE78662498049F00F280BD /* Sources */,
 				F3EE78672498049F00F280BD /* Frameworks */,
 				F3EE78682498049F00F280BD /* Resources */,
+				F3409E4924992B9600F1099C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -524,6 +539,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = adameisfeld;
 				TargetAttributes = {
+					F3409E4A24992C3400F1099C = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					F3EE78692498049F00F280BD = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -565,6 +583,7 @@
 			projectRoot = "";
 			targets = (
 				F3EE78692498049F00F280BD /* PhysicsKit */,
+				F3409E4A24992C3400F1099C /* PhysicsKit-Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -616,6 +635,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3409E4924992B9600F1099C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		F3409E4E24992D0900F1099C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 1. Build Device and Simulator versions. This also include the full bitcode generation of framework\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" -project \"${PROJECT_NAME}.xcodeproj\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" -project \"${PROJECT_NAME}.xcodeproj\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n# Step 3. Copy Swift modules (from iphonesimulator build) to the copied framework directory\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3EE78662498049F00F280BD /* Sources */ = {
@@ -687,6 +744,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F3409E4C24992C3400F1099C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3409E4D24992C3400F1099C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F3EE78702498049F00F280BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -823,6 +896,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = adameisfeld.PhysicsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -849,6 +923,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = adameisfeld.PhysicsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -862,6 +937,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F3409E4B24992C3400F1099C /* Build configuration list for PBXAggregateTarget "PhysicsKit-Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3409E4C24992C3400F1099C /* Debug */,
+				F3409E4D24992C3400F1099C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3EE78642498049F00F280BD /* Build configuration list for PBXProject "PhysicsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

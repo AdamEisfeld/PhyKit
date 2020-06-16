@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QGQ8Y6XSTS;
 						LastSwiftMigration = 1150;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -272,7 +273,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PhysicsKit_Example/Pods-PhysicsKit_Example-frameworks.sh",
-				"${PODS_ROOT}/../../../../PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework",
+				"${PODS_ROOT}/../../../../PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -489,6 +490,7 @@
 			baseConfigurationReference = C79C85C91795667D695F5C39 /* Pods-PhysicsKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QGQ8Y6XSTS;
 				INFOPLIST_FILE = PhysicsKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -504,6 +506,7 @@
 			baseConfigurationReference = FEDE971C6C011C4D07FAB500 /* Pods-PhysicsKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QGQ8Y6XSTS;
 				INFOPLIST_FILE = PhysicsKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -518,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E1585967D84EF82CB7B17D9 /* Pods-PhysicsKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -540,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCFA844D159DE1B0B36DEEC7 /* Pods-PhysicsKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

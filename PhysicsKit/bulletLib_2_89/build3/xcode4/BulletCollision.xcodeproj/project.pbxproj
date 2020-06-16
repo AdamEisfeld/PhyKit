@@ -835,9 +835,13 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-fembed-bitcode",
+				);
 				PRODUCT_NAME = BulletCollision_xcode4_x64_release;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
@@ -895,9 +899,13 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = (
+					"-ffast-math",
+					"-fembed-bitcode",
+				);
 				PRODUCT_NAME = BulletCollision_xcode4_x64_debug;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};

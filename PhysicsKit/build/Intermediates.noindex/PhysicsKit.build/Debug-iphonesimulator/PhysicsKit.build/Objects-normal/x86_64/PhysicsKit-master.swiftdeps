@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "da7f6b3416013fa367bfaff4cbd9a9b9"
-build_time: [1592319415, 688574000]
+options: "5aaf8b31376f10573c0f889a1ce828f9"
+build_time: [1592330461, 766382000]
 inputs:
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/World/PKPhysicsWorldCollisionDelegate.swift": [1592250787, 213072578]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/RigidBodies/PKRigidBodyType.swift": [1592250787, 178532469]
@@ -19,7 +19,7 @@ inputs:
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/World/PKPhysicsWorldSimulationDelegate.swift": [1592250695, 271860672]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/World/PKPhysicsWorld.swift": [1592250787, 243289045]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/CollisionShapes/PKCollisionShape.swift": [1592250787, 157122541]
-  "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/Scene/PKPhysicsScene.swift": [1592250787, 253356867]
+  "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/Scene/PKPhysicsScene.swift": [1592329254, 401710927]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/CollisionShapes/PKCollisionShapeGeometry.swift": [1592317365, 666296710]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/CollisionShapes/PKCollisionShapeCompound.swift": [1592250787, 186539792]
   "/Users/adameisfeld/Desktop/Projects/PhysicsKit/PhysicsKit/swift/World/PKPhysicsWorldTriggerDelegate.swift": [1592250787, 222633118]

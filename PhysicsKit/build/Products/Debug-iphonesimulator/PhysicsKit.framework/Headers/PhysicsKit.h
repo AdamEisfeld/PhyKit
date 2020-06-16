@@ -41,7 +41,9 @@ FOUNDATION_EXPORT const unsigned char PhysicsKitVersionString[];
  3. Configure PhysicsKit target's user header search paths to "$(SRCROOT)/PhysicsKit/bulletLib_2_89" , recursive set to true
  3b (optional) Let Xcode update connected projects to recommended settings
  4. Set "Inhibit All Warnings" to YES for each linked Bullet xcode project in target settings
- 5. Build project, should be successful
+ 5. Set Valid Archtectures to $(ARCHS_STANDARD)
+ 5b. Add -fembed-bitcode to Other C Flags (might not be necessary)
+ 6. Build project, should be successful
  
  
  Exposing PBK / objc files to Swift:

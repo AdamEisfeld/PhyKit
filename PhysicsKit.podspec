@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.public_header_files = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/*.h"
-  s.source_files = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework/Headers/*.h"
-  s.vendored_frameworks = "PhysicsKit/build/Products/Debug-iphonesimulator/PhysicsKit.framework"
+  s.public_header_files = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/*.h"
+  s.source_files = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework/Headers/*.h"
+  s.vendored_frameworks = "PhysicsKit/build/Products/Debug-universal/PhysicsKit.framework"
 
 end

@@ -1,0 +1,12 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule'
+dependencies:
+  - mtime:           1588474443000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule'
+    size:            9758988
+  - mtime:           1587521622000000000
+    path:            'usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface'
+    size:            1474043
+    sdk_relative:    true
+version:         1
+...

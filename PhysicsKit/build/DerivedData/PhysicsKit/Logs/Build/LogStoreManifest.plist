@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit</string>
+			<key>timeStartedRecording</key>
+			<real>614023260.83642197</real>
+			<key>timeStoppedRecording</key>
+			<real>614023269.22789502</real>
+			<key>title</key>
+			<string>Build PhysicsKit</string>
+			<key>uniqueIdentifier</key>
+			<string>4FA2F5F1-3D0D-4055-8B7A-765FEE3EBD9C</string>
+		</dict>
+		<key>957AF0E4-A594-43FA-8DB6-1069B1FFE15D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>957AF0E4-A594-43FA-8DB6-1069B1FFE15D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>PhysicsKit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>PhysicsKit-Aggregate</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>timeStartedRecording</key>
+			<real>614023292.89047801</real>
+			<key>timeStoppedRecording</key>
+			<real>614023304.56281996</real>
+			<key>title</key>
+			<string>Build PhysicsKit-Aggregate</string>
+			<key>uniqueIdentifier</key>
+			<string>957AF0E4-A594-43FA-8DB6-1069B1FFE15D</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

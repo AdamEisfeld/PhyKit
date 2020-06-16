@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../../../PhysicsKit/build/Products/Debug-iphonesimulator"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../../../PhysicsKit/build/Products/Debug-universal"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_LDFLAGS = $(inherited) -framework "PhysicsKit"

@@ -1,0 +1,10 @@
+framework module PhysicsKit {
+  umbrella header "PhysicsKit.h"
+
+  export *
+  module * { export * }
+}
+
+module PhysicsKit.__Swift {
+    exclude header "PhysicsKit-Swift.h"
+}
