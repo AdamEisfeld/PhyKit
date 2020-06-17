@@ -1,4 +1,4 @@
-# PhysicsKit
+![Physics Kit](https://user-images.githubusercontent.com/2840242/84842193-7fe78280-b012-11ea-98f7-a71c29a68174.png)
 
 An open source wrapper for the Bullet physics library, with additional support for mapping physics bodies to SceneKit nodes in favor of SceneKit's stock physics engine.
 
