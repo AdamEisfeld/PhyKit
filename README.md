@@ -201,6 +201,33 @@ let recreatedCollisionShape = PKCollisionShapeFromData(data)
 
 ```
 
+## Updating Bullet
+
+PhysicsKit currently targets Bullet v2.89
+
+The process of updating or adding additional Bullet libraries to PhysicsKit is:
+
+1. Ensure cmake is installed
+> * Install cmake via https://cmake.org/download/
+> * Install cmake command-line tools via PATH="/Applications/CMake.app/Contents/bin":"$PATH"
+
+2. Install desired Bullet library
+> * Install Bullet from https://github.com/bulletphysics/bullet3
+> * Run xcode.command from bullet folder to generate Xcode projects
+
+3. Replace PhysicksKit/bulletLib_2_89 with the new version of Bullet you wish to use
+4. Drag desired Xcode projects from bullet/build3/xcode4 folder into PhysicsKit Xcode project, in PhysicsKit subfolder
+5. Update PhysicsKit Target Build Settings:
+> * Add new Bullet library to target's Dependencies build phase
+> * Add new Bullet library to target's Link Binary With Libraries build phase
+> * Ensure PhysicsKit target's "User Header Search Paths" build setting is pointing to "$(SRCROOT)/PhysicsKit/bulletLib_2_89" (replacing 2_89 with the version of Bullet you're using)
+
+6. Optionally, let Xcode update the newly connected Bullet Xcode projects to the recommended settings
+7. Update each Bullet Xcode project's target's build settings:
+> Set "Inhibit All Warnings" to YES
+> Set "Valid Architectures" to "$(ARCHS_STANDARD)"
+
+8. Build the PhysicsKit Xcode project. There should be no errors at this point.
 
 ## Author
 
@@ -208,4 +235,4 @@ AdamEisfeld, adam.eisfeld@gmail.com
 
 ## License
 
-PhysicsKit is available under the MIT license. See the LICENSE file for more info.
+PhysicsKit is available under the zlib license. See the LICENSE file for more info.
