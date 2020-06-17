@@ -236,6 +236,13 @@ The process of updating or adding additional Bullet libraries to PhysicsKit is:
 3. Add any c++ dependencies to a separate "MyClassName+Internal.h" file which extends your class
 4. Add imports to PhysicsKit.h file. "MyClassName+Internal.h" files should not be imported here / exposed to Swift
 
+## Updating Built Framework
+
+1. Open PhysicsKit.xcodeproj
+2. Build PhysicsKit target
+3. Build PhysicsKit-Aggregate target to generate updated universal framework
+4. Increment podspec version
+
 ## Author
 
 AdamEisfeld, adam.eisfeld@gmail.com
