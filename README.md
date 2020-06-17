@@ -224,10 +224,17 @@ The process of updating or adding additional Bullet libraries to PhysicsKit is:
 
 6. Optionally, let Xcode update the newly connected Bullet Xcode projects to the recommended settings
 7. Update each Bullet Xcode project's target's build settings:
-> Set "Inhibit All Warnings" to YES
-> Set "Valid Architectures" to "$(ARCHS_STANDARD)"
+> * Set "Inhibit All Warnings" to YES
+> * Set "Valid Architectures" to "$(ARCHS_STANDARD)"
 
 8. Build the PhysicsKit Xcode project. There should be no errors at this point.
+
+## Adding Objc Files
+
+1. Add any desired Objc files under the "objc" folder
+2. Ensure implementation files support objc++ by replacing ".m" extension with ".mm"
+3. Add any c++ dependencies to a separate "MyClassName+Internal.h" file which extends your class
+4. Add imports to PhysicsKit.h file. "MyClassName+Internal.h" files should not be imported here / exposed to Swift
 
 ## Author
 
