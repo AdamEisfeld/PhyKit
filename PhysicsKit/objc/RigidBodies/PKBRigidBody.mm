@@ -167,6 +167,24 @@ class PKBMotionState : public btMotionState {
     }
 }
 
+- (PKVector3)eulerOrientation {
+    PKVector3 output;
+    if (_c_body) {
+        btTransform c_transform = _c_body->getWorldTransform();
+        btQuaternion c_orientation = c_transform.getRotation();
+        c_orientation.getEulerZYX(output.z, output.y, output.x);
+    }
+    return output;
+}
+
+- (void)setEulerOrientation:(struct PKVector3)eulerOrientation {
+    btTransform c_transform = _c_body->getWorldTransform();
+    btQuaternion c_orientation = c_transform.getRotation();
+    c_orientation.setEulerZYX(eulerOrientation.z, eulerOrientation.y, eulerOrientation.x);
+    c_transform.setRotation(c_orientation);
+    _c_body->setWorldTransform(c_transform);
+}
+
 - (PKMatrix4)transform {
     if (_c_body) {
         btTransform c_transform = _c_body->getWorldTransform();

@@ -27,6 +27,30 @@ public extension PKVector3 {
         return PKVector3(x, y, z)
     }
     
+    static func radians(_ x: Float, _ y: Float, _ z: Float) -> PKVector3 {
+        return PKVector3(x, y, z)
+    }
+    
+    static func degrees(_ x: Float, _ y: Float, _ z: Float) -> PKVector3 {
+        return PKVector3(x, y, z)
+    }
+    
+    static func radiansFromDegrees(_ x: Float, _ y: Float, _ z: Float) -> PKVector3 {
+        return .vector(x * .pi / 180, y * .pi / 180, z * .pi / 180)
+    }
+    
+    static func degreesFromRadians(_ x: Float, _ y: Float, _ z: Float) -> PKVector3 {
+        return .vector(x * 180 / .pi, y * 180 / .pi, z * 180 / .pi)
+    }
+    
+    func toRadians() -> PKVector3 {
+        return .vector(x * .pi / 180, y * .pi / 180, z * .pi / 180)
+    }
+    
+    func toDegrees() -> PKVector3 {
+        return .vector(x * 180 / .pi, y * 180 / .pi, z * 180 / .pi)
+    }
+    
 }
 
 public extension SCNVector3 {

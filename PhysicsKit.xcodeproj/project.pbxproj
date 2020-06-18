@@ -251,8 +251,8 @@
 		F3EE786C2498049F00F280BD /* PhysicsKit */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79112498073300F280BD /* objc */,
 				F3EE79322498073300F280BD /* swift */,
+				F3EE79112498073300F280BD /* objc */,
 				F3EE788D2498054A00F280BD /* BulletCollision.xcodeproj */,
 				F3EE78752498054900F280BD /* BulletDynamics.xcodeproj */,
 				F3EE78812498054A00F280BD /* BulletFileLoader.xcodeproj */,
@@ -385,9 +385,9 @@
 		F3EE792E2498073300F280BD /* RigidBodies */ = {
 			isa = PBXGroup;
 			children = (
+				F3EE79312498073300F280BD /* PKBRigidBody.h */,
 				F3EE792F2498073300F280BD /* PKBRigidBody+Internal.h */,
 				F3EE79302498073300F280BD /* PKBRigidBody.mm */,
-				F3EE79312498073300F280BD /* PKBRigidBody.h */,
 			);
 			path = RigidBodies;
 			sourceTree = "<group>";
