@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The orientation, expressed as a quaternion, of the rigid body in the simulation
 @property (nonatomic, assign) struct PKQuaternion orientation;
 
+/// The orientation, expressed in euler radian angles, of the rigid body in the simulation
+@property (nonatomic, assign) struct PKVector3 eulerOrientation;
+
 /// The transform of the rigid body in the simulation
 @property (nonatomic, assign) struct PKMatrix4 transform;
 

@@ -1,32 +1,17 @@
-#
-# Be sure to run `pod lib lint PhysicsKit.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'PhysicsKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PhysicsKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '1.0.0'
+  s.summary          = 'Swift/Objc wrapper for Bullet Physics Engine with SceneKit support.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+PhysicsKit wraps the popular Bullet physics library for Swift/Objc, providing additional functionality to attach
+the physics simulation's output to a SceneKit scene's nodes.
                        DESC
 
   s.homepage         = 'https://github.com/AdamEisfeld/PhysicsKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'zlib', :file => 'LICENSE' }
   s.author           = { 'AdamEisfeld' => 'adam.eisfeld@gmail.com' }
   s.source           = { :git => 'https://github.com/AdamEisfeld/PhysicsKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
 
