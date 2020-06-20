@@ -75,6 +75,15 @@
     return self;
 }
 
+- (instancetype)initCylinderWithRadius:(float)radius height:(float)height transform:(struct PKMatrix4)transform {
+    self = [super init];
+    if (self) {
+        _c_shape = new btCylinderShape(btVector3(radius, height/2, radius));
+        _transform = transform;
+    }
+    return self;
+}
+
 - (instancetype)initStaticPlaneWithDirection:(struct PKVector3)direction transform:(struct PKMatrix4)transform {
     self = [super init];
     if (self) {

@@ -25,6 +25,7 @@ struct PKMatrix4;
 - (instancetype)initSphereWithRadius: (float)radius transform: (struct PKMatrix4)transform;
 - (instancetype)initBoxWithWidth: (float)width height: (float)height length: (float)length transform: (struct PKMatrix4)transform;
 - (instancetype)initCapsuleWithRadius: (float)radius height: (float)height transform: (struct PKMatrix4)transform;
+- (instancetype)initCylinderWithRadius:(float)radius height:(float)height transform:(struct PKMatrix4)transform;
 - (instancetype)initStaticPlaneWithDirection:(struct PKVector3)direction transform:(struct PKMatrix4)transform;
 - (instancetype)initWithCollisionShape: (PKBCollisionShape *)collisionShape transform: (struct PKMatrix4)transform;
 - (instancetype)initWithCollisionShapes: (NSArray <PKBCollisionShape *>*)collisionShapes transform: (struct PKMatrix4)transform;

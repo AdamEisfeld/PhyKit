@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		F35859EC249E7F4E00E0994F /* PKCollisionShapeCylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35859EB249E7F4E00E0994F /* PKCollisionShapeCylinder.swift */; };
 		F3D42D2D24990C4C00A2D4AC /* PKGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */; };
 		F3EE786F2498049F00F280BD /* PhysicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EE786D2498049F00F280BD /* PhysicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3EE789E2498058400F280BD /* libBulletCollision_xcode4_x64_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EE78922498054A00F280BD /* libBulletCollision_xcode4_x64_debug.a */; };
@@ -150,6 +151,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F35859EB249E7F4E00E0994F /* PKCollisionShapeCylinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCollisionShapeCylinder.swift; sourceTree = "<group>"; };
 		F3D42D2C24990C4C00A2D4AC /* PKGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGeometry.swift; sourceTree = "<group>"; };
 		F3EE786A2498049F00F280BD /* PhysicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EE786D2498049F00F280BD /* PhysicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsKit.h; sourceTree = "<group>"; };
@@ -359,9 +361,9 @@
 		F3EE79202498073300F280BD /* CollisionShapes */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE79212498073300F280BD /* PKBCollisionShape.mm */,
-				F3EE79222498073300F280BD /* PKBCollisionShape+Internal.h */,
 				F3EE79232498073300F280BD /* PKBCollisionShape.h */,
+				F3EE79222498073300F280BD /* PKBCollisionShape+Internal.h */,
+				F3EE79212498073300F280BD /* PKBCollisionShape.mm */,
 			);
 			path = CollisionShapes;
 			sourceTree = "<group>";
@@ -450,6 +452,7 @@
 				F3EE79452498073300F280BD /* PKCollisionShapeSphere.swift */,
 				F3EE79402498073300F280BD /* PKCollisionShapeBox.swift */,
 				F3EE79432498073300F280BD /* PKCollisionShapeCapsule.swift */,
+				F35859EB249E7F4E00E0994F /* PKCollisionShapeCylinder.swift */,
 				F3EE79472498073300F280BD /* PKCollisionShapeStaticPlane.swift */,
 				F3EE79422498073300F280BD /* PKCollisionShapeCompound.swift */,
 				F3EE79442498073300F280BD /* PKCollisionShapeGeometry.swift */,
@@ -690,6 +693,7 @@
 				F3EE79702498073300F280BD /* PKCollisionPair.swift in Sources */,
 				F3EE796A2498073300F280BD /* PKTriggerPair.swift in Sources */,
 				F3EE79712498073300F280BD /* PKStructConversions.swift in Sources */,
+				F35859EC249E7F4E00E0994F /* PKCollisionShapeCylinder.swift in Sources */,
 				F3EE795F2498073300F280BD /* PKBVertex.mm in Sources */,
 				F3EE79772498073300F280BD /* PKCollisionShapeSphere.swift in Sources */,
 				F3EE79782498073300F280BD /* PKCollisionShapeFromData.swift in Sources */,

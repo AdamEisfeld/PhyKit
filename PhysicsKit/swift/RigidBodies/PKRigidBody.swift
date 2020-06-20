@@ -20,7 +20,7 @@ public class PKRigidBody: PKBRigidBody {
     ///   - type: The type of rigid body to create
     ///   - shape: The shape to use for collision detections for this rigid body
     public init(type: PKRigidBodyType, shape: PKCollisionShape) {
-        super.init(collisionShape: shape.internalShape, rigidBodyType: PKBRigidBodyTypeDynamic, mass: type.mass)
+        super.init(collisionShape: shape.internalShape, rigidBodyType: type.internalType, mass: type.mass)
     }
     
 }

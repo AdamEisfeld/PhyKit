@@ -36,4 +36,15 @@ extension PKRigidBodyType {
         return .dynamic(mass: 1.0)
     }
     
+    var internalType: PKBRigidBodyType {
+        switch self {
+        case .static:
+            return PKBRigidBodyTypeStatic
+        case .kinematic:
+            return PKBRigidBodyTypeKinematic
+        default:
+            return PKBRigidBodyTypeDynamic
+        }
+    }
+    
 }
