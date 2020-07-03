@@ -83,11 +83,12 @@ class PKBMotionState : public btMotionState {
 
         btVector3 _c_bodyInertia;
         if (rigidBodyType == PKBRigidBodyTypeDynamic) {
-            collisionShape.c_shape->calculateLocalInertia(mass, _c_bodyInertia);
+            _c_shape->calculateLocalInertia(mass, _c_bodyInertia);
         }
         
-        btRigidBody::btRigidBodyConstructionInfo c_constructionInfo = btRigidBody::btRigidBodyConstructionInfo(mass, nil, collisionShape.c_shape, _c_bodyInertia);
+        btRigidBody::btRigidBodyConstructionInfo c_constructionInfo = btRigidBody::btRigidBodyConstructionInfo(mass, nil, _c_shape, _c_bodyInertia);
         c_constructionInfo.m_mass = mass;
+        
         _c_body = new btRigidBody(c_constructionInfo);
         _c_body->setUserPointer((__bridge void*)self);
         

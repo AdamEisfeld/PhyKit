@@ -127,7 +127,7 @@
     return self;
 }
 
-- (instancetype)initConvexHullWithGeometry: (PKBGeometry *)geometry {
+- (instancetype)initConvexHullWithGeometry: (PKBGeometry *)geometry transform: (struct PKMatrix4)transform {
     self = [super init];
     if (self) {
 
@@ -136,14 +136,13 @@
          for (PKBMesh *mesh in geometry.meshs) {
              
              btConvexHullShape *c_convexHull = new btConvexHullShape();
-             
+            c_convexHull->setMargin(0.04);
              for (PKBPolygon *polygon in mesh.polygons) {
 
                  for (PKBVertex *vertex in polygon.vertices) {
 
                      btVector3 c_vertexPosition = btVector3(vertex.position.x, vertex.position.y, vertex.position.z);
                      c_convexHull->addPoint(c_vertexPosition);
-
                  }
 
              }
@@ -152,15 +151,16 @@
              c_localTransform.setIdentity();
              c_compoundShape->addChildShape(c_localTransform, c_convexHull);
              
+             
          }
          
-         _c_shape = c_compoundShape;
-        
+        _c_shape = c_compoundShape;
+        _transform = transform;
     }
     return self;
 }
 
-- (instancetype)initTriangleMeshWithGeometry: (PKBGeometry *)geometry {
+- (instancetype)initTriangleMeshWithGeometry: (PKBGeometry *)geometry transform: (struct PKMatrix4)transform {
     self = [super init];
     if (self) {
         
@@ -181,7 +181,7 @@
         }
 
         _c_shape = new btBvhTriangleMeshShape(c_mesh, true);
-
+        _transform = transform;
     }
     return self;
 }
@@ -198,6 +198,14 @@
     NSData *data = [NSData dataWithBytes:bufferBytes length:bufferSize];
     return data;
     
+}
+
+- (void)setMargin: (float)margin {
+    _c_shape->setMargin(margin);
+}
+
+- (float)margin {
+    return _c_shape->getMargin();
 }
 
 @end

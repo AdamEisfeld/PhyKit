@@ -1,11 +1,11 @@
 {
   "name": "PhysicsKit",
-  "version": "0.1.0",
-  "summary": "A short description of PhysicsKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0.0",
+  "summary": "Swift/Objc wrapper for Bullet Physics Engine with SceneKit support.",
+  "description": "PhysicsKit wraps the popular Bullet physics library for Swift/Objc, providing additional functionality to attach\nthe physics simulation's output to a SceneKit scene's nodes.",
   "homepage": "https://github.com/AdamEisfeld/PhysicsKit",
   "license": {
-    "type": "MIT",
+    "type": "zlib",
     "file": "LICENSE"
   },
   "authors": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/AdamEisfeld/PhysicsKit.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "11.0"

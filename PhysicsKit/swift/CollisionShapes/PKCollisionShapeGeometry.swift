@@ -18,16 +18,18 @@ public class PKCollisionShapeGeometry: PKCollisionShape {
     
     public let internalShape: PKBCollisionShape
     
-    public init(geometry: PKGeometry, type: PKCollisionShapeGeometryType) {
+    public init(geometry: PKGeometry, type: PKCollisionShapeGeometryType, transform: PKMatrix4 = PKMatrix4MakeIdentity(), margin: Float = 0.04) {
         
         let internalGeometry = geometry.internalGeometry
         
         switch type {
         case .convex:
-            internalShape = PKBCollisionShape(convexHullWith: internalGeometry)
+            internalShape = PKBCollisionShape(convexHullWith: internalGeometry, transform: transform)
         case .concave:
-            internalShape = PKBCollisionShape(triangleMeshWith: internalGeometry)
+            internalShape = PKBCollisionShape(triangleMeshWith: internalGeometry, transform: transform)
         }
+        internalShape.margin = margin
+        
     }
     
 }

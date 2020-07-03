@@ -13,9 +13,10 @@ public class PKCollisionShapeCompound: PKCollisionShape {
     
     public let internalShape: PKBCollisionShape
     
-    public init(collisionShapes: [PKCollisionShape], transform: PKMatrix4 = PKMatrix4MakeIdentity()) {
+    public init(collisionShapes: [PKCollisionShape], transform: PKMatrix4 = PKMatrix4MakeIdentity(), margin: Float = 0.04) {
         let shapes = collisionShapes.map({$0.internalShape})
         internalShape = PKBCollisionShape(collisionShapes: shapes, transform: transform)
+        internalShape.margin = margin
     }
     
 }

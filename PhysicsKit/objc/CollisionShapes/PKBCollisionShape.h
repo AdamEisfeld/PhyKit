@@ -19,6 +19,7 @@ struct PKMatrix4;
 @interface PKBCollisionShape : NSObject
 
 @property (nonatomic, assign) struct PKMatrix4 transform;
+@property (nonatomic, assign) float margin;
 
 - (instancetype)init;
 - (instancetype)initWithSerializedData: (NSData *)serializedData;
@@ -29,8 +30,8 @@ struct PKMatrix4;
 - (instancetype)initStaticPlaneWithDirection:(struct PKVector3)direction transform:(struct PKMatrix4)transform;
 - (instancetype)initWithCollisionShape: (PKBCollisionShape *)collisionShape transform: (struct PKMatrix4)transform;
 - (instancetype)initWithCollisionShapes: (NSArray <PKBCollisionShape *>*)collisionShapes transform: (struct PKMatrix4)transform;
-- (instancetype)initConvexHullWithGeometry: (PKBGeometry *)geometry;
-- (instancetype)initTriangleMeshWithGeometry: (PKBGeometry *)geometry;
+- (instancetype)initConvexHullWithGeometry: (PKBGeometry *)geometry transform: (struct PKMatrix4)transform;
+- (instancetype)initTriangleMeshWithGeometry: (PKBGeometry *)geometry transform: (struct PKMatrix4)transform;
 
 - (NSData *)serialize;
 

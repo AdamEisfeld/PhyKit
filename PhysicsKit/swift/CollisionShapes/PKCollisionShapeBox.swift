@@ -13,8 +13,9 @@ public class PKCollisionShapeBox: PKCollisionShape {
     
     public let internalShape: PKBCollisionShape
     
-    public init(width: Float, height: Float, length: Float, transform: PKMatrix4 = PKMatrix4MakeIdentity()) {
+    public init(width: Float, height: Float, length: Float, transform: PKMatrix4 = PKMatrix4MakeIdentity(), margin: Float = 0.04) {
         internalShape = PKBCollisionShape(boxWithWidth: width, height: height, length: length, transform: transform)
+        internalShape.margin = margin
     }
     
     public init(size: Float, transform: PKMatrix4 = PKMatrix4MakeIdentity()) {
