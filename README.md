@@ -1,5 +1,7 @@
 <img src="https://user-images.githubusercontent.com/2840242/84842193-7fe78280-b012-11ea-98f7-a71c29a68174.png" width=256></img>
 
+<img src="https://user-images.githubusercontent.com/2840242/86497496-ddd4d380-bd4f-11ea-9cd1-1e878e13092b.gif" width=320></img>
+
 An open source wrapper for the Bullet physics library, with additional support for mapping physics bodies to SceneKit nodes in favor of SceneKit's stock physics engine.
 
 ## Requirements
@@ -96,23 +98,23 @@ You might use a CADisplayLink, or SceneKit's SCNView's render loop to perform th
 class SomeViewController: UIViewController {
 
     var sceneTime: TimeInterval? = nil
-    
+
     ... setup an SCNView, and wire this view controller up to the view's delegate property
 
 }
 extension SomeViewController: SCNSceneRendererDelegate {
-    
+
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        
+
         // Determine how much time has elapsed since we last stepped the simulation
         sceneTime = sceneTime ?? time
         let physicsTime = time - sceneTime!
-        
+
         // Step the simulation
         physicsWorld.simulationTime = physicsTime
-        
+
     }
-    
+
 }
 ```
 
@@ -190,7 +192,7 @@ Collision Shapes are a fundamental building block of a physics simulation. Physi
 - PKCollisionShapeFromData (allows you to construct a physics shape from previously serialized collision shape data)
 - PKCollisionShapeCompound (allows you to construct a physics shape from an array of other PKCollisionShapes)
 
-PKCollisionShapeFromData is useful for speeding up simulation setup. It can take some time to generate collision meshs, especially when loaded from non-standard primitive shapes (eg PKCollisionShapeGeometry). 
+PKCollisionShapeFromData is useful for speeding up simulation setup. It can take some time to generate collision meshs, especially when loaded from non-standard primitive shapes (eg PKCollisionShapeGeometry).
 All PKCollisionShapes have a serialize() function that lets you obtain a Data representation of them, which can be saved to disk / packaged with your application bundle. You can then use PKCollisionShapeFromData to load these shapes.
 
 ```swift
