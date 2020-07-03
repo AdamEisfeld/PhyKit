@@ -12,13 +12,13 @@ import Foundation
 public class PKCollisionPair {
     
     /// The first rigid body that has collided
-    public let rigidBodyA: PKRigidBody
+    public weak var rigidBodyA: PKRigidBody?
     
     /// The position, local to the first rigid body's transform, that the collision occured
     public let localPositionA: PKVector3
     
     /// The second rigid body that has collided
-    public let rigidBodyB: PKRigidBody
+    public weak var rigidBodyB: PKRigidBody?
     
     /// The position, local to the second rigid body's transform, that the collision occured
     public let localPositionB: PKVector3

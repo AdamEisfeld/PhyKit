@@ -92,45 +92,45 @@
 // MARK: Collisions
 
 - (void)internalCheckCollisions {
-    
+
     // Get all contact manifolds. A contact manifold is a cache that contains all contact points between pairs of collision objects.
     int numManifolds = _world->getDispatcher()->getNumManifolds();
-    
+
     // Iterate each manifold
     for (int i = 0; i < numManifolds; i ++) {
-        
+
         // Extract the manifold
         btPersistentManifold* contactManifold =  _world->getDispatcher()->getManifoldByIndexInternal(i);
 
         int numContacts = contactManifold->getNumContacts();
-        
+
         // The existance of a manifold does not mean a collision is occuring RIGHT NOW. We
         // need to check if the number of contacts is greater than 0 to determine if
         // a collision is actually occuring right now.
         if (numContacts > 0) {
-            
+
             // Extract the two objects that collided
             const btCollisionObject* c_colObjA = contactManifold->getBody0();
             const btCollisionObject* c_colObjB = contactManifold->getBody1();
 
             btManifoldPoint contactPoint = contactManifold->getContactPoint(0);
-            
+
             // Compute Local Positions
             btVector3 c_localPositionA = contactPoint.m_localPointA;
             btVector3 c_localPositionB = contactPoint.m_localPointB;
             PKVector3 localPositionA = PKVector3Make(c_localPositionA.x(), c_localPositionA.y(), c_localPositionA.z());
             PKVector3 localPositionB = PKVector3Make(c_localPositionB.x(), c_localPositionB.y(), c_localPositionB.z());
-            
+
             // Extract the user pointers from these collision objects so we can derive the
             // associated PKBRigidBodys
             PKBRigidBody* rigidBodyA = (__bridge PKBRigidBody*)c_colObjA->getUserPointer();
             PKBRigidBody* rigidBodyB = (__bridge PKBRigidBody*)c_colObjB->getUserPointer();
-            
+
             // Signal a collision
             [self internalCollisionDidOccur:rigidBodyA localPositionA:localPositionA internalRigidBodyB:rigidBodyB localPositionB:localPositionB];
-            
+
         }
-        
+
     }
     
 }

@@ -24,46 +24,26 @@ class ViewController: UIViewController {
     // A physics scene for attaching rigid bodies to scenekit nodes
     lazy var physicsScene = PKPhysicsScene(isMotionStateEnabled: false)
     
+    // Represents one of our spawned rigid body / node pairs
+    typealias SpawnedNode = (rigidBody: PKRigidBody, displayNode: SCNNode)
+    private var spawnedNodes: [String : SpawnedNode] = [:]
+    private var lastSpawnTime: Date = Date()
+    
+    // MARK: Setup
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Embed an SCNView in our VC's view, loading a basic scene
         setupSceneView(sceneName: "world")
+        
+        // Setup our physics world
         setupPhysicsWorld()
         
-        // Create a static ground plane for our objects to bounce off of
-        createGroundPlane(position: .zero, orientation: .identity)
+        // Create a static ground object for our objects to bounce off of
+        createGroundPedastle(position: .vector(0, -10, 0), orientation: .identity)
         
-        // Create a series of dynamic primitives to interact
-        
-        let primitiveTypes: [String] = [
-            "box", "sphere", "capsule", "cylinder"
-        ]
-        
-        let primitiveCount = 256
-        
-        for _ in 0..<primitiveCount {
-            
-            let primitiveTypeIndex = Int.random(in: 0..<primitiveTypes.count)
-            let primitiveType = primitiveTypes[primitiveTypeIndex]
-            
-            let position: PKVector3 = .vector(Float.random(in: -10..<10), Float.random(in: 5..<Float(primitiveCount)), Float.random(in: -10..<10))
-            let oritentation: PKQuaternion = .euler(Float.random(in: 0..<360), Float.random(in: 0..<360), Float.random(in: 0..<360), .degrees)
-            
-            switch primitiveType {
-            case "box":
-                createBox(width: Float.random(in: 1..<3), height: Float.random(in: 1..<3), length: Float.random(in: 1..<3), position: position, orientation: oritentation, type: .dynamic)
-            case "sphere":
-                createSphere(radius: Float.random(in: 1..<3), position: position, orientation: oritentation, type: .dynamic)
-            case "capsule":
-                createCapsule(radius: Float.random(in: 1..<1.5), height: Float.random(in: 5..<10), position: position, orientation: oritentation, type: .dynamic)
-            case "cylinder":
-                createCylinder(radius: Float.random(in: 1..<1.5), height: Float.random(in: 5..<10), position: position, orientation: oritentation, type: .dynamic)
-            default:
-                break
-            }
-            
-        }
-        
+        // Create a kinematic logo object that we'll move around to interact with the scene
         createLogo()
         
     }
@@ -97,10 +77,7 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         
         scene.rootNode.addChildNode(cameraOrbit)
-        let orbitAction = SCNAction.rotateBy(x: 0, y: 360 * .pi / 180, z: 0, duration: 12.0)
-        let orbitLoopAction = SCNAction.repeatForever(orbitAction)
-        cameraOrbit.runAction(orbitLoopAction)
-        
+
     }
     
     private func setupPhysicsWorld() {
@@ -109,6 +86,68 @@ class ViewController: UIViewController {
         physicsWorld.triggerDelegate = self
         physicsScene.delegate = self
     }
+    
+    // MARK: Spawning
+    
+    /// Spawns a random rigid body into the scene
+    private func spawnRandomRigidBody() {
+        
+        let primitiveTypes: [String] = [
+            "box", "sphere", "capsule", "cylinder"
+        ]
+        
+        let primitiveTypeIndex = Int.random(in: 0..<primitiveTypes.count)
+        let primitiveType = primitiveTypes[primitiveTypeIndex]
+        
+        let position: PKVector3 = .vector(Float.random(in: -10..<10), Float.random(in: 30..<Float(50)), Float.random(in: -10..<10))
+        let oritentation: PKQuaternion = .euler(Float.random(in: 0..<360), Float.random(in: 0..<360), Float.random(in: 0..<360), .degrees)
+        
+        let spawnedNode: SpawnedNode
+        
+        switch primitiveType {
+        case "box":
+            spawnedNode = createBox(width: Float.random(in: 1..<3), height: Float.random(in: 1..<3), length: Float.random(in: 1..<3), position: position, orientation: oritentation, type: .dynamic)
+        case "sphere":
+            spawnedNode = createSphere(radius: Float.random(in: 1..<3), position: position, orientation: oritentation, type: .dynamic)
+        case "capsule":
+            spawnedNode = createCapsule(radius: Float.random(in: 1..<1.5), height: Float.random(in: 5..<10), position: position, orientation: oritentation, type: .dynamic)
+        case "cylinder":
+            spawnedNode = createCylinder(radius: Float.random(in: 1..<1.5), height: Float.random(in: 5..<10), position: position, orientation: oritentation, type: .dynamic)
+        default:
+            fatalError()
+        }
+        
+        let identifier = UUID().uuidString
+        spawnedNodes[identifier] = spawnedNode
+
+    }
+    
+    private func spawnRigidBodies() {
+        
+        // Remove any bodies that have fallen too far below the ground
+        
+        for (identifier, spawnedNode) in spawnedNodes {
+            if spawnedNode.rigidBody.position.y < -50 {
+
+                physicsWorld.remove(spawnedNode.rigidBody)
+                physicsScene.detach(spawnedNode.displayNode)
+                
+                spawnedNode.displayNode.removeFromParentNode()
+                
+                spawnedNodes[identifier] = nil
+            }
+        }
+        
+        // Spawn more rigid bodies if we need to
+        
+        if lastSpawnTime.timeIntervalSinceNow < -0.2, spawnedNodes.count < 100 {
+            spawnRandomRigidBody()
+            lastSpawnTime = Date()
+        }
+        
+    }
+    
+    // MARK: Body/Node Creation
     
     private func createLogo() {
         
@@ -126,18 +165,58 @@ class ViewController: UIViewController {
         let scene = SCNScene(named: "scenes.scnassets/pkLogo_visual.scn")!
         let displayNode = scene.rootNode.childNode(withName: "logo", recursively: true)!
         
-        let rigidBody = PKRigidBody(type: .static, shape: collisionShape)
+        let rigidBody = PKRigidBody(type: .kinematic, shape: collisionShape)
 
         rigidBody.position = .zero
-        rigidBody.orientation = .identity
         rigidBody.restitution = 0.8
         rigidBody.isSleepingEnabled = false
-        rigidBody.position = .vector(0, 10, 0)
+        rigidBody.position = .vector(0, -1, 0)
         
+        // Create an action that moves the logo up/down via a sinewave
+        var inc: Float = 0
+        let moveAction = PKAction.move(rigidBody, byFunction: { () -> (PKVector3) in
+            let y = sin(inc)
+            inc += 0.02
+            return .vector(0, y * 0.1, 0)
+        })
+        moveAction.repeatCount = -1
+        
+        // Create an action that rotates the logo constantly around it's y axis
+        let orientAction = PKAction.orient(rigidBody, by: .euler(0, 180, 0, .degrees), duration: 4.0)
+        orientAction.repeatCount = -1
+        
+        // Run the actions
+        moveAction.run()
+        orientAction.run()
+
         physicsWorld.add(rigidBody)
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
+    }
+    
+    private func createGroundPedastle(position: PKVector3, orientation: PKQuaternion) {
+        // Create a box
+        let geometry = SCNCylinder(radius: 14, height: 2)
+        let displayNode = SCNNode(geometry: geometry)
+        
+        // Color the geometry
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor(red: 51.0/255.0, green: 51.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+        material.lightingModel = .physicallyBased
+        geometry.materials = [material]
+        
+        // Create a physics body for the box
+        let collisionShape = PKCollisionShapeCylinder(radius: 14, height: 2)
+        let rigidBody = PKRigidBody(type: .static, shape: collisionShape)
+        
+        rigidBody.position = position
+        rigidBody.orientation = orientation
+        rigidBody.isSleepingEnabled = false
+        
+        physicsWorld.add(rigidBody)
+        sceneView.scene!.rootNode.addChildNode(displayNode)
+        physicsScene.attach(rigidBody, to: displayNode)
     }
     
     private func createGroundPlane(position: PKVector3, orientation: PKQuaternion) {
@@ -163,9 +242,10 @@ class ViewController: UIViewController {
         physicsWorld.add(rigidBody)
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
+        
     }
     
-    private func createBox(width: Float, height: Float, length: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) {
+    private func createBox(width: Float, height: Float, length: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) -> SpawnedNode  {
         
         // Create a box
         let geometry = SCNBox(width: CGFloat(width), height: CGFloat(height), length: CGFloat(length), chamferRadius: 0.0)
@@ -190,9 +270,11 @@ class ViewController: UIViewController {
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
+        return SpawnedNode(rigidBody, displayNode)
+        
     }
     
-    private func createSphere(radius: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) {
+    private func createSphere(radius: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) -> SpawnedNode  {
         
         // Create a sphere
         let geometry = SCNSphere(radius: CGFloat(radius))
@@ -217,9 +299,11 @@ class ViewController: UIViewController {
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
+        return SpawnedNode(rigidBody, displayNode)
+        
     }
     
-    private func createCapsule(radius: Float, height: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) {
+    private func createCapsule(radius: Float, height: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) -> SpawnedNode  {
         
         // Create a sphere
         let geometry = SCNCapsule(capRadius: CGFloat(radius), height: CGFloat(height))
@@ -244,9 +328,11 @@ class ViewController: UIViewController {
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
         
+        return SpawnedNode(rigidBody, displayNode)
+        
     }
     
-    private func createCylinder(radius: Float, height: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) {
+    private func createCylinder(radius: Float, height: Float, position: PKVector3, orientation: PKQuaternion, type: PKRigidBodyType) -> SpawnedNode  {
         
         // Create a sphere
         let geometry = SCNCylinder(radius: CGFloat(radius), height: CGFloat(height))
@@ -270,6 +356,8 @@ class ViewController: UIViewController {
         physicsWorld.add(rigidBody)
         sceneView.scene!.rootNode.addChildNode(displayNode)
         physicsScene.attach(rigidBody, to: displayNode)
+        
+        return SpawnedNode(rigidBody, displayNode)
         
     }
     
@@ -324,11 +412,15 @@ extension ViewController: SCNSceneRendererDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         
+        spawnRigidBodies()
+        
         sceneTime = sceneTime ?? time
         let physicsTime = time - sceneTime!
         
         physicsWorld.simulationTime = physicsTime
         physicsScene.iterativelyOrientAllNodesToAttachedRigidBodies()
+        
+        
         
     }
     

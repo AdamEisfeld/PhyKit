@@ -58,6 +58,7 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
     /// - Parameter rigidBody: The rigid body to remove from the simulation
     public func remove(_ rigidBody: PKRigidBody) {
         rigidBodies.remove(rigidBody)
+        
         internalRemove(rigidBody)
     }
 

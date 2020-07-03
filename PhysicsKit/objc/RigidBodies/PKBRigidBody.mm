@@ -20,8 +20,8 @@
 
 @interface PKBRigidBody() {
     
-    btCollisionShape* _c_shape;
-    
+    PKBCollisionShape *_collisionShape;
+
 }
 
 @end
@@ -79,14 +79,14 @@ class PKBMotionState : public btMotionState {
     if (self) {
         
         _rigidBodyType = rigidBodyType;
-        _c_shape = collisionShape.c_shape;
-
-        btVector3 _c_bodyInertia;
+        _collisionShape = collisionShape;
+        
+        btVector3 _c_bodyInertia = btVector3(0,0,0);
         if (rigidBodyType == PKBRigidBodyTypeDynamic) {
-            _c_shape->calculateLocalInertia(mass, _c_bodyInertia);
+            _collisionShape.c_shape->calculateLocalInertia(mass, _c_bodyInertia);
         }
         
-        btRigidBody::btRigidBodyConstructionInfo c_constructionInfo = btRigidBody::btRigidBodyConstructionInfo(mass, nil, _c_shape, _c_bodyInertia);
+        btRigidBody::btRigidBodyConstructionInfo c_constructionInfo = btRigidBody::btRigidBodyConstructionInfo(mass, nil, _collisionShape.c_shape, _c_bodyInertia);
         c_constructionInfo.m_mass = mass;
         
         _c_body = new btRigidBody(c_constructionInfo);
@@ -112,13 +112,13 @@ class PKBMotionState : public btMotionState {
 // MARK: Deallocation
 
 - (void)dealloc {
+    _collisionShape = nil;
+    delete _c_body->getMotionState();
     if (_c_body) {
-        delete _c_body->getMotionState();
-        delete _c_body->getCollisionShape();
-        [_physicsWorld internalRemoveRigidBody:self];
         delete _c_body;
     }
-    delete _c_shape;
+    [_physicsWorld internalRemoveRigidBody:self];
+
 }
 
 // MARK: Transform

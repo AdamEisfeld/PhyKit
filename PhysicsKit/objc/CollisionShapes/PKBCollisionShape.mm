@@ -17,6 +17,14 @@
 #import "PKBVertex.h"
 #import "PKBDependencies+Internal.h"
 
+@interface PKBCollisionShape() {
+    
+    NSArray *_collisionShapes;
+
+}
+
+@end
+
 @implementation PKBCollisionShape
 
 - (instancetype)init {
@@ -111,6 +119,8 @@
     self = [super init];
     if (self) {
         if (collisionShapes.count > 1) {
+            // We need to hold on to these other collision shapes to prevent memory issues
+            _collisionShapes = collisionShapes;
             btCompoundShape *c_compoundShape = new btCompoundShape();
             for (PKBCollisionShape *collisionShape in collisionShapes) {
                 btTransform c_transform = btTransformMakeFrom(collisionShape.transform);
@@ -206,6 +216,13 @@
 
 - (float)margin {
     return _c_shape->getMargin();
+}
+
+- (void)dealloc {
+    if (_c_shape != NULL) {
+        delete _c_shape;
+    }
+    _collisionShapes = nil;
 }
 
 @end
