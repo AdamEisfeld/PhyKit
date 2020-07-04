@@ -162,6 +162,45 @@ In order to orient the SCNNodes to their attached PKRigidBody instances, PKPhysi
 - isMotionStateEnabled = true: The physics scene will automatically listen to the Bullet physics engine for any transform changes on a given rigid body, and apply those to the associated scenekit node.
 - isMotionStateEnabled = false: You must manually force the physics scene to update it's scenekit node transforms, via calling iterativelyOrientAllNodesToAttachedRigidBodies() on the physics scene.
 
+### Actions
+
+As of PhysicsKit 1.0.2, PKActions have been added. Similar to SCNActions in SceneKit, you can construct PKActions to modify a rigid body's attributes over time for things like animations.
+
+You can create a custom PKAction, or use one of the provided helper constructors, eg:
+
+```swift
+// Move the rigid body to a new position in 1 second
+let moveActionTo = PKAction.move(rigidBody, to: someNewPosition, duration: 1.0)
+moveActionTo.run()
+
+// Move the rigid body forwards by 1 unit / second, constantly
+let moveActionBy = PKAction.move(rigidBody, by: .vector(0, 0, 1), duration: 1.0)
+moveActionBy.repeatCount = -1 // Repeat forever
+moveActionBy.run()
+
+// Rotate the rigid body around it's y axis 180 degrees / second, 3 times
+let orientAction = PKAction.orient(rigidBody, by: .euler(0, 180, 0, .degrees), duration: 1.0)
+orientAction.repeatCount = 3
+orientAction.run()
+```
+
+Note that only kinematic rigid bodies support PKActions. Adding PKActions to static/dynamic rigid bodies may have undefined behavior.
+
+### Raycasting
+
+As of PhysicsKit 1.0.3, raycasting has been added. Perform raycasts via the PKPhysicsWorld to determine which rigid bodies intersect a ray:
+
+```swift
+let start: PKVector3 = .vector(0, 10, 0)
+let end: PKVector3 = .vector(0, -10, 0)
+let results = physicsWorld.rayCast(from: start, to: end)
+for result in results {
+   let intersectedRigidBody = result.rigidBody
+   let intersectionWorldPosition = result.worldPosition
+   let intersectionWorldNormal = result.worldNormal
+}
+```
+
 ## Delegates
 
 ### Observing Simulation Changes
