@@ -361,6 +361,37 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: Touch Interaction
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    private func checkTouches(_ touches: Set<UITouch>) {
+        let touchLocation = touches.first?.location(in: view) ?? .zero
+        let unprojectStart = SCNVector3(touchLocation.x, touchLocation.y, 0)
+        let unprojectEnd = SCNVector3(touchLocation.x, touchLocation.y, 1)
+        
+        // Convert the 2D touch location to a 3D point on the camera's near plane
+        let rayStart = sceneView.unprojectPoint(unprojectStart).PKVector3
+        // Convert the 2D touch location to a 3D point on the camera's far plane
+        let rayEnd = sceneView.unprojectPoint(unprojectEnd).PKVector3
+        // Raycast from the near point to the far point to find any rigid bodies intersected
+        let results = physicsWorld.rayCast(from: rayStart, to: rayEnd)
+        
+        // Apply an impulse to any rigid bodies we've touched, along the z axis
+        for result in results {
+            guard let rigidBody = result.rigidBody else { continue }
+            guard rigidBody.type == .dynamic else { continue }
+            rigidBody.applyForce(.vector(0, 0, 200), impulse: true)
+        }
+    }
 
 }
 
@@ -419,8 +450,6 @@ extension ViewController: SCNSceneRendererDelegate {
         
         physicsWorld.simulationTime = physicsTime
         physicsScene.iterativelyOrientAllNodesToAttachedRigidBodies()
-        
-        
         
     }
     

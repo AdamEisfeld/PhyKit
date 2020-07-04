@@ -1,5 +1,5 @@
 PODS:
-  - PhysicsKit (1.0.1)
+  - PhysicsKit (1.0.3)
 
 DEPENDENCIES:
   - PhysicsKit (from `../../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../../"
 
 SPEC CHECKSUMS:
-  PhysicsKit: 0f0e384226cb822f1d02230138e21fc7062cd0a5
+  PhysicsKit: cf8c149eb119096b8428bfed27efde5371e1ad8f
 
 PODFILE CHECKSUM: 6ad20f70115bdf5b5ac83b4a285c4fdff28efdbb
 

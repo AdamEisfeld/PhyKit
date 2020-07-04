@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)internalStepSimulation: (NSTimeInterval)time;
 - (void)internalCheckCollisions;
 - (void)internalCollisionDidOccur: (PKBRigidBody *)internalRigidBodyA localPositionA: (struct PKVector3 )pointA internalRigidBodyB: (PKBRigidBody *)internalRigidBodyB localPositionB: (struct PKVector3 )pointB;
+- (void)internalRaycastAllFrom: (struct PKVector3 )from to: (struct PKVector3 )to perform: (void (^_Nullable)(struct PKVector3 position, struct PKVector3 normal, PKBRigidBody* rigidBody))hitResult;
 - (void)internalReset;
 
 @end

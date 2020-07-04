@@ -9,13 +9,26 @@
 import Foundation
 
 /// The type of rigid body to use
-public enum PKRigidBodyType {
+public enum PKRigidBodyType: Equatable {
     /// Static rigid bodies can not move or be affected by forces / collisions. Other rigid bodies can collide with static rigid bodies.
     case `static`
     /// Kinematic rigid bodies can be programmatically moved via their transform, but are not affected by forces / collisions. Other rigid bodies can collide with kinematic rigid bodies.
     case kinematic
     /// Dynamic rigid bodies are affected by forces / collisions and should not be programmatically moved via their transform. Apply forces to dynamic rigid bodies to move them.
     case dynamic(mass: Float)
+    
+    public static func ==(lhs: PKRigidBodyType, rhs: PKRigidBodyType) -> Bool {
+        switch (lhs, rhs) {
+        case (let .dynamic(lhsMass), let .dynamic(rhsMass)):
+            return lhsMass == rhsMass
+        case (.kinematic, .kinematic):
+            return true
+        case (.static, .static):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 extension PKRigidBodyType {
@@ -29,6 +42,10 @@ extension PKRigidBodyType {
         case .dynamic(let mass):
             return mass
         }
+    }
+    
+    public var isDynamic: Bool {
+        self != .kinematic && self != .static
     }
     
     /// Static rigid bodies can not move or be affected by forces / collisions. Other rigid bodies can collide with static rigid bodies.

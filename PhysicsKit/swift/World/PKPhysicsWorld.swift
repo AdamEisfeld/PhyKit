@@ -95,7 +95,22 @@ public class PKPhysicsWorld: PKBPhysicsWorld {
         collisionPairs = [:]
         previousCollisionPairs = [:]
     }
-
+    
+    /// Checks for intersections with rigid bodies with a ray
+    /// - Parameters:
+    ///   - from: The starting 3D world position of the ray
+    ///   - to: The ending 3D world position of the ray
+    /// - Returns: An array of rigid bodies that intersect the ray, sorted from closest to furthest
+    public func rayCast(from: PKVector3, to: PKVector3) -> [PKRaycastResult] {
+        var results: [PKRaycastResult] = []
+        internalRaycastAll(from: from, to: to) { (position, normal, rigidBody) in
+            guard let rigidBody = rigidBody as? PKRigidBody else { return }
+            let result = PKRaycastResult(rigidBody: rigidBody, worldPosition: position, worldNormal: normal)
+            results.append(result)
+        }
+        return results
+    }
+    
     // MARK: Private Functions
     
     private func stepSimulation(_ time: TimeInterval) {

@@ -139,6 +139,28 @@
     // Subclass overrides
 }
 
+- (void)internalRaycastAllFrom: (struct PKVector3 )from to: (struct PKVector3 )to perform: (void (^_Nullable)(struct PKVector3 position, struct PKVector3 normal, PKBRigidBody* rigidBody))hitResult {
+    
+    btVector3 c_from = btVector3(from.x, from.y, from.z);
+    btVector3 c_to = btVector3(to.x, to.y, to.z);
+    btCollisionWorld::AllHitsRayResultCallback result(c_from, c_to);
+    
+    _world->rayTest(c_from, c_to, result);
+    
+    if (result.hasHit()) {
+        for (int i = 0; i < result.m_collisionObjects.size(); i++) {
+            btVector3 c_hitPointWorld = result.m_hitPointWorld[i];
+            PKVector3 hitPointWorld = PKVector3Make(c_hitPointWorld.getX(), c_hitPointWorld.getY(), c_hitPointWorld.getZ());
+            btVector3 c_hitNormalWorld = result.m_hitNormalWorld[i];
+            PKVector3 hitNormalWorld = PKVector3Make(c_hitNormalWorld.getX(), c_hitNormalWorld.getY(), c_hitNormalWorld.getZ());
+            const btCollisionObject* hitCollisionObject = result.m_collisionObjects[i];
+            PKBRigidBody* hitRigidBody = (__bridge PKBRigidBody*)hitCollisionObject->getUserPointer();
+            hitResult(hitPointWorld, hitNormalWorld, hitRigidBody);
+        }
+    }
+    
+}
+
 // MARK: Accessors
 
 - (SCNVector3)gravity {
