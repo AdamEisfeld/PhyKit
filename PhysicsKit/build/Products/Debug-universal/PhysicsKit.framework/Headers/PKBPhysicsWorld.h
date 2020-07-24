@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PKBPhysicsWorld : NSObject
 
-@property (nonatomic, assign) SCNVector3 gravity;
+@property (nonatomic, assign) struct PKVector3 gravity;
 
 - (void)internalAddRigidBody: (PKBRigidBody *)rigidBody;
 - (void)internalRemoveRigidBody: (PKBRigidBody *)rigidBody;

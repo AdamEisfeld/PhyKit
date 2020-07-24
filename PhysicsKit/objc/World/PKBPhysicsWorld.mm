@@ -163,12 +163,12 @@
 
 // MARK: Accessors
 
-- (SCNVector3)gravity {
+- (PKVector3)gravity {
     btVector3 c_gravity = _world->getGravity();
-    return SCNVector3Make(c_gravity.x(), c_gravity.y(), c_gravity.z());
+    return PKVector3Make(c_gravity.x(), c_gravity.y(), c_gravity.z());
 }
 
-- (void)setGravity:(SCNVector3)gravity {
+- (void)setGravity:(PKVector3)gravity {
     btVector3 c_gravity = btVector3(gravity.x, gravity.y, gravity.z);
     _world->setGravity(c_gravity);
 }

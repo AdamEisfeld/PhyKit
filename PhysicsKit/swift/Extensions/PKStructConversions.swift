@@ -72,6 +72,10 @@ public extension PKQuaternion {
         return SCNQuaternion(x, y, z, w)
     }
 
+    var direction: PKVector3 {
+        return PKVector3AxisFromQuaternion(self)
+    }
+    
     init(_ x: Float, _ y: Float, _ z: Float, _ w: Float) {
         self.init(x: x, y: y, z: z, w: w)
     }

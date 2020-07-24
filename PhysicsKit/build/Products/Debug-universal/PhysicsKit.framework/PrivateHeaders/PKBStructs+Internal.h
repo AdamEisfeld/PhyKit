@@ -22,5 +22,6 @@ extern struct PKMatrix4 PKMatrix4MakeFrom(btTransform c_transform);
 #endif
 
 extern struct btTransform btTransformMakeFrom(PKMatrix4 transform);
+extern struct btTransform btTransformMakeFrom(PKMatrix4 transform);
 
 #endif /* BLStructs_Internal_h */

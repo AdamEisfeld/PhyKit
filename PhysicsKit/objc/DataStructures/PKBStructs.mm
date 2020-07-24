@@ -113,3 +113,10 @@ btTransformMakeFrom(PKMatrix4 transform) {
     c_transform.setFromOpenGLMatrix(c_transformComponents);
     return c_transform;
 }
+
+struct PKVector3
+PKVector3AxisFromQuaternion(PKQuaternion quaternion) {
+    btQuaternion c_quaternion = btQuaternion(quaternion.x, quaternion.y, quaternion.z, quaternion.w);
+    btVector3 axis = c_quaternion.getAxis();
+    return PKVector3Make(axis.x(), axis.y(), axis.z());
+}
