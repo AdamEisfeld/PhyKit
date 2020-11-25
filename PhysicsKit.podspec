@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PhysicsKit'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'Swift/Objc wrapper for Bullet Physics Engine with SceneKit support.'
 
   s.description      = <<-DESC

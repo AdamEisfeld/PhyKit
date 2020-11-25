@@ -92,6 +92,9 @@ class PKBMotionState : public btMotionState {
         _c_body = new btRigidBody(c_constructionInfo);
         _c_body->setUserPointer((__bridge void*)self);
         
+        btTransform c_transform = btTransformMakeFrom(collisionShape.transform);
+        _c_body->setWorldTransform(c_transform);
+        
         if (rigidBodyType == PKBRigidBodyTypeDynamic) {
             
         } else if (rigidBodyType == PKBRigidBodyTypeKinematic) {
