@@ -94,6 +94,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Whether this body is affected by outside forces
 @property (nonatomic, assign) BOOL isForcesEnabled;
 
+/// If non-zero, continuous collision detection will be enabled on this body, using the specified radius
+@property (nonatomic, assign) float continuousCollisionDetectionRadius;
+
 /// The type of this rigid body, either static, kinematic, or dynamic
 @property (nonatomic, readonly) PKBRigidBodyType rigidBodyType;
 

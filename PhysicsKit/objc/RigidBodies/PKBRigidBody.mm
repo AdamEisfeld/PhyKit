@@ -350,9 +350,7 @@ class PKBMotionState : public btMotionState {
 
 - (void)setIsForcesEnabled:(BOOL)isForcesEnabled {
     if (isForcesEnabled) {
-        if (!self.isForcesEnabled) {
-            _c_body->setActivationState(ACTIVE_TAG);
-        }
+        _c_body->setActivationState(ACTIVE_TAG);
     } else {
         _c_body->setActivationState(DISABLE_SIMULATION);
     }
@@ -370,6 +368,7 @@ class PKBMotionState : public btMotionState {
 - (void)applyForce: (PKVector3)force impulse: (BOOL)impulse {
     btVector3 c_force = btVector3(force.x, force.y, force.z);
     btVector3 c_position = btVector3(0, 0, 0);
+    _c_body->activate(true);
     if (impulse) {
         _c_body->applyImpulse(c_force, c_position);
     } else {
@@ -378,6 +377,7 @@ class PKBMotionState : public btMotionState {
 }
 
 - (void)applyTorque: (PKVector3)torque impulse: (BOOL)impulse {
+    _c_body->activate(true);
     btVector3 c_torque = btVector3(torque.x, torque.y, torque.z);
     if (impulse) {
         _c_body->applyTorqueImpulse(c_torque);
@@ -386,10 +386,15 @@ class PKBMotionState : public btMotionState {
     }
 }
 
-
-
-
-
-
+- (void)setContinuousCollisionDetectionRadius:(float)continuousCollisionDetectionRadius {
+    _continuousCollisionDetectionRadius = continuousCollisionDetectionRadius;
+    if (_continuousCollisionDetectionRadius > 0) {
+        _c_body->setCcdMotionThreshold(0.0000001);
+        _c_body->setCcdSweptSphereRadius(_continuousCollisionDetectionRadius);
+    } else {
+        _c_body->setCcdMotionThreshold(FLT_MAX);
+        _c_body->setCcdSweptSphereRadius(0);
+    }
+}
 
 @end
