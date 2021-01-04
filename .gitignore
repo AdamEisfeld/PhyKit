@@ -1,16 +1,3 @@
-PhysicsKit/build/DerivedData
-PhysicsKit/build/Intermediates.noindex
-build
-PhysicsKit/bulletLib_2_89/build3/xcode4/obj/x64/Debug/BulletCollision/XCBuildData
-physicsKitLogo.png
-physicsKitLogo.psd
-PhysicsKit/bulletLib_2_89/build3/xcode4/BulletCollision.xcodeproj/xcuserdata
-PhysicsKit/bulletLib_2_89/build3/xcode4/BulletDynamics.xcodeproj/xcuserdata
-PhysicsKit/bulletLib_2_89/build3/xcode4/BulletFileLoader.xcodeproj/xcuserdata
-PhysicsKit/bulletLib_2_89/build3/xcode4/BulletWorldImporter.xcodeproj/xcuserdata
-PhysicsKit/bulletLib_2_89/build3/xcode4/LinearMath.xcodeproj/xcuserdata
+Builds/*/*.xcarchive
 PhysicsKit.xcodeproj/xcuserdata
-Breakpoints_v2.xcbkptlist
-physicsKitLogoBW.png
-physicsKitLogoBWSQ.png
 .swiftpm/xcode/xcuserdata
