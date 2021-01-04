@@ -18,6 +18,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "PhysicsKit", path: "Builds/1.0.0/PhysicsKit.xcframework")
+        .binaryTarget(name: "PhysicsKit", path: "Builds/2.0.0/PhysicsKit.xcframework")
     ]
 )
