@@ -1,8 +1,8 @@
 #!/bin/sh
 
+framework_version="$1"
 release_notes=`cat RELEASENOTES.txt`
 podspec_path="PhysicsKit.podspec"
-framework_version="$1"
 
 function updatePodspec {
 
