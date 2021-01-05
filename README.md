@@ -279,12 +279,18 @@ PhysicsKit currently targets Bullet v2.89
 
 After making any desired changes, follow these steps to release a new version of PhysicsKit:
 
-1. In terminal, navigate to the root directory of PhysicsKit, and run the helper script buildPhysicsKit.sh, passing the new version number. Eg: "./buildPhysicsKit.sh 2.0.3".  This script will:
+1. In terminal, navigate to the root directory of PhysicsKit, and run the helper script buildPhysicsKit.sh. This script will:
 > * Create .xcarchives of PhysicsKit for all of the supported platforms
 > * Bundle these xcarchives together into an xcframework
-> * Update the version strings used across Cocoapods, SPM, and the build directories
+
+2. Still in terminal, run the helper script deployPhysicsKit.sh, passing the version number you'd like to apply for the given release. PhysicsKit uses Semantic Versioning (see https://semver.org). This script will:
+> * Update the version declared in the podspec
 > * Tag the current git branch with the version number
 > * Run "pod lib lint" to ensure Cocoapods functionality is not broken.
+> * Stage all changes for commit
+> * Commit all changes (a commit message dialog will appear)
+> * Push the branch and version tag to the remote repo
+> * Push the pod up to CocoaPods for public consumption
 
 ## Adding Objc Files
 
@@ -300,7 +306,7 @@ After making any desired changes, follow these steps to release a new version of
 
 ## Author
 
-AdamEisfeld, adam.eisfeld@gmail.com
+Adam Eisfeld, adam.eisfeld@gmail.com
 
 ## License
 

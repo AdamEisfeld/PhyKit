@@ -41,5 +41,11 @@ function updateGit {
 
 }
 
-updatePodspec $podspec_path $framework_version
-updateGit $framework_version
+function pushPod {
+  i_podspec_path="$1"
+  pod trunk push NAME.podspec
+}
+
+updatePodspec "$podspec_path" "$framework_version"
+updateGit "$framework_version"
+pushPod "$podspec_path"
