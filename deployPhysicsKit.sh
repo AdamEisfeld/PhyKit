@@ -25,7 +25,8 @@ function updateGit {
   git add -A
 
   # Commit and push changes
-  git commit -e
+  # git commit -e
+  git commit -m "Test"
   git push -u origin HEAD
 
   # Delete current version tag from any commits if it exists
@@ -36,7 +37,7 @@ function updateGit {
 
   # Update tag
   git tag -fa "$i_version_tag" -m "Automatically updating tag to $i_version_tag"
-  git push -f "$i_version_tag"
+  git push origin "refs/tags/$i_version_tag"
 
 }
 
