@@ -1,4 +1,4 @@
-automaticVersion = '3.0.2'
+automaticVersion = '2.0.0'
 Pod::Spec.new do |s|
   s.name             = 'PhysicsKit'
   s.version          = automaticVersion

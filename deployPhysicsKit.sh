@@ -1,7 +1,6 @@
 #!/bin/sh
 
 framework_version="$1"
-release_notes=`cat RELEASENOTES.txt`
 podspec_path="PhysicsKit.podspec"
 
 echo "$framework_version"
@@ -20,11 +19,8 @@ function updatePodspec {
 
 function updateGit {
 
-  i_commit_message="$1"
   i_version_tag="$2"
 
-  echo "Tagging $i_version_tag"
-  
   # Stage all changes
   git add -A
 
@@ -45,5 +41,5 @@ function updateGit {
 
 }
 
-# updatePodspec $podspec_path $framework_version
-updateGit $release_notes $framework_version
+updatePodspec $podspec_path $framework_version
+updateGit $framework_version
