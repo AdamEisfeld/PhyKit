@@ -36,7 +36,7 @@ function updateGit {
 
   # Update tag
   git tag -a "$i_version_tag" -m "Automatically updating tag to $i_version_tag"
-  git push origin tag "$i_version_tag"
+  git push origin "$i_version_tag"
 
 }
 
