@@ -2,10 +2,6 @@
 
 framework_name="PhysicsKit"
 framework_build_dir="Framework"
-framework_version="$1"
-
-podspec_path="PhysicsKit.podspec"
-
 framework_output_base="$framework_build_dir"
 
 project_path="PhysicsKit.xcodeproj"
@@ -68,19 +64,6 @@ function buildFramework {
   -output "$i_output_full_path"
 }
 
-function updatePodspec {
-
-  i_podspec_path="$1"
-  i_version="$2"
-  version_string="automaticVersion = '$i_version'"
-
-  echo "Updating podspec version to $i_version"
-
-  sed -i '' "1s/.*/${version_string}/" "$i_podspec_path"
-
-}
-
-
 deletePath "$build_ios_full_path"
 deletePath "$build_ios_simulator_full_path"
 deletePath "$build_macos_full_path"
@@ -108,7 +91,5 @@ buildArchive \
 "$build_macos_dir"
 
 buildFramework "$framework_name" "$build_ios_full_path" "$build_ios_simulator_full_path" "$build_macos_full_path" "$build_framework_full_path"
-
-updatePodspec $podspec_path $framework_version
 
 echo "Build complete"

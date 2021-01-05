@@ -25,7 +25,7 @@ function updateGit {
   git add -A
 
   # Commit and push changes
-  git commit -m "$i_commit_message"
+  git commit -e
   git push -u origin HEAD
 
   # Delete current version tag from any commits if it exists
@@ -37,7 +37,7 @@ function updateGit {
   # Update tag
   git tag -a "$i_version_tag" -m "Automatically updating tag to $i_version_tag"
   git push origin tag "$i_version_tag"
-  
+
 }
 
 updatePodspec $podspec_path $framework_version
