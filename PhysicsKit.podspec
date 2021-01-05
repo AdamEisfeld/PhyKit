@@ -1,6 +1,7 @@
+automaticVersion = '3.0.1'
 Pod::Spec.new do |s|
   s.name             = 'PhysicsKit'
-  s.version          = '2.0.0'
+  s.version          = automaticVersion
   s.summary          = 'Swift/Objc wrapper for Bullet Physics Engine with SceneKit support.'
 
   s.description      = <<-DESC
@@ -16,6 +17,6 @@ the physics simulation's output to a SceneKit scene's nodes.
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '11.1'
 
-  s.vendored_frameworks = "Builds/2.0.0/PhysicsKit.xcframework"
+  s.vendored_frameworks = "Framework/PhysicsKit.xcframework"
 
 end

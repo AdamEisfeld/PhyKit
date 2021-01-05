@@ -1,12 +1,14 @@
 #!/bin/bash
 
 framework_name="PhysicsKit"
-framework_version="1.0.0"
+framework_build_dir="Framework"
+framework_version="$1"
 
-framework_build_dir="Builds"
-framework_output_base="$framework_build_dir/$framework_version"
+podspec_path="PhysicsKit.podspec"
 
-project_name="PhysicsKit.xcodeproj"
+framework_output_base="$framework_build_dir"
+
+project_path="PhysicsKit.xcodeproj"
 
 build_ios_scheme="PhysicsKit-ios"
 build_ios_dir="$framework_output_base/ios"
@@ -20,61 +22,93 @@ build_macos_scheme="PhysicsKit-macos"
 build_macos_dir="$framework_output_base/macos"
 build_macos_full_path="$build_macos_dir.xcarchive"
 
-build_framework_full_path="$framework_build_dir/$framework_version/$framework_name.xcframework"
+build_framework_full_path="$framework_build_dir/$framework_name.xcframework"
 
 function deletePath {
-  path="$1"
-  if [ -d "$path" ]; then rm -Rf "$path"; fi
+  i_path="$1"
+  if [ -d "$i_path" ]; then rm -Rf "$i_path"; fi
 }
+
+function buildArchive {
+
+  i_destination="$1"
+  i_project_path="$2"
+  i_archive_name="$3"
+  i_scheme="$4"
+  i_output_dir="$5"
+
+  echo "Building $i_archive_name archive for $i_destination"
+
+  xcodebuild archive \
+  -quiet \
+  -project "$i_project_path" \
+  -scheme "$i_scheme" \
+  -destination "$i_destination" \
+  -archivePath "$i_output_dir" \
+  "PRODUCT_NAME=$i_archive_name" \
+  "SKIP_INSTALL=NO" \
+  "BUILD_LIBRARY_FOR_DISTRIBUTION=YES"
+}
+
+function buildFramework {
+
+  i_framework_name="$1"
+  i_ios_path="$2"
+  i_ios_simulator_path="$3"
+  i_macos_path="$4"
+  i_output_full_path="$5"
+
+  echo "Packaging archives into $i_framework_name.xcframework"
+
+  xcodebuild \
+  -create-xcframework \
+  -framework "$i_ios_path/Products/Library/Frameworks/$i_framework_name.framework" \
+  -framework "$i_ios_simulator_path/Products/Library/Frameworks/$i_framework_name.framework" \
+  -framework "$i_macos_path/Products/Library/Frameworks/$i_framework_name.framework" \
+  -output "$i_output_full_path"
+}
+
+function updatePodspec {
+
+  i_podspec_path="$1"
+  i_version="$2"
+  version_string="automaticVersion = '$i_version'"
+
+  echo "Updating podspec version to $i_version"
+
+  sed -i '' "1s/.*/${version_string}/" "$i_podspec_path"
+
+}
+
 
 deletePath "$build_ios_full_path"
 deletePath "$build_ios_simulator_full_path"
 deletePath "$build_macos_full_path"
 deletePath "$build_framework_full_path"
 
-echo "Building $framework_name for ios"
+buildArchive \
+"generic/platform=iOS" \
+"$project_path" \
+"$framework_name" \
+"$build_ios_scheme" \
+"$build_ios_dir"
 
-xcodebuild archive \
--quiet \
--project "$project_name" \
--scheme "$build_ios_scheme" \
--destination "generic/platform=iOS" \
--archivePath "$build_ios_dir" \
-"PRODUCT_NAME=$framework_name" \
-"SKIP_INSTALL=NO" \
-"BUILD_LIBRARY_FOR_DISTRIBUTION=YES"
+buildArchive \
+"generic/platform=iOS Simulator" \
+"$project_path" \
+"$framework_name" \
+"$build_ios_simulator_scheme" \
+"$build_ios_simulator_dir"
 
-echo "Building $framework_name for ios simulator"
+buildArchive \
+"generic/platform=macOS" \
+"$project_path" \
+"$framework_name" \
+"$build_macos_scheme" \
+"$build_macos_dir"
 
-xcodebuild archive \
--quiet \
--project "$project_name" \
--scheme "$build_ios_simulator_scheme" \
--destination "generic/platform=iOS Simulator" \
--archivePath "$build_ios_simulator_dir" \
-"PRODUCT_NAME=$framework_name" \
-"SKIP_INSTALL=NO" \
-"BUILD_LIBRARY_FOR_DISTRIBUTION=YES"
+buildFramework "$framework_name" "$build_ios_full_path" "$build_ios_simulator_full_path" "$build_macos_full_path" "$build_framework_full_path"
 
-echo "Building $framework_name for macos"
-
-xcodebuild archive \
--quiet \
--project "$project_name" \
--scheme "$build_macos_scheme" \
--destination "generic/platform=macOS" \
--archivePath "$build_macos_dir" \
-"PRODUCT_NAME=$framework_name" \
-"SKIP_INSTALL=NO" \
-"BUILD_LIBRARY_FOR_DISTRIBUTION=YES"
-
-echo "Packaging $framework_name"
-
-xcodebuild \
--create-xcframework \
--framework "$build_ios_full_path/Products/Library/Frameworks/$framework_name.framework" \
--framework "$build_ios_simulator_full_path/Products/Library/Frameworks/$framework_name.framework" \
--framework "$build_macos_full_path/Products/Library/Frameworks/$framework_name.framework" \
--output "$build_framework_full_path"
+updatePodspec $podspec_path $framework_version
 
 echo "Build complete"
