@@ -25,8 +25,7 @@ function updateGit {
   git add -A
 
   # Commit and push changes
-  # git commit -e
-  git commit -m "Test"
+  git commit -e
   git push -u origin HEAD
 
   # Delete current version tag from any commits if it exists
