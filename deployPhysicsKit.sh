@@ -19,7 +19,7 @@ function updatePodspec {
 
 function updateGit {
 
-  i_version_tag="$2"
+  i_version_tag="$1"
 
   # Stage all changes
   git add -A
