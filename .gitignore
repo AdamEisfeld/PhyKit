@@ -1,5 +1,6 @@
 Builds/*/*.xcarchive
 PhyKit.xcodeproj/xcuserdata
-PhyKit/Demos/FallingPrimitives/FallingPrimitives.xcodeproj/xcuserdata
-PhyKit/Demos.xcworkspace/xcuserdata
+Demos/FallingPrimitives/FallingPrimitives.xcodeproj/xcuserdata
+Demos/Demos.xcworkspace/xcuserdata
+ScratchPad/ScratchPad.xcodeproj/xcuserdata
 .swiftpm/*
