@@ -47,4 +47,4 @@ function pushPod {
 
 updatePodspec "$podspec_path" "$framework_version"
 updateGit "$framework_version"
-# pushPod "$podspec_path"
+pushPod "$podspec_path"
