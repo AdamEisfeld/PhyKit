@@ -1,0 +1,11 @@
+framework module BulletKit {
+  umbrella header "BulletKit.h"
+
+  export *
+  module * { export * }
+}
+
+module BulletKit.Swift {
+    header "BulletKit-Swift.h"
+    requires objc
+}

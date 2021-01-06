@@ -1,0 +1,11 @@
+framework module PhyKit {
+  umbrella header "PhyKit.h"
+
+  export *
+  module * { export * }
+}
+
+module PhyKit.Swift {
+    header "PhyKit-Swift.h"
+    requires objc
+}

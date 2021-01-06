@@ -1,0 +1,269 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-macos11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BulletKit
+@_exported import BulletKit
+import CoreVideo
+import Foundation
+import SceneKit
+import Swift
+public class BKAction {
+  public typealias SetupBlock = ((BulletKit.BKRigidBody) -> (Any?))
+  public typealias ActionBlock = ((Foundation.TimeInterval, BulletKit.BKRigidBody, Any?) -> ())
+  public var repeatCount: Swift.Int
+  public init(rigidBody: BulletKit.BKRigidBody, duration: Foundation.TimeInterval, setup: BulletKit.BKAction.SetupBlock? = nil, action: BulletKit.BKAction.ActionBlock? = nil)
+  public func run()
+  public func stop()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BKDisplayLink {
+  public var onTick: (() -> ())?
+  public func start()
+  public func stop()
+  @objc deinit
+}
+public protocol BKPhysicsSceneUpdateDelegate : AnyObject {
+  func physicsSceneWillIterativelyUpdate(_ physicsScene: BulletKit.BKPhysicsScene)
+  func physicsSceneDidIterativelyUpdate(_ physicsScene: BulletKit.BKPhysicsScene)
+  func physicsScene(_ physicsScene: BulletKit.BKPhysicsScene, willReactivelyUpdateNode node: SceneKit.SCNNode, attachedToRigidBody rigidBody: BulletKit.BKRigidBody)
+  func physicsScene(_ physicsScene: BulletKit.BKPhysicsScene, didReactivelyUpdateNode node: SceneKit.SCNNode, attachedToRigidBody rigidBody: BulletKit.BKRigidBody)
+}
+public class BKCollisionShapeFromData : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+extension BKCollisionShape {
+  public func serialize() -> Foundation.Data
+}
+public class BKCollisionShapeStaticPlane : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(direction: BulletKit.BKVector3 = BKVector3(0, 1, 0), transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+public class BKCollisionPair {
+  weak public var rigidBodyA: BulletKit.BKRigidBody?
+  final public let localPositionA: BulletKit.BKVector3
+  weak public var rigidBodyB: BulletKit.BKRigidBody?
+  final public let localPositionB: BulletKit.BKVector3
+  public init(rigidBodyA: BulletKit.BKRigidBody, localPositionA: BulletKit.BKVector3, rigidBodyB: BulletKit.BKRigidBody, localPositionB: BulletKit.BKVector3)
+  @objc deinit
+}
+extension BKVector3 {
+  public var scnVector3: SceneKit.SCNVector3 {
+    get
+  }
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float)
+  public static var zero: BulletKit.BKVector3 {
+    get
+  }
+  public static func vector(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> BulletKit.BKVector3
+  public static func radians(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> BulletKit.BKVector3
+  public static func degrees(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> BulletKit.BKVector3
+  public static func radiansFromDegrees(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> BulletKit.BKVector3
+  public static func degreesFromRadians(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> BulletKit.BKVector3
+  public func toRadians() -> BulletKit.BKVector3
+  public func toDegrees() -> BulletKit.BKVector3
+}
+extension BKVector4 {
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float)
+  public static func vector(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float) -> BulletKit.BKVector4
+}
+extension SCNVector3 {
+  public var bkVector3: BulletKit.BKVector3 {
+    get
+  }
+}
+extension SCNVector4 {
+  public var BKVector4: BulletKit.BKVector4 {
+    get
+  }
+}
+public enum BKRotationMetric {
+  case radians
+  case degrees
+  public static func == (a: BulletKit.BKRotationMetric, b: BulletKit.BKRotationMetric) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension BKQuaternion {
+  public var scnQuaternion: SceneKit.SCNQuaternion {
+    get
+  }
+  public var direction: BulletKit.BKVector3 {
+    get
+  }
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float)
+  public static func quaternion(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float) -> BulletKit.BKQuaternion
+  public static func euler(_ eulerX: Swift.Float, _ eulerY: Swift.Float, _ eulerZ: Swift.Float, _ metric: BulletKit.BKRotationMetric = .degrees) -> BulletKit.BKQuaternion
+  public static var identity: BulletKit.BKQuaternion {
+    get
+  }
+}
+extension SCNVector4 {
+  public var BKQuaternion: BulletKit.BKQuaternion {
+    get
+  }
+}
+extension BKMatrix4 {
+  public var scnMatrix: SceneKit.SCNMatrix4 {
+    get
+  }
+}
+extension CATransform3D {
+  public var blMatrix: BulletKit.BKMatrix4 {
+    get
+  }
+}
+public protocol BKPhysicsWorldSimulationDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, willSimulateAtTime time: Foundation.TimeInterval)
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, didSimulateAtTime time: Foundation.TimeInterval)
+}
+public class BKTriggerPair {
+  final public let rigidBody: BulletKit.BKRigidBody
+  final public let trigger: BulletKit.BKTrigger
+  public init(rigidBody: BulletKit.BKRigidBody, trigger: BulletKit.BKTrigger)
+  @objc deinit
+}
+extension BKAction {
+  public static func orient(_ rigidBody: BulletKit.BKRigidBody, by delta: BulletKit.BKQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> BulletKit.BKAction
+  public static func orient(_ rigidBody: BulletKit.BKRigidBody, to end: BulletKit.BKQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> BulletKit.BKAction
+}
+public protocol BKCollisionShape {
+  var internalShape: BulletKit.CBKCollisionShape { get }
+}
+public class BKPhysicsScene {
+  weak public var delegate: BulletKit.BKPhysicsSceneUpdateDelegate?
+  public init(isMotionStateEnabled: Swift.Bool)
+  public func attach(_ rigidBody: BulletKit.BKRigidBody, to node: SceneKit.SCNNode)
+  public func detach(_ node: SceneKit.SCNNode)
+  public func iterativelyOrientAllNodesToAttachedRigidBodies()
+  @objc deinit
+}
+public class BKCollisionShapeGeometry : BulletKit.BKCollisionShape {
+  public enum BKCollisionShapeGeometryType {
+    case convex
+    case concave
+    public static func == (a: BulletKit.BKCollisionShapeGeometry.BKCollisionShapeGeometryType, b: BulletKit.BKCollisionShapeGeometry.BKCollisionShapeGeometryType) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(geometry: BulletKit.BKGeometry, type: BulletKit.BKCollisionShapeGeometry.BKCollisionShapeGeometryType, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  @objc deinit
+}
+public class BKGeometry {
+  final public let internalGeometry: BulletKit.CBKGeometry
+  public init(scnGeometry: SceneKit.SCNGeometry)
+  @objc deinit
+}
+public protocol BKPhysicsWorldCollisionDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, collisionDidBeginAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKCollisionPair)
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, collisionDidContinueAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKCollisionPair)
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, collisionDidEndAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKCollisionPair)
+}
+public class BKCollisionShapeCapsule : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(radius: Swift.Float, height: Swift.Float, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+public class BKCollisionShapeBox : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(width: Swift.Float, height: Swift.Float, length: Swift.Float, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  public init(size: Swift.Float, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity())
+  @objc deinit
+}
+public class BKCollisionShapeCylinder : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(radius: Swift.Float, height: Swift.Float, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+@objc public class BKRigidBody : BulletKit.CBKRigidBody {
+  final public let uuid: Swift.String
+  final public let type: BulletKit.BKRigidBodyType
+  public init(type: BulletKit.BKRigidBodyType, shape: BulletKit.BKCollisionShape)
+  @objc deinit
+  @objc override dynamic public init(collisionShape: BulletKit.CBKCollisionShape, rigidBodyType: BulletKit.CBKRigidBodyType, mass: Swift.Float)
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class BKPhysicsWorld : BulletKit.CBKPhysicsWorld {
+  weak public var simulationDelegate: BulletKit.BKPhysicsWorldSimulationDelegate?
+  weak public var collisionDelegate: BulletKit.BKPhysicsWorldCollisionDelegate?
+  weak public var triggerDelegate: BulletKit.BKPhysicsWorldTriggerDelegate?
+  public var simulationTime: Swift.Double {
+    get
+    set
+  }
+  public func add(_ rigidBody: BulletKit.BKRigidBody)
+  public func remove(_ rigidBody: BulletKit.BKRigidBody)
+  public func add(_ trigger: BulletKit.BKTrigger)
+  public func remove(_ trigger: BulletKit.BKTrigger)
+  public func reset()
+  public func rayCast(from: BulletKit.BKVector3, to: BulletKit.BKVector3) -> [BulletKit.BKRaycastResult]
+  @objc override dynamic public func internalCollisionDidOccur(_ internalRigidBodyA: BulletKit.CBKRigidBody, localPositionA: BulletKit.BKVector3, internalRigidBodyB: BulletKit.CBKRigidBody, localPositionB: BulletKit.BKVector3)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class BKCollisionShapeSphere : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(radius: Swift.Float, transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+extension BKAction {
+  public static func move(_ rigidBody: BulletKit.BKRigidBody, to end: BulletKit.BKVector3, duration: Foundation.TimeInterval) -> BulletKit.BKAction
+  public static func move(_ rigidBody: BulletKit.BKRigidBody, by dist: BulletKit.BKVector3, duration: Foundation.TimeInterval) -> BulletKit.BKAction
+  public static func move(_ rigidBody: BulletKit.BKRigidBody, byFunction distFunction: @escaping () -> (BulletKit.BKVector3)) -> BulletKit.BKAction
+}
+public protocol BKPhysicsWorldTriggerDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, triggerDidBeginAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKTriggerPair)
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, triggerDidContinueAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKTriggerPair)
+  func physicsWorld(_ physicsWorld: BulletKit.BKPhysicsWorld, triggerDidEndAtTime time: Foundation.TimeInterval, with collisionPair: BulletKit.BKTriggerPair)
+}
+public enum BKRigidBodyType : Swift.Equatable {
+  case `static`
+  case kinematic
+  case dynamic(mass: Swift.Float)
+  public static func == (lhs: BulletKit.BKRigidBodyType, rhs: BulletKit.BKRigidBodyType) -> Swift.Bool
+}
+extension BKRigidBodyType {
+  public var mass: Swift.Float {
+    get
+  }
+  public var isDynamic: Swift.Bool {
+    get
+  }
+  public static var dynamic: BulletKit.BKRigidBodyType {
+    get
+  }
+}
+@objc public class BKTrigger : BulletKit.CBKPhysicsTrigger {
+  final public let uuid: Swift.String
+  public init(shape: BulletKit.BKCollisionShape)
+  public func getCollidingRigidBodies() -> [BulletKit.BKRigidBody]
+  @objc deinit
+  @objc override dynamic public init(collisionShape: BulletKit.CBKCollisionShape)
+  @objc override dynamic public init()
+}
+public class BKRaycastResult {
+  weak public var rigidBody: BulletKit.BKRigidBody?
+  final public let worldPosition: BulletKit.BKVector3
+  final public let worldNormal: BulletKit.BKVector3
+  public init(rigidBody: BulletKit.BKRigidBody, worldPosition: BulletKit.BKVector3, worldNormal: BulletKit.BKVector3)
+  @objc deinit
+}
+public class BKCollisionShapeCompound : BulletKit.BKCollisionShape {
+  final public let internalShape: BulletKit.CBKCollisionShape
+  public init(collisionShapes: [BulletKit.BKCollisionShape], transform: BulletKit.BKMatrix4 = BKMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  @objc deinit
+}
+extension BulletKit.BKRotationMetric : Swift.Equatable {}
+extension BulletKit.BKRotationMetric : Swift.Hashable {}
+extension BulletKit.BKCollisionShapeGeometry.BKCollisionShapeGeometryType : Swift.Equatable {}
+extension BulletKit.BKCollisionShapeGeometry.BKCollisionShapeGeometryType : Swift.Hashable {}

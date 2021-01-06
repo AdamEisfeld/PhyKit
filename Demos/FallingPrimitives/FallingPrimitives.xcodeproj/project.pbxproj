@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F33199AF25A6462000E71BB1 /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F331999625A6462000E71BB1 /* SourceCodePro-Regular.ttf */; };
+		F33199B025A6462000E71BB1 /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F331999625A6462000E71BB1 /* SourceCodePro-Regular.ttf */; };
+		F33199B325A6462000E71BB1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F331999825A6462000E71BB1 /* OFL.txt */; };
+		F33199B425A6462000E71BB1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F331999825A6462000E71BB1 /* OFL.txt */; };
+		F33199B725A6462000E71BB1 /* SourceCodePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F331999A25A6462000E71BB1 /* SourceCodePro-Bold.ttf */; };
+		F33199B825A6462000E71BB1 /* SourceCodePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F331999A25A6462000E71BB1 /* SourceCodePro-Bold.ttf */; };
+		F354265625A4FEFC007ADB77 /* FallingPrimitivesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354264325A4FEFC007ADB77 /* FallingPrimitivesApp.swift */; };
+		F354265725A4FEFC007ADB77 /* FallingPrimitivesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354264325A4FEFC007ADB77 /* FallingPrimitivesApp.swift */; };
+		F354265A25A4FEFC007ADB77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F354264525A4FEFC007ADB77 /* Assets.xcassets */; };
+		F354265B25A4FEFC007ADB77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F354264525A4FEFC007ADB77 /* Assets.xcassets */; };
+		F354267C25A50D6A007ADB77 /* BridgeUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354267B25A50D6A007ADB77 /* BridgeUserInterface.swift */; };
+		F354268025A50D77007ADB77 /* BridgeUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354267F25A50D77007ADB77 /* BridgeUserInterface.swift */; };
+		F354268425A50FA7007ADB77 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354268325A50FA7007ADB77 /* DemoViewController.swift */; };
+		F354268525A50FA7007ADB77 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354268325A50FA7007ADB77 /* DemoViewController.swift */; };
+		F354268B25A51348007ADB77 /* Scenes.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F354268A25A51348007ADB77 /* Scenes.scnassets */; };
+		F354268C25A51348007ADB77 /* Scenes.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F354268A25A51348007ADB77 /* Scenes.scnassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F331994B25A6222400E71BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F331994625A6222400E71BB1 /* PhyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3A560E525A36A90006D6778;
+			remoteInfo = "PhyKit-ios";
+		};
+		F331994D25A6222400E71BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F331994625A6222400E71BB1 /* PhyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3A560F425A36AA9006D6778;
+			remoteInfo = "PhyKit-macos";
+		};
+		F331995125A6223800E71BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F331994625A6222400E71BB1 /* PhyKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A560E425A36A90006D6778;
+			remoteInfo = "PhyKit-ios";
+		};
+		F331995325A6223C00E71BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F331994625A6222400E71BB1 /* PhyKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A560F325A36AA9006D6778;
+			remoteInfo = "PhyKit-macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F33198C625A6174300E71BB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33198C925A6174600E71BB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F331994625A6222400E71BB1 /* PhyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PhyKit.xcodeproj; path = ../../../PhyKit.xcodeproj; sourceTree = "<group>"; };
+		F331999625A6462000E71BB1 /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = "<group>"; };
+		F331999825A6462000E71BB1 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		F331999A25A6462000E71BB1 /* SourceCodePro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Bold.ttf"; sourceTree = "<group>"; };
+		F354264325A4FEFC007ADB77 /* FallingPrimitivesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingPrimitivesApp.swift; sourceTree = "<group>"; };
+		F354264525A4FEFC007ADB77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F354264A25A4FEFC007ADB77 /* FallingPrimitives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingPrimitives.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F354264D25A4FEFC007ADB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F354265225A4FEFC007ADB77 /* FallingPrimitives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingPrimitives.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F354265425A4FEFC007ADB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F354265525A4FEFC007ADB77 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F354267B25A50D6A007ADB77 /* BridgeUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeUserInterface.swift; sourceTree = "<group>"; };
+		F354267F25A50D77007ADB77 /* BridgeUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeUserInterface.swift; sourceTree = "<group>"; };
+		F354268325A50FA7007ADB77 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		F354268A25A51348007ADB77 /* Scenes.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Scenes.scnassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F354264725A4FEFC007ADB77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F354264F25A4FEFC007ADB77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F33198C125A6173600E71BB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F331994725A6222400E71BB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F331994C25A6222400E71BB1 /* PhyKit.framework */,
+				F331994E25A6222400E71BB1 /* PhyKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F331998A25A6462000E71BB1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F331998B25A6462000E71BB1 /* Source_Code_Pro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F331998B25A6462000E71BB1 /* Source_Code_Pro */ = {
+			isa = PBXGroup;
+			children = (
+				F331999625A6462000E71BB1 /* SourceCodePro-Regular.ttf */,
+				F331999A25A6462000E71BB1 /* SourceCodePro-Bold.ttf */,
+				F331999825A6462000E71BB1 /* OFL.txt */,
+			);
+			path = Source_Code_Pro;
+			sourceTree = "<group>";
+		};
+		F354263D25A4FEFB007ADB77 = {
+			isa = PBXGroup;
+			children = (
+				F354264225A4FEFC007ADB77 /* Shared */,
+				F354264C25A4FEFC007ADB77 /* iOS */,
+				F354265325A4FEFC007ADB77 /* macOS */,
+				F354264B25A4FEFC007ADB77 /* Products */,
+				F33198C125A6173600E71BB1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F354264225A4FEFC007ADB77 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F331994625A6222400E71BB1 /* PhyKit.xcodeproj */,
+				F354264325A4FEFC007ADB77 /* FallingPrimitivesApp.swift */,
+				F354268325A50FA7007ADB77 /* DemoViewController.swift */,
+				F331998A25A6462000E71BB1 /* Fonts */,
+				F354268A25A51348007ADB77 /* Scenes.scnassets */,
+				F354264525A4FEFC007ADB77 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F354264B25A4FEFC007ADB77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F354264A25A4FEFC007ADB77 /* FallingPrimitives.app */,
+				F354265225A4FEFC007ADB77 /* FallingPrimitives.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F354264C25A4FEFC007ADB77 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F354264D25A4FEFC007ADB77 /* Info.plist */,
+				F354267B25A50D6A007ADB77 /* BridgeUserInterface.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		F354265325A4FEFC007ADB77 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F354265425A4FEFC007ADB77 /* Info.plist */,
+				F354265525A4FEFC007ADB77 /* macOS.entitlements */,
+				F354267F25A50D77007ADB77 /* BridgeUserInterface.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F354264925A4FEFC007ADB77 /* FallingPrimitives (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F354265E25A4FEFC007ADB77 /* Build configuration list for PBXNativeTarget "FallingPrimitives (iOS)" */;
+			buildPhases = (
+				F354264625A4FEFC007ADB77 /* Sources */,
+				F354264725A4FEFC007ADB77 /* Frameworks */,
+				F354264825A4FEFC007ADB77 /* Resources */,
+				F33198C625A6174300E71BB1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F331995225A6223800E71BB1 /* PBXTargetDependency */,
+			);
+			name = "FallingPrimitives (iOS)";
+			productName = "FallingPrimitives (iOS)";
+			productReference = F354264A25A4FEFC007ADB77 /* FallingPrimitives.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F354265125A4FEFC007ADB77 /* FallingPrimitives (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F354266125A4FEFC007ADB77 /* Build configuration list for PBXNativeTarget "FallingPrimitives (macOS)" */;
+			buildPhases = (
+				F354264E25A4FEFC007ADB77 /* Sources */,
+				F354264F25A4FEFC007ADB77 /* Frameworks */,
+				F354265025A4FEFC007ADB77 /* Resources */,
+				F33198C925A6174600E71BB1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F331995425A6223C00E71BB1 /* PBXTargetDependency */,
+			);
+			name = "FallingPrimitives (macOS)";
+			productName = "FallingPrimitives (macOS)";
+			productReference = F354265225A4FEFC007ADB77 /* FallingPrimitives.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F354263E25A4FEFB007ADB77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F354264925A4FEFC007ADB77 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F354265125A4FEFC007ADB77 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = F354264125A4FEFB007ADB77 /* Build configuration list for PBXProject "FallingPrimitives" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F354263D25A4FEFB007ADB77;
+			productRefGroup = F354264B25A4FEFC007ADB77 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F331994725A6222400E71BB1 /* Products */;
+					ProjectRef = F331994625A6222400E71BB1 /* PhyKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F354264925A4FEFC007ADB77 /* FallingPrimitives (iOS) */,
+				F354265125A4FEFC007ADB77 /* FallingPrimitives (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F331994C25A6222400E71BB1 /* PhyKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PhyKit.framework;
+			remoteRef = F331994B25A6222400E71BB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F331994E25A6222400E71BB1 /* PhyKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PhyKit.framework;
+			remoteRef = F331994D25A6222400E71BB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F354264825A4FEFC007ADB77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33199B325A6462000E71BB1 /* OFL.txt in Resources */,
+				F33199AF25A6462000E71BB1 /* SourceCodePro-Regular.ttf in Resources */,
+				F33199B725A6462000E71BB1 /* SourceCodePro-Bold.ttf in Resources */,
+				F354268B25A51348007ADB77 /* Scenes.scnassets in Resources */,
+				F354265A25A4FEFC007ADB77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F354265025A4FEFC007ADB77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33199B425A6462000E71BB1 /* OFL.txt in Resources */,
+				F33199B025A6462000E71BB1 /* SourceCodePro-Regular.ttf in Resources */,
+				F33199B825A6462000E71BB1 /* SourceCodePro-Bold.ttf in Resources */,
+				F354268C25A51348007ADB77 /* Scenes.scnassets in Resources */,
+				F354265B25A4FEFC007ADB77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F354264625A4FEFC007ADB77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F354267C25A50D6A007ADB77 /* BridgeUserInterface.swift in Sources */,
+				F354265625A4FEFC007ADB77 /* FallingPrimitivesApp.swift in Sources */,
+				F354268425A50FA7007ADB77 /* DemoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F354264E25A4FEFC007ADB77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F354268025A50D77007ADB77 /* BridgeUserInterface.swift in Sources */,
+				F354265725A4FEFC007ADB77 /* FallingPrimitivesApp.swift in Sources */,
+				F354268525A50FA7007ADB77 /* DemoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F331995225A6223800E71BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PhyKit-ios";
+			targetProxy = F331995125A6223800E71BB1 /* PBXContainerItemProxy */;
+		};
+		F331995425A6223C00E71BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PhyKit-macos";
+			targetProxy = F331995325A6223C00E71BB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F354265C25A4FEFC007ADB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F354265D25A4FEFC007ADB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F354265F25A4FEFC007ADB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phyzyxkit.FallingPrimitives;
+				PRODUCT_NAME = FallingPrimitives;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F354266025A4FEFC007ADB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phyzyxkit.FallingPrimitives;
+				PRODUCT_NAME = FallingPrimitives;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F354266225A4FEFC007ADB77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phyzyxkit.FallingPrimitives;
+				PRODUCT_NAME = FallingPrimitives;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F354266325A4FEFC007ADB77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = phyzyxkit.FallingPrimitives;
+				PRODUCT_NAME = FallingPrimitives;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F354264125A4FEFB007ADB77 /* Build configuration list for PBXProject "FallingPrimitives" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F354265C25A4FEFC007ADB77 /* Debug */,
+				F354265D25A4FEFC007ADB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F354265E25A4FEFC007ADB77 /* Build configuration list for PBXNativeTarget "FallingPrimitives (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F354265F25A4FEFC007ADB77 /* Debug */,
+				F354266025A4FEFC007ADB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F354266125A4FEFC007ADB77 /* Build configuration list for PBXNativeTarget "FallingPrimitives (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F354266225A4FEFC007ADB77 /* Debug */,
+				F354266325A4FEFC007ADB77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F354263E25A4FEFB007ADB77 /* Project object */;
+}

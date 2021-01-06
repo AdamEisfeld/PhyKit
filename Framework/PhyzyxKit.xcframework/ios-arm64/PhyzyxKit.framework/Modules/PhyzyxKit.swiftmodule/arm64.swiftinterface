@@ -1,0 +1,268 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PhyzyxKit
+import Foundation
+@_exported import PhyzyxKit
+import SceneKit
+import Swift
+public class PXAction {
+  public typealias SetupBlock = ((PhyzyxKit.PXRigidBody) -> (Any?))
+  public typealias ActionBlock = ((Foundation.TimeInterval, PhyzyxKit.PXRigidBody, Any?) -> ())
+  public var repeatCount: Swift.Int
+  public init(rigidBody: PhyzyxKit.PXRigidBody, duration: Foundation.TimeInterval, setup: PhyzyxKit.PXAction.SetupBlock? = nil, action: PhyzyxKit.PXAction.ActionBlock? = nil)
+  public func run()
+  public func stop()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PXDisplayLink {
+  public var onTick: (() -> ())?
+  public func start()
+  public func stop()
+  @objc deinit
+}
+public protocol PXPhysicsSceneUpdateDelegate : AnyObject {
+  func physicsSceneWillIterativelyUpdate(_ physicsScene: PhyzyxKit.PXPhysicsScene)
+  func physicsSceneDidIterativelyUpdate(_ physicsScene: PhyzyxKit.PXPhysicsScene)
+  func physicsScene(_ physicsScene: PhyzyxKit.PXPhysicsScene, willReactivelyUpdateNode node: SceneKit.SCNNode, attachedToRigidBody rigidBody: PhyzyxKit.PXRigidBody)
+  func physicsScene(_ physicsScene: PhyzyxKit.PXPhysicsScene, didReactivelyUpdateNode node: SceneKit.SCNNode, attachedToRigidBody rigidBody: PhyzyxKit.PXRigidBody)
+}
+public class PXCollisionShapeFromData : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+extension PXCollisionShape {
+  public func serialize() -> Foundation.Data
+}
+public class PXCollisionShapeStaticPlane : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(direction: PhyzyxKit.PXVector3 = PXVector3(0, 1, 0), transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+public class PXCollisionPair {
+  weak public var rigidBodyA: PhyzyxKit.PXRigidBody?
+  final public let localPositionA: PhyzyxKit.PXVector3
+  weak public var rigidBodyB: PhyzyxKit.PXRigidBody?
+  final public let localPositionB: PhyzyxKit.PXVector3
+  public init(rigidBodyA: PhyzyxKit.PXRigidBody, localPositionA: PhyzyxKit.PXVector3, rigidBodyB: PhyzyxKit.PXRigidBody, localPositionB: PhyzyxKit.PXVector3)
+  @objc deinit
+}
+extension PXVector3 {
+  public var scnVector3: SceneKit.SCNVector3 {
+    get
+  }
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float)
+  public static var zero: PhyzyxKit.PXVector3 {
+    get
+  }
+  public static func vector(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> PhyzyxKit.PXVector3
+  public static func radians(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> PhyzyxKit.PXVector3
+  public static func degrees(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> PhyzyxKit.PXVector3
+  public static func radiansFromDegrees(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> PhyzyxKit.PXVector3
+  public static func degreesFromRadians(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> PhyzyxKit.PXVector3
+  public func toRadians() -> PhyzyxKit.PXVector3
+  public func toDegrees() -> PhyzyxKit.PXVector3
+}
+extension PXVector4 {
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float)
+  public static func vector(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float) -> PhyzyxKit.PXVector4
+}
+extension SCNVector3 {
+  public var bkVector3: PhyzyxKit.PXVector3 {
+    get
+  }
+}
+extension SCNVector4 {
+  public var PXVector4: PhyzyxKit.PXVector4 {
+    get
+  }
+}
+public enum PXRotationMetric {
+  case radians
+  case degrees
+  public static func == (a: PhyzyxKit.PXRotationMetric, b: PhyzyxKit.PXRotationMetric) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension PXQuaternion {
+  public var scnQuaternion: SceneKit.SCNQuaternion {
+    get
+  }
+  public var direction: PhyzyxKit.PXVector3 {
+    get
+  }
+  public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float)
+  public static func quaternion(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float) -> PhyzyxKit.PXQuaternion
+  public static func euler(_ eulerX: Swift.Float, _ eulerY: Swift.Float, _ eulerZ: Swift.Float, _ metric: PhyzyxKit.PXRotationMetric = .degrees) -> PhyzyxKit.PXQuaternion
+  public static var identity: PhyzyxKit.PXQuaternion {
+    get
+  }
+}
+extension SCNVector4 {
+  public var PXQuaternion: PhyzyxKit.PXQuaternion {
+    get
+  }
+}
+extension PXMatrix4 {
+  public var scnMatrix: SceneKit.SCNMatrix4 {
+    get
+  }
+}
+extension SCNMatrix4 {
+  public var blMatrix: PhyzyxKit.PXMatrix4 {
+    get
+  }
+}
+public protocol PXPhysicsWorldSimulationDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, willSimulateAtTime time: Foundation.TimeInterval)
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, didSimulateAtTime time: Foundation.TimeInterval)
+}
+public class PXTriggerPair {
+  final public let rigidBody: PhyzyxKit.PXRigidBody
+  final public let trigger: PhyzyxKit.PXTrigger
+  public init(rigidBody: PhyzyxKit.PXRigidBody, trigger: PhyzyxKit.PXTrigger)
+  @objc deinit
+}
+extension PXAction {
+  public static func orient(_ rigidBody: PhyzyxKit.PXRigidBody, by delta: PhyzyxKit.PXQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> PhyzyxKit.PXAction
+  public static func orient(_ rigidBody: PhyzyxKit.PXRigidBody, to end: PhyzyxKit.PXQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> PhyzyxKit.PXAction
+}
+public protocol PXCollisionShape {
+  var internalShape: PhyzyxKit.CPXCollisionShape { get }
+}
+public class PXPhysicsScene {
+  weak public var delegate: PhyzyxKit.PXPhysicsSceneUpdateDelegate?
+  public init(isMotionStateEnabled: Swift.Bool)
+  public func attach(_ rigidBody: PhyzyxKit.PXRigidBody, to node: SceneKit.SCNNode)
+  public func detach(_ node: SceneKit.SCNNode)
+  public func iterativelyOrientAllNodesToAttachedRigidBodies()
+  @objc deinit
+}
+public class PXCollisionShapeGeometry : PhyzyxKit.PXCollisionShape {
+  public enum PXCollisionShapeGeometryType {
+    case convex
+    case concave
+    public static func == (a: PhyzyxKit.PXCollisionShapeGeometry.PXCollisionShapeGeometryType, b: PhyzyxKit.PXCollisionShapeGeometry.PXCollisionShapeGeometryType) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(geometry: PhyzyxKit.PXGeometry, type: PhyzyxKit.PXCollisionShapeGeometry.PXCollisionShapeGeometryType, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  @objc deinit
+}
+public class PXGeometry {
+  final public let internalGeometry: PhyzyxKit.CPXGeometry
+  public init(scnGeometry: SceneKit.SCNGeometry)
+  @objc deinit
+}
+public protocol PXPhysicsWorldCollisionDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, collisionDidBeginAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXCollisionPair)
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, collisionDidContinueAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXCollisionPair)
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, collisionDidEndAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXCollisionPair)
+}
+public class PXCollisionShapeCapsule : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(radius: Swift.Float, height: Swift.Float, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+public class PXCollisionShapeBox : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(width: Swift.Float, height: Swift.Float, length: Swift.Float, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  public init(size: Swift.Float, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity())
+  @objc deinit
+}
+public class PXCollisionShapeCylinder : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(radius: Swift.Float, height: Swift.Float, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+@objc public class PXRigidBody : PhyzyxKit.CPXRigidBody {
+  final public let uuid: Swift.String
+  final public let type: PhyzyxKit.PXRigidBodyType
+  public init(type: PhyzyxKit.PXRigidBodyType, shape: PhyzyxKit.PXCollisionShape)
+  @objc deinit
+  @objc override dynamic public init(collisionShape: PhyzyxKit.CPXCollisionShape, rigidBodyType: PhyzyxKit.CPXRigidBodyType, mass: Swift.Float)
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class PXPhysicsWorld : PhyzyxKit.CPXPhysicsWorld {
+  weak public var simulationDelegate: PhyzyxKit.PXPhysicsWorldSimulationDelegate?
+  weak public var collisionDelegate: PhyzyxKit.PXPhysicsWorldCollisionDelegate?
+  weak public var triggerDelegate: PhyzyxKit.PXPhysicsWorldTriggerDelegate?
+  public var simulationTime: Swift.Double {
+    get
+    set
+  }
+  public func add(_ rigidBody: PhyzyxKit.PXRigidBody)
+  public func remove(_ rigidBody: PhyzyxKit.PXRigidBody)
+  public func add(_ trigger: PhyzyxKit.PXTrigger)
+  public func remove(_ trigger: PhyzyxKit.PXTrigger)
+  public func reset()
+  public func rayCast(from: PhyzyxKit.PXVector3, to: PhyzyxKit.PXVector3) -> [PhyzyxKit.PXRaycastResult]
+  @objc override dynamic public func internalCollisionDidOccur(_ internalRigidBodyA: PhyzyxKit.CPXRigidBody, localPositionA: PhyzyxKit.PXVector3, internalRigidBodyB: PhyzyxKit.CPXRigidBody, localPositionB: PhyzyxKit.PXVector3)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class PXCollisionShapeSphere : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(radius: Swift.Float, transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  required public init(serializedData: Foundation.Data)
+  @objc deinit
+}
+extension PXAction {
+  public static func move(_ rigidBody: PhyzyxKit.PXRigidBody, to end: PhyzyxKit.PXVector3, duration: Foundation.TimeInterval) -> PhyzyxKit.PXAction
+  public static func move(_ rigidBody: PhyzyxKit.PXRigidBody, by dist: PhyzyxKit.PXVector3, duration: Foundation.TimeInterval) -> PhyzyxKit.PXAction
+  public static func move(_ rigidBody: PhyzyxKit.PXRigidBody, byFunction distFunction: @escaping () -> (PhyzyxKit.PXVector3)) -> PhyzyxKit.PXAction
+}
+public protocol PXPhysicsWorldTriggerDelegate : AnyObject {
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, triggerDidBeginAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXTriggerPair)
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, triggerDidContinueAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXTriggerPair)
+  func physicsWorld(_ physicsWorld: PhyzyxKit.PXPhysicsWorld, triggerDidEndAtTime time: Foundation.TimeInterval, with collisionPair: PhyzyxKit.PXTriggerPair)
+}
+public enum PXRigidBodyType : Swift.Equatable {
+  case `static`
+  case kinematic
+  case dynamic(mass: Swift.Float)
+  public static func == (lhs: PhyzyxKit.PXRigidBodyType, rhs: PhyzyxKit.PXRigidBodyType) -> Swift.Bool
+}
+extension PXRigidBodyType {
+  public var mass: Swift.Float {
+    get
+  }
+  public var isDynamic: Swift.Bool {
+    get
+  }
+  public static var dynamic: PhyzyxKit.PXRigidBodyType {
+    get
+  }
+}
+@objc public class PXTrigger : PhyzyxKit.CPXPhysicsTrigger {
+  final public let uuid: Swift.String
+  public init(shape: PhyzyxKit.PXCollisionShape)
+  public func getCollidingRigidBodies() -> [PhyzyxKit.PXRigidBody]
+  @objc deinit
+  @objc override dynamic public init(collisionShape: PhyzyxKit.CPXCollisionShape)
+  @objc override dynamic public init()
+}
+public class PXRaycastResult {
+  weak public var rigidBody: PhyzyxKit.PXRigidBody?
+  final public let worldPosition: PhyzyxKit.PXVector3
+  final public let worldNormal: PhyzyxKit.PXVector3
+  public init(rigidBody: PhyzyxKit.PXRigidBody, worldPosition: PhyzyxKit.PXVector3, worldNormal: PhyzyxKit.PXVector3)
+  @objc deinit
+}
+public class PXCollisionShapeCompound : PhyzyxKit.PXCollisionShape {
+  final public let internalShape: PhyzyxKit.CPXCollisionShape
+  public init(collisionShapes: [PhyzyxKit.PXCollisionShape], transform: PhyzyxKit.PXMatrix4 = PXMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
+  @objc deinit
+}
+extension PhyzyxKit.PXRotationMetric : Swift.Equatable {}
+extension PhyzyxKit.PXRotationMetric : Swift.Hashable {}
+extension PhyzyxKit.PXCollisionShapeGeometry.PXCollisionShapeGeometryType : Swift.Equatable {}
+extension PhyzyxKit.PXCollisionShapeGeometry.PXCollisionShapeGeometryType : Swift.Hashable {}
