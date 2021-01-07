@@ -24,7 +24,7 @@ import PhyKit
 
 1. In Xcode, select File > Swift Packages > Add Package Dependency
 2. Enter "https://github.com/AdamEisfeld/PhyKit" for the remote url, and click Next
-3. Enter the desired version number (2.0 an onwards supported) or branch and click Next
+3. Enter the desired version number and click Next
 4. Click Finish
 
 Then, import it into your Swift source and begin using the framework:
