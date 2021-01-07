@@ -11,7 +11,7 @@ PhyKit is packaged as a universal XCFramework, built for iOS and macOS, distribu
 Reference PhyKit in your podfile:
 
 ```ruby
-pod 'PhyKit'
+pod 'PodPhyKit'
 ```
 
 Run pod install or pod update. Then, import it into your Swift source and begin using the framework:

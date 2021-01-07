@@ -9,10 +9,10 @@ PhyKit wraps the popular Bullet physics library for Swift/Objc, providing additi
 the physics simulation's output to a SceneKit scene's nodes.
                        DESC
 
-  s.homepage         = 'https://github.com/AdamEisfeld/BulletKit'
+  s.homepage         = 'https://github.com/AdamEisfeld/PhyKit'
   s.license          = { :type => 'zlib', :file => 'LICENSE' }
   s.author           = { 'AdamEisfeld' => 'adam.eisfeld@gmail.com' }
-  s.source           = { :git => 'https://github.com/AdamEisfeld/BulletKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/AdamEisfeld/PhyKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '11.0'
