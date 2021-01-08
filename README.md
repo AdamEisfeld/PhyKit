@@ -2,23 +2,11 @@
 
 An open source iOS / macOS wrapper for the Bullet physics library, with additional support for SceneKit.
 
+<img src="https://user-images.githubusercontent.com/2840242/103972814-ce3da980-513b-11eb-8f7a-cc102e3a3078.gif"></img>
+
 ## Requirements
 
 PhyKit is packaged as a universal XCFramework, built for iOS and macOS, distributed via Swift Package Manager or Cocoapods.
-
-## Installation Via Cocoapods
-
-Reference PhyKit in your podfile:
-
-```ruby
-pod 'PodPhyKit'
-```
-
-Run pod install or pod update. Then, import it into your Swift source and begin using the framework:
-
-```swift
-import PhyKit
-```
 
 ## Installation Via Swift Package Manager
 
@@ -28,6 +16,20 @@ import PhyKit
 4. Click Finish
 
 Then, import it into your Swift source and begin using the framework:
+
+```swift
+import PhyKit
+```
+
+## Installation Via Cocoapods
+
+Reference PhyKit in your podfile ("PhyKit" was taken on CocoaPods, so the pod name is PhyKitCocoapod):
+
+```ruby
+pod 'PhyKitCocoapod'
+```
+
+Run pod install or pod update. Then, import it into your Swift source and begin using the framework:
 
 ```swift
 import PhyKit
@@ -101,7 +103,7 @@ physicsWorld.add(staticBody)
 To run the simulation, you must "step" the physics simulation forward by some delta time. Typically, this time would be equal to the elapsed time since the
 last time you stepped the simulation.
 
-You might use a CADisplayLink, or SceneKit's SCNView's render loop to perform this call.
+You might use a CADisplayLink (PHYDisplayLink uses CADisplayLink on iOS and CVDisplayLink on macOS), or SceneKit's SCNView's render loop to perform this call.
 
 ```swift
 
@@ -279,11 +281,11 @@ PhyKit currently targets Bullet v2.89
 
 After making any desired changes, follow these steps to release a new version of PhyKit:
 
-1. In terminal, navigate to the root directory of PhyKit, and run the helper script buildPhy.sh. This script will:
+1. In terminal, navigate to the root directory of PhyKit, and run the helper script ```./buildPhy.sh```. This script will:
 > * Create .xcarchives of PhyKit for all of the supported platforms
 > * Bundle these xcarchives together into an xcframework
 
-2. Still in terminal, run the helper script deployPhy.sh, passing the version number you'd like to apply for the given release. PhyKit uses Semantic Versioning (see https://semver.org). This script will:
+2. Still in terminal, run the helper deployPhy script, passing the version number you'd like to apply for the given release (eg  ```./deployPhy.sh 1.2.3```). PhyKit uses Semantic Versioning (see https://semver.org). This script will:
 > * Update the version declared in the podspec
 > * Tag the current git branch with the version number
 > * Run "pod lib lint" to ensure Cocoapods functionality is not broken.
@@ -303,6 +305,10 @@ After making any desired changes, follow these steps to release a new version of
 
 1. Add any iOS-specific files to the PhyKit-ios directory / link them to the PhyKit-ios target
 2. Add any macOS-specific files to the PhyKit-macos directory / link them to the PhyKit-macos target
+
+## Development
+
+Open the included "Scratchpad" Xcode project to work on PHYKit's source wired to a boilerplate cross-platform application with a basic scene setup.
 
 ## Author
 

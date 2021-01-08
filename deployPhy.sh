@@ -1,7 +1,7 @@
 #!/bin/sh
 
 framework_version="$1"
-podspec_path="PodPhyKit.podspec"
+podspec_path="PhyKitCocoapod.podspec"
 
 echo "$framework_version"
 

@@ -1,6 +1,6 @@
 automaticVersion = '1.0.0'
 Pod::Spec.new do |s|
-  s.name             = 'PodPhyKit'
+  s.name             = 'PhyKitCocoapod'
   s.version          = automaticVersion
   s.summary          = 'Swift/Objc wrapper for Bullet Physics Engine with SceneKit support.'
 
