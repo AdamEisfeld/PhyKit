@@ -176,7 +176,7 @@ In order to orient the SCNNodes to their attached PHYRigidBody instances, PHYSce
 
 ### Actions
 
-As of PhyKit 1.0.2, PHYActions have been added. Similar to SCNActions in SceneKit, you can construct PHYActions to modify a rigid body's attributes over time for things like animations.
+Similar to SCNActions in SceneKit, you can construct PHYActions to modify a rigid body's attributes over time for things like animations.
 
 You can create a custom PHYAction, or use one of the provided helper constructors, eg:
 
@@ -200,7 +200,7 @@ Note that only kinematic rigid bodies support PHYActions. Adding PHYActions to s
 
 ### Raycasting
 
-As of PhyKit 1.0.3, raycasting has been added. Perform raycasts via the PHYWorld to determine which rigid bodies intersect a ray:
+Perform raycasts via the PHYWorld to determine which rigid bodies intersect a ray:
 
 ```swift
 let start: PHYVector3 = .vector(0, 10, 0)
