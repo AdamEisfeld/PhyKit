@@ -1,9 +1,9 @@
 BCSymbolMap Version: 2.0
-Apple clang version 12.0.0 (clang-1200.0.32.28)
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk
-iPhoneOS14.3.sdk
-/Users/adameisfeld/Library/Developer/Xcode/DerivedData/PhyKit-ctrttyatvmnrvkeiywompbcstlxx/Build/Intermediates.noindex/ArchiveIntermediates/PhyKit-ios/IntermediateBuildFilesPath/PhyKit.build/Release-iphoneos/PhyKit-ios.build/DerivedSources/PhyKit_vers.c
-/Users/adameisfeld/Desktop/Projects/PhyKit
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk
+iPhoneOS15.0.sdk
+/Users/adameisfeld/Library/Developer/Xcode/DerivedData/PhyKit-drdqtccnljahubekzssuswsopejg/Build/Intermediates.noindex/ArchiveIntermediates/PhyKit-ios/IntermediateBuildFilesPath/PhyKit.build/Release-iphoneos/PhyKit-ios.build/DerivedSources/PhyKit_vers.c
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit
 __ZN21btConvexInternalShape9setMarginEf
 __ZN12btConvexCast10CastResultD1Ev
 __ZN15btTriangleShapeD1Ev
@@ -63,6 +63,7 @@ dot
 cross
 operator-
 isInside
+llvm.loop.mustprogress
 getPlane
 getNumPlanes
 getVertex
@@ -218,9 +219,9 @@ PhyKit-shared/bullet/BulletCollision/Gimpact/btGImpactShape.cpp
 PhyKit-shared/bullet/LinearMath/btAlignedObjectArray.h
 clear
 init
+size
 deallocate
 PhyKit-shared/bullet/LinearMath/btAlignedAllocator.h
-size
 ~btGImpactMeshShape
 PhyKit-shared/bullet/BulletCollision/Gimpact/btGImpactShape.h
 ~btGImpactShapeInterface
@@ -332,7 +333,9 @@ __ZN21btMultiBodyConstraint14setGearAuxLinkEi
 __ZN21btMultiBodyConstraint25setRelativePositionTargetEf
 __ZN30btMultiBodySphericalJointMotor6setErpEf
 __ZN30btMultiBodySphericalJointMotor17setVelocityTargetERK9btVector3f
+__ZN30btMultiBodySphericalJointMotor25setVelocityTargetMultiDofERK9btVector3S2_
 __ZN30btMultiBodySphericalJointMotor17setPositionTargetERK12btQuaternionf
+__ZN30btMultiBodySphericalJointMotor25setPositionTargetMultiDofERK12btQuaternionRK9btVector3
 __ZNK30btMultiBodySphericalJointMotor6getErpEv
 __ZN30btMultiBodySphericalJointMotor11setRhsClampEf
 __ZN11btMatrix3x311setRotationERK12btQuaternion
@@ -346,7 +349,9 @@ PhyKit-shared/bullet/LinearMath/btQuaternion.h
 setRhsClamp
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBodySphericalJointMotor.h
 getErp
+setPositionTargetMultiDof
 setPositionTarget
+setVelocityTargetMultiDof
 setVelocityTarget
 setErp
 setRelativePositionTarget
@@ -359,10 +364,10 @@ setFrameInB
 createConstraintRows
 getNumRows
 getColumn
-expandNonInitializing
 getLink
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBody.h
 setIdentity
+expandNonInitializing
 btMultiBodySolverConstraint
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBodySolverConstraint.h
 btQuaternion
@@ -398,6 +403,7 @@ PhyKit-shared/bullet/BulletCollision/CollisionShapes/btMiniSDF.h
 btSdfCollisionShape
 btSdfCollisionShapeInternalData
 btMiniSDF
+operator new
 initializeSDF
 __ZN19btMinkowskiSumShapeD1Ev
 __ZN19btMinkowskiSumShapeD0Ev
@@ -517,7 +523,6 @@ getClosestPointsNonVirtual
 operator-=
 setZero
 fullSimplex
-fuzzyZero
 btDoSimplex
 btDoSimplex4
 ccdSign
@@ -582,7 +587,7 @@ setStiffness
 enableSpring
 setMaxMotorForce
 setServoTarget
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/math.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/math.h
 setTargetVelocity
 setServo
 enableMotor
@@ -706,7 +711,6 @@ computeConstraintMatrixOffDiagElementMultiBody
 computeDeltaVelocityInConstraintSpace
 computeConstraintMatrixDiagElementMultiBody
 createMLCPFastRigidBody
-getInvInertiaTensorWorld
 expand
 getBufferPointer
 resizeNoInitialize
@@ -805,13 +809,13 @@ findLibPointer
 find
 btHashPtr
 at
-getLibPointers
-PhyKit-shared/bullet/BulletFileLoader/bFile.h
 dumpChunks
 resolvePointersStructRecursive
 getArraySizeNew
 PhyKit-shared/bullet/BulletFileLoader/bDNA.h
 resolvePointersChunk
+getLibPointers
+PhyKit-shared/bullet/BulletFileLoader/bFile.h
 resolvePointersMismatch
 getElement
 safeSwapPtr
@@ -875,7 +879,6 @@ btSin
 setOrigin
 calcTimeOfImpact
 btPointCollector
-getOrigin
 calculateVelocity
 computeClosestPoints
 getPlaneConstant
@@ -888,8 +891,6 @@ __ZN20btAlignedObjectArrayIN7ConvexH8HalfEdgeEED2Ev
 __ZN20btAlignedObjectArrayI7btPlaneED2Ev
 __ZZN14btHullTriangle4neibEiiE2er
 PhyKit-shared/bullet/LinearMath/btConvexHull.cpp
-maxdirfiltered<btVector3>
-btDot
 GetDist
 ReleaseResult
 BringOutYourDead
@@ -905,14 +906,16 @@ ComputeHull
 calchull
 deAllocateTriangle
 calchullgen
-extrudable
+btDot
 TriNormal
 btCross
 hasvert
 setMax
 setMin
 maxdirsterid<btVector3>
+maxdirfiltered<btVector3>
 FindSimplex
+extrudable
 extrude
 allocateTriangle
 btHullTriangle
@@ -965,6 +968,7 @@ needApplyTorques
 getRotationalLimitMotor
 getInfo1NonVirtual
 isLimited
+llvm.loop.isvectorized
 buildAngularJacobian
 getInvInertiaDiagLocal
 buildLinearJacobian
@@ -1326,6 +1330,7 @@ facecontains
 SegmentSqrDistance
 collide
 getVertexPtr
+getOrigin
 inverseTimes
 transposeTimes
 getRow
@@ -1479,7 +1484,6 @@ setWorldTransform
 ~CPHYMotionState
 PhyKit-shared/objc/RigidBodies/CPHYRigidBody+Internal.h
 PhyKit-shared/objc/RigidBodies/CPHYRigidBody.h
-setCcdSweptSphereRadius
 setCcdMotionThreshold
 applyTorque
 applyForce
@@ -1506,7 +1510,6 @@ setEulerZYX
 getEulerZYX
 setCollisionFlags
 setUserPointer
-operator new
 btRigidBodyConstructionInfo
 setMotionState
 CPHYMotionState
@@ -1527,10 +1530,10 @@ merge_contacts_unique
 PhyKit-shared/bullet/BulletCollision/Gimpact/gim_contact.h
 growingCheck
 resizeData
+back
 gim_heap_sort<GIM_RSORT_TOKEN, GIM_RSORT_TOKEN_COMPARATOR>
 gim_swap_elements<GIM_RSORT_TOKEN>
 merge_contacts
-back
 interpolate_normals
 pointer
 calc_key_contact
@@ -1658,6 +1661,7 @@ PhyKit-shared/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h
 btDbvtBroadphase
 __ZN9btMatrixXIfE11setIdentityEv
 __ZN9btMatrixXIfE8negativeEv
+__ZN9btMatrixXIfE12setSubMatrixEiiiiRKS0_
 __ZN9btMatrixXIfE12setSubMatrixEiiiif
 __ZNK9btVectorXIfE4nrm2Ev
 __ZN9btVectorXIfEC2Ei
@@ -1867,6 +1871,7 @@ btGetHash
 btAdjustInternalEdgeContacts
 invXform
 btNearestPointInLineSegment
+fuzzyZero
 getTriangleInfoMap
 PhyKit-shared/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h
 PhyKit-shared/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h
@@ -1956,10 +1961,10 @@ addMultiBodySpinningFrictionConstraint
 addMultiBodyTorsionalFrictionConstraint
 addMultiBodyFrictionConstraint
 setupMultiBodyTorsionalFrictionConstraint
-getVelocityVector
 getPositionWorldOnB
 getPositionWorldOnA
 setupMultiBodyContactConstraint
+getInvInertiaTensorWorld
 fillContactJacobianMultiDof
 resolveConeFrictionConstraintRows
 resolveSingleConstraintRowGeneric
@@ -1980,7 +1985,6 @@ quickSort<btPersistentManifoldSortPredicateDeterministic>
 getNumElements
 buildAndProcessIslands
 buildIslands
-hasContactResponse
 isKinematicObject
 setDeactivationTime
 getUnionFind
@@ -2017,6 +2021,8 @@ btOptimizedBvhNode
 PhyKit-shared/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h
 ~NodeTriangleCallback
 quantize
+setZ
+setY
 ~QuantizedNodeTriangleCallback
 serializeInPlace
 PhyKit-shared/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h
@@ -2031,7 +2037,6 @@ getTriangleIndex
 getPartId
 refit
 build
-getEscapeIndex
 NodeTriangleCallback
 QuantizedNodeTriangleCallback
 ~btOptimizedBvh
@@ -2552,6 +2557,8 @@ gridRaycast<ProcessTrianglesAction>
 exec
 performRaycast
 ProcessVBoundsAction
+overlaps
+minmaxRange
 quantizeWithClamp
 getQuantized
 getRawHeightFieldValue
@@ -2598,6 +2605,7 @@ btBvhTriangleMeshShape
 buildOptimizedBvh
 __ZN12gjkepa2_implL10InitializeEPK13btConvexShapeRK11btTransformS2_S5_RN15btGjkEpaSolver28sResultsERNS_13MinkowskiDiffEb
 __ZN12gjkepa2_impl3GJK8EvaluateERKNS_13MinkowskiDiffERK9btVector3
+__ZNK12gjkepa2_impl13MinkowskiDiff7SupportERK9btVector3j
 __ZN12gjkepa2_impl3EPA8EvaluateERNS_3GJKERK9btVector3
 __ZN12gjkepa2_impl3GJK13projectoriginERK9btVector3S3_PfRj
 __ZN12gjkepa2_impl3GJK13projectoriginERK9btVector3S3_S3_PfRj
@@ -2848,10 +2856,10 @@ __ZNK12btHashString6equalsERKS_
 __ZNK9btHashMapI9btHashPtrP17btCollisionObjectE9findIndexERKS0_
 __ZN9btHashMapI9btHashPtrP17btCollisionObjectE10growTablesERKS0_
 PhyKit-shared/bullet/BulletWorldImporter/btBulletWorldImporter.cpp
-operator==<std::__1::allocator<char> >
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string
+operator==<std::allocator<char> >
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/string
 compare
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__string
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/__string
 data
 __get_pointer
 __is_long
@@ -2866,18 +2874,19 @@ __set_short_size
 __set_long_size
 __set_long_cap
 __set_long_pointer
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/__memory/allocator_traits.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/memory
 __libcpp_allocate
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/new
+__libcpp_operator_new<unsigned long>
 __recommend
+__align_it<16>
 ~btHashString
 ~basic_string
 __libcpp_deallocate
-__do_deallocate_handle_size_align
-__do_deallocate_handle_size
-__do_call
+__do_deallocate_handle_size<>
+__libcpp_operator_delete<void *>
 convertAllObjects
-getVersion
 deSerializeFloat
 loadFileFromMemory
 getFileDNA
@@ -2900,6 +2909,7 @@ calc_from_homogenic
 calc_absolute_matrix
 rayQuery
 getEscapeNodeIndex
+getEscapeIndex
 collide_ray
 boxQuery
 buildSet
@@ -3240,16 +3250,34 @@ __ZN15btMultibodyLink32updateInterpolationCacheMultiDofEv
 __ZZN11btMultiBody21stepPositionsMultiDofEfPfS0_EN3$_1clERK9btVector3R12btQuaternionbf
 __ZN20btAlignedObjectArrayI15btMultibodyLinkED2Ev
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBody.cpp
+isLinkAndAllAncestorsStaticOrKinematic
+isBaseStaticOrKinematic
+isLinkKinematic
+isKinematic
+isBaseKinematic
+isLinkStaticOrKinematic
+isStaticOrKinematic
+setLinkDynamicType
+setDynamicType
+getNumLinks
+setBaseDynamicType
+saveKinematicState
+setInterpolateBaseWorldTransform
+setInterpolateWorldToBaseRot
+setInterpolateBasePos
+getBaseWorldTransform
+setBaseOmega
+setBaseVel
+getWorldToBaseRot
+getInterpolateBaseWorldTransform
+getInterpolateWorldToBaseRot
 getAxisTop
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBodyLink.h
 getAxisBottom
-getJointVelMultiDof
-getNumLinks
 getBaseInertia
 getBaseMass
 getBaseOmega
 getBaseVel
-getWorldToBaseRot
 getBasePos
 updateCollisionObjectInterpolationWorldTransforms
 setInterpolationWorldTransform
@@ -3263,6 +3291,7 @@ wakeUp
 goToSleep
 fillConstraintJacobianMultiDof
 stepPositionsMultiDof
+getJointVelMultiDof
 updateInterpolationCacheMultiDof
 predictPositionsMultiDof
 calcAccelerationDeltasMultiDof
@@ -3283,15 +3312,17 @@ transformInverse
 symmetricSpatialOuterProduct<btSpatialForceVector>
 outerProduct
 btSymmetricSpatialDyad
+isLinkAndAllAncestorsKinematic
 cross<btSpatialMotionVector>
 transform<btSpatialMotionVector>
 computeAccelerationsArticulatedBodyAlgorithmMultiDof
+setMatrix
 addLinear
 addAngular
-setMatrix
 addVector
 safeNorm
 transformRotationOnly<btSpatialMotionVector>
+hasFixedBase
 getJointTorqueMultiDof
 getJointTorque
 getLinkTorque
@@ -3380,7 +3411,6 @@ clearGravity
 applyGravity
 applyDamping
 btPow
-saveKinematicState
 predictIntegratedTransform
 updateInertiaTensor
 setMassProps
@@ -3649,7 +3679,7 @@ dumpTypeDefinitions
 getLength
 getArraySize
 name_is_array
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/string.h
 __libcpp_strchr
 initCmpFlags
 initRecurseCmpFlags
@@ -3776,7 +3806,6 @@ __ZTI17btTriangleInfoMap
 PhyKit-shared/bullet/BulletWorldImporter/btWorldImporter.cpp
 ~btTriangleInfoMap
 convertRigidBodyDouble
-llvm.loop.isvectorized
 isNonMoving
 convertRigidBodyFloat
 getTriangleInfoMapByIndex
@@ -3869,6 +3898,7 @@ allocateCollisionAlgorithm
 btCollisionPairCallback
 checkCollideWith
 needsResponse
+hasContactResponse
 findAlgorithm
 ~btCollisionDispatcher
 registerClosestPointsCreateFunc
@@ -4035,7 +4065,6 @@ setMotorTargetInConstraintSpace
 GetPointForAngle
 computeTwistLimitInfo
 adjustSwingAxisToUseEllipseNormal
-setZ
 computeConeLimitInfo
 calcAngleInfo
 btAtan2Fast
@@ -4075,14 +4104,10 @@ setNumContacts
 getBody1FromContactManifold
 getBody0FromContactManifold
 syncMultiBody<btMultiBodyFloatData>
-setBaseOmega
-setBaseVel
 syncContactManifolds<btPersistentManifoldDoubleData>
 syncMultiBody<btMultiBodyDoubleData>
 getAtIndex
-hasFixedBase
 setBaseCollider
-getBaseWorldTransform
 btMultiBodyLinkCollider
 getMultiBody
 PhyKit-shared/bullet/BulletDynamics/Featherstone/btMultiBodyDynamicsWorld.h
@@ -4127,7 +4152,6 @@ __ZN29btSphereBoxCollisionAlgorithm22getAllContactManifoldsER20btAlignedObjectAr
 PhyKit-shared/bullet/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp
 PhyKit-shared/bullet/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.h
 getSpherePenetration
-setY
 getSphereDistance
 ~btSphereBoxCollisionAlgorithm
 btSphereBoxCollisionAlgorithm
@@ -4175,6 +4199,7 @@ triple
 ~CenterCallback
 ~LocalSupportVertexCallback
 ~btConvexTriangleMeshShape
+getInertia
 InertiaCallback
 getVolume
 getCenter
@@ -4203,7 +4228,6 @@ __ZN30btKinematicCharacterController12updateActionEP16btCollisionWorldf
 __ZN43btKinematicClosestNotMeConvexResultCallbackD0Ev
 __ZNK16btCollisionWorld20ConvexResultCallback14needsCollisionEP17btBroadphaseProxy
 __ZN43btKinematicClosestNotMeConvexResultCallback15addSingleResultERN16btCollisionWorld17LocalConvexResultEb
-__ZN16btCollisionWorld27ClosestConvexResultCallback15addSingleResultERNS_17LocalConvexResultEb
 __ZZN30btKinematicCharacterController19getUpAxisDirectionsEvE16sUpAxisDirection
 __ZGVZN30btKinematicCharacterController19getUpAxisDirectionsEvE16sUpAxisDirection
 __ZTS30btCharacterControllerInterface
@@ -4237,7 +4261,6 @@ setWalkDirection
 stepDown
 btKinematicClosestNotMeConvexResultCallback
 ClosestConvexResultCallback
-getGhostObject
 stepForwardAndStrafe
 updateTargetPositionBasedOnCollision
 perpindicularComponent
@@ -4245,6 +4268,7 @@ parallelComponent
 computeReflectionDirection
 stepUp
 recoverFromPenetration
+getGhostObject
 ~btKinematicCharacterController
 btKinematicCharacterController
 setMaxSlope
@@ -4406,9 +4430,7 @@ hasAnisotropicFriction
 initSolverBody
 internalSetInvMass
 internalGetTurnVelocity
-internalGetPushVelocity
 internalGetDeltaAngularVelocity
-internalGetDeltaLinearVelocity
 btRandInt2
 btRand2
 getScalarConstraintRowSolverLowerLimit
@@ -4598,6 +4620,7 @@ removeMultiBodyConstraint
 addMultiBodyConstraint
 substractSplitV
 integrateMultiBodyTransforms
+getVelocityVector
 isPosUpdated
 addSplitV
 solveExternalForces
@@ -4649,8 +4672,8 @@ getUpperAngLimit
 getLowerAngLimit
 getUpperLinLimit
 getLowerLinLimit
-getCalculatedTransformB
 getUseLinearReferenceFrameA
+getCalculatedTransformB
 getCalculatedTransformA
 getTranslationalLimitMotor
 getBFrame
@@ -4798,8 +4821,8 @@ _$sSo13PHYQuaternionVwet
 _$sSo13PHYQuaternionVwst
 _$sSo13PHYQuaternionVMa
 _$sypSgWOc
-_$sypSgWOd
 _$sypSgWOb
+_$sypSgWOd
 _$s6PhyKit12PHYRigidBodyCypSgIeggr_SgWOy
 _$sSo10simd_quatfaMa
 _$sSo10SCNVector3VMa
@@ -4848,6 +4871,8 @@ __swift_FORCE_LOAD_$_swiftGLKit_$_PhyKit
 __swift_FORCE_LOAD_$_swiftModelIO_$_PhyKit
 __swift_FORCE_LOAD_$_swiftUIKit_$_PhyKit
 __swift_FORCE_LOAD_$_swiftCoreImage_$_PhyKit
+__swift_FORCE_LOAD_$_swiftFileProvider_$_PhyKit
+__swift_FORCE_LOAD_$_swiftDataDetection_$_PhyKit
 __swift_FORCE_LOAD_$_swiftCompatibility50_$_PhyKit
 __swift_FORCE_LOAD_$_swiftCompatibility51_$_PhyKit
 __swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements_$_PhyKit
@@ -4883,14 +4908,15 @@ _symbolic _____ySfG s5SIMD4V
 _$sSo10simd_quatfaMF
 ___swift_reflection_version
 _objc_classes
+Apple clang version 13.0.0 (clang-1300.0.29.1)
 -private-discriminator _D3494EAA68ED48D4675CE211BCA922F4
 <swift-imported-modules>
-Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction.swift
+Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction.swift
 $sSo10PHYVector3VMa
 <compiler-generated>
-$sypSgWOb
 $sypSgWOd
+$sypSgWOb
 $sypSgWOc
 $sSo13PHYQuaternionVwst
 $sSo13PHYQuaternionVwet
@@ -4910,7 +4936,6 @@ Swift runtime failure: arithmetic overflow
 setupInfo.get
 actionBlock.get
 needsSetup.set
-playCount.get
 repeatCount.get
 elapsedTime.set
 startTime.get
@@ -4957,7 +4982,7 @@ _symbolic ytIegr_
 _symbolic Ieg_
 _$s6PhyKit14PHYDisplayLinkCACycfCTq
 -private-discriminator _B551FBD7A18737CEBCA8B9E41B02C1E8
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-ios/swift/PHYDisplayLink.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-ios/swift/PHYDisplayLink.swift
 $sIeg_ytIegr_TRTA
 $sIeg_ytIegr_TR
 $sytIegr_Ieg_TRTA
@@ -4974,7 +4999,8 @@ $s6PhyKit14PHYDisplayLinkC6onTickyycSgvpACTK
 _symbolic $s6PhyKit22PHYSceneUpdateDelegateP
 _$s6PhyKit22PHYSceneUpdateDelegate_pMF
 _symbolic x
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Scene/PHYSceneUpdateDelegate.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Scene/PHYSceneUpdateDelegate.swift
+_$s10Foundation4DataV15_RepresentationOWOy
 _$s10Foundation4DataV15_RepresentationOWOe
 _$s6PhyKit25PHYCollisionShapeFromDataCAA0cD0A2aDP08internalD0So013CPHYCollisionD0CvgTW
 _$s6PhyKit25PHYCollisionShapeFromDataC08internalD0So013CPHYCollisionD0CvpWvd
@@ -4985,7 +5011,7 @@ _$s6PhyKit25PHYCollisionShapeFromDataCMf
 _symbolic _____ 6PhyKit25PHYCollisionShapeFromDataC
 _symbolic So18CPHYCollisionShapeC
 _$s6PhyKit25PHYCollisionShapeFromDataCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeFromData.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeFromData.swift
 $s6PhyKit25PHYCollisionShapeFromDataCMa
 internalShape.get
 _$s6PhyKit28PHYCollisionShapeStaticPlaneCAA0cD0A2aDP08internalD0So013CPHYCollisionD0CvgTW
@@ -4996,7 +5022,7 @@ __DATA__TtC6PhyKit28PHYCollisionShapeStaticPlane
 _$s6PhyKit28PHYCollisionShapeStaticPlaneCMf
 _symbolic _____ 6PhyKit28PHYCollisionShapeStaticPlaneC
 _$s6PhyKit28PHYCollisionShapeStaticPlaneCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeStaticPlane.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeStaticPlane.swift
 $s6PhyKit28PHYCollisionShapeStaticPlaneCMa
 _$s6PhyKit16PHYCollisionPairC10rigidBodyAAA08PHYRigidF0CSgvpACTK
 _$s6PhyKit16PHYCollisionPairC10rigidBodyAAA08PHYRigidF0CSgvpACTk
@@ -5022,7 +5048,7 @@ _$s6PhyKit16PHYCollisionPairCMf
 _symbolic _____ 6PhyKit16PHYCollisionPairC
 _symbolic _____SgXw 6PhyKit12PHYRigidBodyC
 _$s6PhyKit16PHYCollisionPairCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Collisions/PHYCollisionPair.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Collisions/PHYCollisionPair.swift
 $s6PhyKit16PHYCollisionPairCMa
 localPositionB.get
 rigidBodyB.modify
@@ -5048,15 +5074,15 @@ _$s6PhyKit17PHYRotationMetricOwst
 _$s6PhyKit17PHYRotationMetricOwug
 _$s6PhyKit17PHYRotationMetricOwup
 _$s6PhyKit17PHYRotationMetricOwui
+_$s6PhyKit17PHYRotationMetricOSQAAMcMK
 _$s6PhyKit17PHYRotationMetricOACSQAAWL
 _associated conformance 6PhyKit17PHYRotationMetricOSHAASQ
+_$s6PhyKit17PHYRotationMetricOSHAAMcMK
 _$s6PhyKit17PHYRotationMetricOWV
 _$s6PhyKit17PHYRotationMetricOMf
 _symbolic _____ 6PhyKit17PHYRotationMetricO
 _$s6PhyKit17PHYRotationMetricOMF
-_$s6PhyKit17PHYRotationMetricOSQAAMcMK
-_$s6PhyKit17PHYRotationMetricOSHAAMcMK
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Extensions/PHYStructConversions.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Extensions/PHYStructConversions.swift
 $s6PhyKit17PHYRotationMetricOMa
 $s6PhyKit17PHYRotationMetricOwui
 $s6PhyKit17PHYRotationMetricOwup
@@ -5091,7 +5117,7 @@ zero.get
 scnVector3.get
 _symbolic $s6PhyKit26PHYWorldSimulationDelegateP
 _$s6PhyKit26PHYWorldSimulationDelegate_pMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldSimulationDelegate.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldSimulationDelegate.swift
 _$s6PhyKit14PHYTriggerPairC9rigidBodyAA08PHYRigidF0CvpWvd
 _$s6PhyKit14PHYTriggerPairC7triggerAA0C0CvpWvd
 __METACLASS_DATA__TtC6PhyKit14PHYTriggerPair
@@ -5101,7 +5127,7 @@ _$s6PhyKit14PHYTriggerPairCMf
 _symbolic _____ 6PhyKit14PHYTriggerPairC
 _symbolic _____ 6PhyKit10PHYTriggerC
 _$s6PhyKit14PHYTriggerPairCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Triggers/PHYTriggerPair.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Triggers/PHYTriggerPair.swift
 $s6PhyKit14PHYTriggerPairCMa
 trigger.get
 rigidBody.get
@@ -5110,44 +5136,44 @@ _$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQ
 _$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZySd_AIypSgtcfU0_
 _$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZySd_AIypSgtcfU0_TA
 _$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZTm
+_$s6PhyKit9PHYActionC6orient_2to8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_
 _$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5
 _$s6PhyKit9PHYActionC6orient_2to8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_TA
+_$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_TATm
+__ZL10simd_slerp10simd_quatfS_f
+__ZL18simd_slerp_longest10simd_quatfS_f
 _$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_So10simd_quatfaTg5Tf4gd_n
+__ZL20_simd_slerp_internal10simd_quatfS_f
 _$s6PhyKit9PHYActionC6orient_2to8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZySd_AIypSgtcfU0_TA
 _symbolic SDySS_____G So10simd_quatfa
 _$sSDySSSo10simd_quatfaGMD
 _symbolic _____ySS______tG s23_ContiguousArrayStorageC So10simd_quatfa
 _$ss23_ContiguousArrayStorageCySS_So10simd_quatfatGMD
-_symbolic SS______t So10simd_quatfa
-_$sSS_So10simd_quatfatMD
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction+Orient.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction+Orient.swift
+__tg_sin
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/tgmath.h
+__tg_atan2
 objectdestroy.8
-$s6PhyKit9PHYActionC6orient_2to8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_TA
+$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_TA
+objectdestroy.5
 $s6PhyKit9PHYActionC6orient_2to8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_
-$ss23_ContiguousArrayStorageCfDSS_So10simd_quatfat_Tg5
-$ss23_ContiguousArrayStorageCfdSS_So10simd_quatfat_Tg5
-$sSp12deinitialize5countSvSi_tFSS_So10simd_quatfat_Tg5
 _allocateUninitializedArray
 $sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSS_So10simd_quatfat_Tg5
 $ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSS_So10simd_quatfat_Tg5
 $ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCSS_So10simd_quatfat_Tg5
 $ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSS_So10simd_quatfat_Tg5
-objectdestroy.5
 orient
 PhyKit-shared/swift/Actions/PHYAction.swift
 $s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZySd_AIypSgtcfU0_TA
 objectdestroy.2
 $s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZySd_AIypSgtcfU0_
+$ss17FixedWidthIntegerPsE18truncatingIfNeededxqd___tcSzRd__lufCs5Int32V_SiTgq5
 subscript.get
 $ss17_NativeDictionaryV7_valuesSpyq_GvgSS_So10simd_quatfaTg5
-__tg_sin
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/tgmath.h
-__tg_atan2
-$s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_TA
 $s6PhyKit9PHYActionC6orient_2by8duration10longestArcAcA12PHYRigidBodyC_So13PHYQuaternionVSdSbtFZypSgAIcfU_
 _symbolic $s6PhyKit17PHYCollisionShapeP
 _$s6PhyKit17PHYCollisionShape_pMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShape.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShape.swift
 _$sSDyq_SgxcigSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 _$s6PhyKit8PHYSceneC8delegateAA0C14UpdateDelegate_pSgvpACTK
 _$s6PhyKit8PHYSceneC8delegateAA0C14UpdateDelegate_pSgvpACTk
@@ -5229,7 +5255,7 @@ _$ss18_DictionaryStorageCySo7SCNNodeC6PhyKit12PHYRigidBodyCGMD
 _symbolic _____ySS_____G s18_DictionaryStorageC So10simd_quatfa
 _$ss18_DictionaryStorageCySSSo10simd_quatfaGMD
 -private-discriminator _0A50BDD5C943F18F873A7819C95BA535
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Scene/PHYScene.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Scene/PHYScene.swift
 $ss17_NativeDictionaryV_8capacityAByxq_Gs07__CocoaB0Vn_SitcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5Tf4gnd_n
 $ss17_NativeDictionaryV9insertNew3key5valueyxn_q_ntFSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $ss17_NativeDictionaryV16_unsafeInsertNew3key5valueyxn_q_ntFSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
@@ -5246,21 +5272,17 @@ $ss26_forceBridgeFromObjectiveCyxyXl_xmtlF6PhyKit12PHYRigidBodyC_Tg5
 $ss26_forceBridgeFromObjectiveCyxyXl_xmtlFSo7SCNNodeC_Tg5
 $ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_6PhyKit16PHYCollisionPairCTg5
 Swift runtime failure: Dictionary literal contains duplicate keys
-$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_6PhyKit16PHYCollisionPairCt_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSS_6PhyKit16PHYCollisionPairCt_Tg5
-Swift runtime failure: Index out of range
-$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_6PhyKit16PHYCollisionPairCTg5
 $sSp10initialize2toyx_tF6PhyKit16PHYCollisionPairC_Tg5
 $ss17_NativeDictionaryV7_valuesSpyq_GvgSS_6PhyKit16PHYCollisionPairCTg5
 $sSp10initialize2toyx_tFSS_Tg5
 $ss17_NativeDictionaryV5_keysSpyxGvgSS_6PhyKit16PHYCollisionPairCTg5
 $sSa9formIndex5afterySiz_tFSS_6PhyKit16PHYCollisionPairCt_Tg5
-$sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSS_6PhyKit16PHYCollisionPairCt_Tg5
-$ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSS_6PhyKit16PHYCollisionPairCt_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSS_6PhyKit16PHYCollisionPairCt_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_6PhyKit16PHYCollisionPairCt_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_6PhyKit16PHYCollisionPairCTg5
 $ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSS_6PhyKit16PHYCollisionPairCTg5
 $sSa5countSivgSS_6PhyKit16PHYCollisionPairCt_Tg5
 $sSa9_getCountSiyFSS_6PhyKit16PHYCollisionPairCt_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_6PhyKit16PHYCollisionPairCt_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_6PhyKit16PHYCollisionPairCt_Tg5
 $s6PhyKit8PHYSceneCMa
 $s6PhyKit22PHYSceneUpdateDelegate_pSgXwWOh
@@ -5270,29 +5292,24 @@ block_destroy_helper
 block_copy_helper
 $s6PhyKit8PHYSceneC6attach_2toyAA12PHYRigidBodyC_So7SCNNodeCtFySo10PHYMatrix4VcfU_TA
 $ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
-$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
-$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $sSa9formIndex5afterySiz_tFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
-$sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
-$ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $sSa5countSivgSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
 $sSa9_getCountSiyFSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo7SCNNodeC_6PhyKit12PHYRigidBodyCt_Tg5
 $ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_So10simd_quatfaTg5
-$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_So10simd_quatfat_Tg5
-$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_So10simd_quatfaTg5
 $sSp10initialize2toyx_tFSo10simd_quatfa_Tg5
 $ss17_NativeDictionaryV5_keysSpyxGvgSS_So10simd_quatfaTg5
 $sSa9formIndex5afterySiz_tFSS_So10simd_quatfat_Tg5
-$sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSS_So10simd_quatfat_Tg5
-$ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSS_So10simd_quatfat_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSS_So10simd_quatfat_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_So10simd_quatfat_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_So10simd_quatfaTg5
 $ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSS_So10simd_quatfaTg5
 $sSa5countSivgSS_So10simd_quatfat_Tg5
 $sSa9_getCountSiyFSS_So10simd_quatfat_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_So10simd_quatfat_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_So10simd_quatfat_Tg5
 $ss17_NativeDictionaryV7_delete2atys10_HashTableV6BucketV_tF6PhyKit12PHYRigidBodyC_So7SCNNodeCTg5
 $sSp14moveInitialize4from5countySpyxG_SitFSo7SCNNodeC_Tg5
@@ -5334,8 +5351,8 @@ $ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntF6PhyK
 iterativelyOrientAllNodesToAttachedRigidBodies
 $sSD8IteratorV4nextx3key_q_5valuetSgyFSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 delegate.get
-PhyKit-shared/swift/Extensions/PHYStructConversions.swift
 $ss13_UnsafeBitsetV4WordV4nextSiSgyF
+PhyKit-shared/swift/Extensions/PHYStructConversions.swift
 $sSD12makeIteratorSD0B0Vyxq__GyFSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $sSD8IteratorV6_cocoaAByxq__Gs17__CocoaDictionaryVAACn_tcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
 $sSD8IteratorV7_nativeAByxq__Gs17_NativeDictionaryVAAVyxq__Gn_tcfCSo7SCNNodeC_6PhyKit12PHYRigidBodyCTg5
@@ -5369,8 +5386,10 @@ _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwst
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwug
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwup
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwui
+_$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSQAAMcMK
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOAESQAAWL
 _associated conformance 6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSHAASQ
+_$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSHAAMcMK
 _$s6PhyKit25PHYCollisionShapeGeometryC08internalD0So013CPHYCollisionD0CvpWvd
 __METACLASS_DATA__TtC6PhyKit25PHYCollisionShapeGeometry
 __IVARS__TtC6PhyKit25PHYCollisionShapeGeometry
@@ -5382,9 +5401,7 @@ _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOWV
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOMf
 _symbolic _____ 6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeO
 _$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOMF
-_$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSQAAMcMK
-_$s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSHAAMcMK
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeGeometry.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeGeometry.swift
 $s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOMa
 $s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwui
 $s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOwup
@@ -5396,12 +5413,10 @@ $s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOAESQAAWl
 $s6PhyKit25PHYCollisionShapeGeometryC0cdE4TypeOSHAASQWb
 _$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo17SCNGeometrySourceC_Tg5
 _$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo011SCNGeometryD0C_Tg5
-_$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSo11CPHYPolygonC_Tg5
-_$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo11CPHYPolygonC_Tg5
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo11CPHYPolygonC_Tg5
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10CPHYVertexC_Tg5
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSi_Tg5
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo8CPHYMeshC_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo11CPHYPolygonC_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo10CPHYVertexC_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSi_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo8CPHYMeshC_Tg5
 _$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10PHYVector3V_Tg5
 _$s6PhyKit11PHYGeometryC18getVertexPositions33_8A84929B0354E63EEA5996D1852D6A41LLySaySo10PHYVector3VGSo11SCNGeometryCFZTf4nd_n
 _$s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZTf4nnd_n
@@ -5436,94 +5451,86 @@ _$ss23_ContiguousArrayStorageCySo10CPHYVertexCGMD
 _$sSo10CPHYVertexCML
 _$sSo17SCNGeometrySourceCML
 -private-discriminator _8A84929B0354E63EEA5996D1852D6A41
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Geometry/PHYGeometry.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Geometry/PHYGeometry.swift
 $sSo18SCNGeometryElementCMa
 $sSnySiGMa
 $sSnySiGSnyxGSXsWl
 $s10Foundation4DataVAcA0B8ProtocolAAWl
 $s6PhyKit11PHYGeometryCMa
 getGeometry
-$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV8capacitySivgSo8CPHYMeshC_Tg5
-Swift runtime failure: Out of bounds: index > endIndex
-$sSlsE20_failEarlyRangeCheck_6boundsy5IndexQz_SNyADGtFs18_CocoaArrayWrapperV_Tgq5
-Swift runtime failure: Out of bounds: index < startIndex
 $sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSo8CPHYMeshC_Tg5
 $ss16IndexingIteratorV4next7ElementQzSgyFSaySo011SCNGeometryD0CG_Tg5
-$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo18SCNGeometryElementC_Ti5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo18SCNGeometryElementC_Tg5
 $sSa9formIndex5afterySiz_tFSo18SCNGeometryElementC_Tg5
 Swift runtime failure: loop induction variable overflowed
 $sSiSQsSQ2eeoiySbx_xtFZTW
 $sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSo8CPHYMeshC_Tg5
 $sSp10initialize2toyx_tFSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvgSo8CPHYMeshC_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV5countSivsSo8CPHYMeshC_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvgSo8CPHYMeshC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSo8CPHYMeshC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo8CPHYMeshC_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivgSo8CPHYMeshC_Tg5
-$sSa9_getCountSiyFSo8CPHYMeshC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV9_isNativeSbvgSo8CPHYMeshC_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo8CPHYMeshC_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivgSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyFSo8CPHYMeshC_Tg5
 $sSa5countSivgSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV30isMutableAndUniquelyReferencedSbyFSo8CPHYMeshC_Tg5
-$ss12_ArrayBufferV20isUniquelyReferencedSbyFSo8CPHYMeshC_Tg5
+$sSa9_getCountSiyFSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo8CPHYMeshC_Tg5
+$ss12_ArrayBufferV9_isNativeSbvgSo8CPHYMeshC_Tg5
 getPolygons
-$sSayxGSlsSly7ElementQz5IndexQzcirTWSo011SCNGeometryA0C_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo011SCNGeometryA0C_Tg5
 $sSayxSicirSo18SCNGeometryElementC_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo011SCNGeometryB0C_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo011SCNGeometryE0C_Tg5
 $sSa29_hoistableIsNativeTypeCheckedSbyFSo18SCNGeometryElementC_Tg5
 $ss12_ArrayBufferV32arrayPropertyIsNativeTypeCheckedSbvgSo18SCNGeometryElementC_Tg5
 $ss12_ArrayBufferV20_isNativeTypeCheckedSbvgSo18SCNGeometryElementC_Tg5
-$sSayxGSlsSl8endIndex0B0QzvgTWSo18SCNGeometryElementC_Ti5
+$sSayxGSlsSl8endIndex0B0QzvgTWSo18SCNGeometryElementC_Tg5
 $sSa8endIndexSivgSo18SCNGeometryElementC_Tg5
 $sSa9_getCountSiyFSo18SCNGeometryElementC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo18SCNGeometryElementC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo18SCNGeometryElementC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo18SCNGeometryElementC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo18SCNGeometryElementC_Tg5
 $ss12_ArrayBufferV9_isNativeSbvgSo18SCNGeometryElementC_Tg5
 getVertexPositions
-$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV8capacitySivgSo10CPHYVertexC_Tg5
-$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV8capacitySivgSo11CPHYPolygonC_Tg5
 $sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSo11CPHYPolygonC_Tg5
 $sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSo10CPHYVertexC_Tg5
 $sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSo10PHYVector3V_Tg5
 $ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSo10PHYVector3V_Tg5
-Swift runtime failure: Can't form Range with upperBound < lowerBound
+Swift runtime failure: Index out of range
+Swift runtime failure: Range requires lowerBound <= upperBound
 $ss16IndexingIteratorV4next7ElementQzSgyFSaySiG_Tg5
-$sSayxGSlsSly7ElementQz5IndexQzcirTWSi_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSi_Tg5
 $sSayxSicirSi_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSi_Tg5
-$ss16StrideToIteratorV4nextxSgyFSi_Tg5
-$sSiSxsSx5_step5after4from2bySiSg5index_x5valuetAeF_xAGt_x6StrideQztFZTW
-$sSxsE5_step5after4from2bySiSg5index_x5valuetAeF_xAGt_x6StrideQztFZSi_Tg5
-$sSiSxsSx8advanced2byx6StrideQz_tFTW
 stride
 $ss8StrideToV6_start3end6strideAByxGx_x0A0QztcfCSi_Tg5
 Swift runtime failure: Stride size must not be zero
-$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSo11CPHYPolygonC_Tg5
 $ss16IndexingIteratorV4next7ElementQzSgyFSnySiG_Tg5
+$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSo11CPHYPolygonC_Tg5
 $sSp10initialize2toyx_tFSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvgSo11CPHYPolygonC_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV5countSivsSo11CPHYPolygonC_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo11CPHYPolygonC_Tg5
-$sSnyxGSlsSxRzSZ6StrideRpzrlSl9formIndex5aftery0C0Qzz_tFTWSi_Ti5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvgSo11CPHYPolygonC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSo11CPHYPolygonC_Tg5
+$sSnyxGSlsSxRzSZ6StrideRpzrlSl9formIndex5aftery0C0Qzz_tFTWSi_Tg5
 $sSlsE9formIndex5aftery0B0Qzz_tFSnySiG_Tg5
-$sSnyxGSlsSxRzSZ6StrideRpzrlSl5index5after5IndexQzAG_tFTWSi_Ti5
+$sSnyxGSlsSxRzSZ6StrideRpzrlSl5index5after5IndexQzAG_tFTWSi_Tg5
 $sSnsSxRzSZ6StrideRpzrlE5index5afterxx_tFSi_Tg5
+$sSiSxsSx8advanced2byx6StrideQz_tFTW
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo11CPHYPolygonC_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo11CPHYPolygonC_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyFSo11CPHYPolygonC_Tg5
+$sSa5countSivgSo11CPHYPolygonC_Tg5
 $sSa9_getCountSiyFSo11CPHYPolygonC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo11CPHYPolygonC_Tg5
 $ss12_ArrayBufferV9_isNativeSbvgSo11CPHYPolygonC_Tg5
 $sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSo10CPHYVertexC_Tg5
 $ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo10CPHYVertexC_Tg5
 $ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCSo10CPHYVertexC_Tg5
 $ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSo10CPHYVertexC_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo10PHYVector3V_Tg5
 withUnsafeMutableBytes
 $ss24withUnsafeMutablePointer2to_q_xz_q_SpyxGKXEtKr0_lFSi_SiTg5
 $ss22withUnsafeMutableBytes2of_q_xz_q_SwKXEtKr0_lFq_SpyxGKXEfU_Si_SiTG5
@@ -5532,55 +5539,49 @@ $sSwSis5Error_pIgydzo_SwSisAA_pIegyrzo_TR
 $s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZSiSwXEfU3_
 $s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZSiSwXEfU2_
 $s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZSiSwXEfU1_
-$sSw5start5countSwSvSg_SitcfC
-$sS2vs5Error_pIgydzo_S2vsAA_pIegnrzo_TR
-$sSw5start5countSwSvSg_SitcfcS2vXEfU_
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo10PHYVector3V_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo10PHYVector3V_Tg5
 $sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSi_Tg5
 $ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSi_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSi_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivgSo11CPHYPolygonC_Tg5
-$sSa5countSivgSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV30isMutableAndUniquelyReferencedSbyFSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV20isUniquelyReferencedSbyFSo11CPHYPolygonC_Tg5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSi_Tg5
+$sSa9formIndex5afterySiz_tFSi_Tg5
+$sSa12_endMutationyyFSo10CPHYVertexC_Tg5
 $sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSo10CPHYVertexC_Tg5
 $sSp10initialize2toyx_tFSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvgSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV5countSivsSo10CPHYVertexC_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvgSo10CPHYVertexC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSo10CPHYVertexC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo10CPHYVertexC_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivgSo10CPHYVertexC_Tg5
-$sSa9_getCountSiyFSo10CPHYVertexC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV9_isNativeSbvgSo10CPHYVertexC_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo10CPHYVertexC_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivgSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyFSo10CPHYVertexC_Tg5
 $sSa5countSivgSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV30isMutableAndUniquelyReferencedSbyFSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV20isUniquelyReferencedSbyFSo10CPHYVertexC_Tg5
+$sSa9_getCountSiyFSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo10CPHYVertexC_Tg5
+$ss12_ArrayBufferV9_isNativeSbvgSo10CPHYVertexC_Tg5
 $s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZSiSwXEfU0_
-$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSi_Ti5
-$sSa9formIndex5afterySiz_tFSi_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSi_Tg5
-$sSayxGSlsSl8endIndex0B0QzvgTWSi_Ti5
+$sSayxGSlsSl8endIndex0B0QzvgTWSi_Tg5
 $sSa8endIndexSivgSi_Tg5
 $sSa9_getCountSiyFSi_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSi_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSi_Tg5
+$ss16StrideToIteratorV4nextxSgyFSi_Tg5
 $sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSi_Tg5
 $sSp10initialize2toyx_tFSi_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvgSi_Tg5
-$ss12_ArrayBufferV5countSivsSi_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSi_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvgSi_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSi_Tg5
 $sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSi_Tg5
-$ss12_ArrayBufferV8capacitySivgSi_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivgSi_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSi_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivgSi_Tg5
 $sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSi_Tg5
 $sSa5countSivgSi_Tg5
-$ss12_ArrayBufferV30isMutableAndUniquelyReferencedSbyFSi_Tg5
-$ss12_ArrayBufferV20isUniquelyReferencedSbyFSi_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyFSi_Tg5
 $s6PhyKit11PHYGeometryC11getPolygons33_8A84929B0354E63EEA5996D1852D6A41LL_15vertexPositionsSaySo11CPHYPolygonCGSo18SCNGeometryElementC_SaySo10PHYVector3VGtFZSiSwXEfU_
+$sSiSxsSx5_step5after4from2bySiSg5index_x5valuetAeF_xAGt_x6StrideQztFZTW
+$sSxss17FixedWidthIntegerRzSZRzrlE5_step5after4from2bySiSg5index_x5valuetAfG_xAHt_x6StrideSxQztFZSi_Tgq5
 $sSiSLsSL1goiySbx_xtFZTW
 first.get
-$sSayxGSlsSly7ElementQz5IndexQzcirTWSo17SCNGeometrySourceC_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo17SCNGeometrySourceC_Tg5
 $sSayxSicirSo17SCNGeometrySourceC_Tg5
 $sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSo17SCNGeometrySourceC_Tg5
 $ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSo17SCNGeometrySourceC_Tg5
@@ -5591,34 +5592,35 @@ copyBytes
 $s10Foundation4DataV16_copyBytesHelper2to4fromySv_SnySiGtF
 $s10Foundation4DataV06InlineB0V9copyBytes2to4fromySv_SnySiGtF
 $s10Foundation4DataV06InlineB0V9copyBytes2to4fromySv_SnySiGtFySWXEfU_
-Swift runtime failure: Negative value is not representable
 Swift runtime failure: precondition failure
-$ss18EnumeratedSequenceV8IteratorVyx_GStsSt4next7ElementQzSgyFTWSaySo10SCNVector3VG_Ti5
+$s10Foundation13__DataStorageC9copyBytes2to4fromySv_SnySiGtF
+$ss18EnumeratedSequenceV8IteratorVyx_GStsSt4next7ElementQzSgyFTWSaySo10SCNVector3VG_Tg5
 $ss18EnumeratedSequenceV8IteratorV4nextSi6offset_7ElementQz7elementtSgyFSaySo10SCNVector3VG_Tg5
-$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySo10SCNVector3VG_Ti5
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySo10SCNVector3VG_Tg5
 $ss16IndexingIteratorV4next7ElementQzSgyFSaySo10SCNVector3VG_Tg5
-$sSayxGSlsSly7ElementQz5IndexQzcirTWSo10SCNVector3V_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo10SCNVector3V_Tg5
 $sSayxSicirSo10SCNVector3V_Tg5
 $sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSo10SCNVector3V_Tg5
 $ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSo10SCNVector3V_Tg5
-$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo10SCNVector3V_Ti5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo10SCNVector3V_Tg5
 $sSa9formIndex5afterySiz_tFSo10SCNVector3V_Tg5
-Swift runtime failure: UnsafeMutableBufferPointer with negative count
+Swift runtime failure: Unexpectedly found nil while unwrapping an Optional value
 $ss15ContiguousArrayV6appendyyxnFSo10PHYVector3V_Tg5
 $ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFSo10PHYVector3V_Tg5
 $sSp10initialize2toyx_tFSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo10PHYVector3V_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSo10PHYVector3V_Tg5
 $ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivgSo10PHYVector3V_Tg5
-$ss15ContiguousArrayV9_getCountSiyFSo10PHYVector3V_Tg5
 $ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFSo10PHYVector3V_Tg5
 $ss15ContiguousArrayV5countSivgSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV30isMutableAndUniquelyReferencedSbyFSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV20isUniquelyReferencedSbyFSo10PHYVector3V_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo10SCNVector3V_Tg5
-$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo10SCNVector3V_Tg5
+$ss15ContiguousArrayV9_getCountSiyFSo10PHYVector3V_Tg5
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyFSo10PHYVector3V_Tg5
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufCSo10PHYVector3V_s15ContiguousArrayVyAEGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSo10PHYVector3V_Tg5
 $ss15ContiguousArrayV15reserveCapacityyySiFSo10PHYVector3V_Tg5
+$ss15ContiguousArrayV12_endMutationyyFSo10PHYVector3V_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo10SCNVector3V_Tg5
 $ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtFSo10PHYVector3V_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSo10PHYVector3V_Tg5
 $sSa22_allocateUninitializedySayxG_SpyxGtSiFZSo10SCNVector3V_Tg5
 $sSa19_uninitializedCountSayxGSi_tcfCSo10SCNVector3V_Tg5
 Swift runtime failure: Can't construct Array with count < 0
@@ -5626,25 +5628,23 @@ llvm.loop.unroll.runtime.disable
 $sSp10initialize2toyx_tFSo10SCNVector3V_Tg5
 $ss12_ArrayBufferV19firstElementAddressSpyxGvgSo10SCNVector3V_Tg5
 $ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo10SCNVector3V_Tg5
-$ss12_ArrayBufferV5countSivsSo10SCNVector3V_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo10SCNVector3V_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo17SCNGeometrySourceC_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo17SCNGeometrySourceC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo17SCNGeometrySourceC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo17SCNGeometrySourceC_Tg5
 $sSa29_hoistableIsNativeTypeCheckedSbyFSo17SCNGeometrySourceC_Tg5
 $ss12_ArrayBufferV32arrayPropertyIsNativeTypeCheckedSbvgSo17SCNGeometrySourceC_Tg5
 $ss12_ArrayBufferV20_isNativeTypeCheckedSbvgSo17SCNGeometrySourceC_Tg5
-$sSayxGSlsSl8endIndex0B0QzvgTWSo17SCNGeometrySourceC_Ti5
+$sSayxGSlsSl8endIndex0B0QzvgTWSo17SCNGeometrySourceC_Tg5
 $sSa8endIndexSivgSo17SCNGeometrySourceC_Tg5
-$sSayxGSlsSl10startIndex0B0QzvgTWSo17SCNGeometrySourceC_Ti5
+$sSayxGSlsSl10startIndex0B0QzvgTWSo17SCNGeometrySourceC_Tg5
 $sSa10startIndexSivgSo17SCNGeometrySourceC_Tg5
 $sSa9_getCountSiyFSo17SCNGeometrySourceC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo17SCNGeometrySourceC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo17SCNGeometrySourceC_Tg5
 $ss12_ArrayBufferV9_isNativeSbvgSo17SCNGeometrySourceC_Tg5
 internalGeometry.get
 _symbolic $s6PhyKit25PHYWorldCollisionDelegateP
 _$s6PhyKit25PHYWorldCollisionDelegate_pMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldCollisionDelegate.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldCollisionDelegate.swift
 _$s6PhyKit24PHYCollisionShapeCapsuleCAA0cD0A2aDP08internalD0So013CPHYCollisionD0CvgTW
 _$s6PhyKit24PHYCollisionShapeCapsuleC08internalD0So013CPHYCollisionD0CvpWvd
 __METACLASS_DATA__TtC6PhyKit24PHYCollisionShapeCapsule
@@ -5653,7 +5653,7 @@ __DATA__TtC6PhyKit24PHYCollisionShapeCapsule
 _$s6PhyKit24PHYCollisionShapeCapsuleCMf
 _symbolic _____ 6PhyKit24PHYCollisionShapeCapsuleC
 _$s6PhyKit24PHYCollisionShapeCapsuleCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCapsule.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCapsule.swift
 $s6PhyKit24PHYCollisionShapeCapsuleCMa
 _$s6PhyKit20PHYCollisionShapeBoxCAA0cD0A2aDP08internalD0So013CPHYCollisionD0CvgTW
 _$s6PhyKit20PHYCollisionShapeBoxC08internalD0So013CPHYCollisionD0CvpWvd
@@ -5663,7 +5663,7 @@ __DATA__TtC6PhyKit20PHYCollisionShapeBox
 _$s6PhyKit20PHYCollisionShapeBoxCMf
 _symbolic _____ 6PhyKit20PHYCollisionShapeBoxC
 _$s6PhyKit20PHYCollisionShapeBoxCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeBox.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeBox.swift
 $s6PhyKit20PHYCollisionShapeBoxCMa
 _$s6PhyKit25PHYCollisionShapeCylinderCAA0cD0A2aDP08internalD0So013CPHYCollisionD0CvgTW
 _$s6PhyKit25PHYCollisionShapeCylinderC08internalD0So013CPHYCollisionD0CvpWvd
@@ -5673,13 +5673,13 @@ __DATA__TtC6PhyKit25PHYCollisionShapeCylinder
 _$s6PhyKit25PHYCollisionShapeCylinderCMf
 _symbolic _____ 6PhyKit25PHYCollisionShapeCylinderC
 _$s6PhyKit25PHYCollisionShapeCylinderCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCylinder.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCylinder.swift
 $s6PhyKit25PHYCollisionShapeCylinderCMa
 ___swift_project_boxed_opaque_existential_1
 ___swift_destroy_boxed_opaque_existential_1
-_$s6PhyKit12PHYRigidBodyCfETo
 _$s6PhyKit12PHYRigidBodyC14collisionShape05rigidD4Type4massACSo013CPHYCollisionF0C_So09CPHYRigiddH0aSftcfcTo
 _$s6PhyKit12PHYRigidBodyCACycfcTo
+_$s6PhyKit12PHYRigidBodyCfETo
 _$s6PhyKit12PHYRigidBodyC4uuidSSvpWvd
 _$s6PhyKit12PHYRigidBodyC4typeAA0cD4TypeOvpWvd
 __METACLASS_DATA__TtC6PhyKit12PHYRigidBody
@@ -5691,7 +5691,8 @@ _$s6PhyKit12PHYRigidBodyCMf
 _symbolic SS
 _symbolic _____ 6PhyKit16PHYRigidBodyTypeO
 _$s6PhyKit12PHYRigidBodyCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/RigidBodies/PHYRigidBody.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/RigidBodies/PHYRigidBody.swift
+$s6PhyKit12PHYRigidBodyCfETo
 $ss25_unimplementedInitializer9className04initD04file4line6columns5NeverOs12StaticStringV_A2JS2utFySRys5UInt8VGXEfU0_
 $ss25_unimplementedInitializer9className04initD04file4line6columns5NeverOs12StaticStringV_A2JS2utFySRys5UInt8VGXEfU0_yAMXEfU_
 __swift_destroy_boxed_opaque_existential_1
@@ -5744,8 +5745,8 @@ _$s6PhyKit8PHYWorldC15checkCollisions33_3B1E3CC23B8485087FA073100096BF81LLyyF
 _$s6PhyKit8PHYWorldC13checkTriggers33_3B1E3CC23B8485087FA073100096BF81LLyyF
 _$s6PhyKit8PHYWorldC25internalCollisionDidOccur_14localPositionA0D10RigidBodyB0hI1BySo09CPHYRigidK0C_So10PHYVector3VAiKtF
 _$s6PhyKit8PHYWorldC25internalCollisionDidOccur_14localPositionA0D10RigidBodyB0hI1BySo09CPHYRigidK0C_So10PHYVector3VAiKtFTo
-_$s6PhyKit8PHYWorldCfETo
 _$s6PhyKit8PHYWorldCACycfcTo
+_$s6PhyKit8PHYWorldCfETo
 _$s6PhyKit10PHYTriggerC23getCollidingRigidBodiesSayAA12PHYRigidBodyCGyF
 _$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tg5
 _$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlF6PhyKit12PHYRigidBodyC_Tg5
@@ -5760,10 +5761,7 @@ _$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtF6Ph
 _$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_6PhyKit14PHYTriggerPairCTg5
 _$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_6PhyKit14PHYTriggerPairCTg5Tm
 _$sSa034_makeUniqueAndReserveCapacityIfNotB0yyF6PhyKit16PHYRaycastResultC_Tg5
-_$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSo11CPHYPolygonC_Tg5Tm
-_$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF6PhyKit16PHYRaycastResultC_Tg5
-_$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo11CPHYPolygonC_Tg5Tm
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit16PHYRaycastResultC_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit16PHYRaycastResultC_Tg5
 _$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF6PhyKit12PHYRigidBodyC_Tg5
 _$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF6PhyKit10PHYTriggerC_Tg5
 _$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF6PhyKit12PHYRigidBodyC_Tg5Tm
@@ -5834,7 +5832,7 @@ _$ss11_SetStorageCy6PhyKit10PHYTriggerCGMD
 _symbolic _____y_____G s11_SetStorageC 6PhyKit12PHYRigidBodyC
 _$ss11_SetStorageCy6PhyKit12PHYRigidBodyCGMD
 -private-discriminator _3B1E3CC23B8485087FA073100096BF81
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorld.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorld.swift
 $ss10_NativeSetV_8capacityAByxGs07__CocoaB0Vn_SitcfC6PhyKit12PHYRigidBodyC_Tg5Tf4gnd_n
 $ss10_NativeSetV9insertNew_8isUniqueyxn_SbtF6PhyKit12PHYRigidBodyC_Tg5
 $ss10_NativeSetV16_unsafeInsertNewyyxnF6PhyKit12PHYRigidBodyC_Tg5
@@ -5848,8 +5846,6 @@ $sSa9formIndex5afterySiz_tF6PhyKit12PHYRigidBodyC_Tg5
 $sSo8NSObjectCSQ10ObjectiveCSQ2eeoiySbx_xtFZTW
 $sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtF6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtF6PhyKit12PHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV5countSivg6PhyKit12PHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg6PhyKit12PHYRigidBodyC_Tg5
 $sSa29_hoistableIsNativeTypeCheckedSbyF6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV32arrayPropertyIsNativeTypeCheckedSbvg6PhyKit12PHYRigidBodyC_Tg5
@@ -5857,11 +5853,13 @@ $ss12_ArrayBufferV20_isNativeTypeCheckedSbvg6PhyKit12PHYRigidBodyC_Tg5
 $ss10_NativeSetV8capacityAByxGSi_tcfC6PhyKit12PHYRigidBodyC_Tg5
 $sS2hyxGycfC6PhyKit12PHYRigidBodyC_Tg5
 $sSlsE7isEmptySbvgSay6PhyKit12PHYRigidBodyCG_Tg5
-$sSayxGSlsSl8endIndex0B0QzvgTW6PhyKit12PHYRigidBodyC_Ti5
+$sSayxGSlsSl8endIndex0B0QzvgTW6PhyKit12PHYRigidBodyC_Tg5
 $sSa8endIndexSivg6PhyKit12PHYRigidBodyC_Tg5
-$sSayxGSlsSl10startIndex0B0QzvgTW6PhyKit12PHYRigidBodyC_Ti5
+$sSayxGSlsSl10startIndex0B0QzvgTW6PhyKit12PHYRigidBodyC_Tg5
 $sSa10startIndexSivg6PhyKit12PHYRigidBodyC_Tg5
 $sSa9_getCountSiyF6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV14immutableCountSivg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvg6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV9_isNativeSbvg6PhyKit12PHYRigidBodyC_Tg5
 $ss10_NativeSetV7_delete2atys10_HashTableV6BucketV_tF6PhyKit10PHYTriggerC_Tg5
 $sSp14moveInitialize4from5countySpyxG_SitF6PhyKit10PHYTriggerC_Tg5
@@ -5881,13 +5879,22 @@ $ss10_NativeSetV4copyyyF6PhyKit12PHYRigidBodyC_Tg5
 $ss10_HashTableV12copyContents2ofyAB_tF
 $ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtF6PhyKit12PHYRigidBodyC_Tg5
 $sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF6PhyKit12PHYRigidBodyC_Tg5
+$sSa034_makeUniqueAndReserveCapacityIfNotB0yyF6PhyKit16PHYRaycastResultC_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit16PHYRaycastResultC_Tg5
+$sSa5countSivg6PhyKit16PHYRaycastResultC_Tg5
+$sSa9_getCountSiyF6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV14immutableCountSivg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV9_isNativeSbvg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyF6PhyKit16PHYRaycastResultC_Tg5
 $ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_6PhyKit14PHYTriggerPairCTg5
 $ss17_NativeDictionaryV16_unsafeInsertNew3key5valueyxn_q_ntFSS_6PhyKit14PHYTriggerPairCTg5
 $sSp10initialize2toyx_tF6PhyKit14PHYTriggerPairC_Tg5
 $ss17_NativeDictionaryV7_valuesSpyq_GvgSS_6PhyKit14PHYTriggerPairCTg5
 $ss17_NativeDictionaryV5_keysSpyxGvgSS_6PhyKit14PHYTriggerPairCTg5
 $sSSSHsSH13_rawHashValue4seedS2i_tFTW
-$sSSSHsSH4hash4intoys6HasherVz_tFTW
+$sSHsE13_rawHashValue4seedS2i_tFSS_Tgq5
 $ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtF6PhyKit12PHYRigidBodyC_So7SCNNodeCTg5
 $ss17_NativeDictionaryV16_unsafeInsertNew3key5valueyxn_q_ntF6PhyKit12PHYRigidBodyC_So7SCNNodeCTg5
 $ss17_NativeDictionaryV4copyyyFSS_6PhyKit14PHYTriggerPairCTg5
@@ -5900,6 +5907,7 @@ $ss14_stringCompare__9expectingSbs11_StringGutsV_ADs01_D16ComparisonResultOtF
 $ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSo7SCNNodeC_Tg5
 $ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlF6PhyKit12PHYRigidBodyC_Tg5
 $ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5
+$s6PhyKit8PHYWorldCfETo
 internalCollisionDidOccur
 simulationTime.get
 collisionDelegate.get
@@ -5915,7 +5923,7 @@ $ss17_NativeDictionaryV8setValue_6forKey8isUniqueyq_n_xSbtFSS_6PhyKit14PHYTrigge
 $ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_6PhyKit14PHYTriggerPairCTg5
 $ss17_NativeDictionaryV12mutatingFind_8isUniques10_HashTableV6BucketV6bucket_Sb5foundtx_SbtFSS_6PhyKit14PHYTriggerPairCTg5
 $ss16IndexingIteratorV4next7ElementQzSgyFSay6PhyKit12PHYRigidBodyCG_Tg5
-$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW6PhyKit12PHYRigidBodyC_Ti5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW6PhyKit12PHYRigidBodyC_Tg5
 $sSD8IteratorV4nextx3key_q_5valuetSgyFSS_6PhyKit14PHYTriggerPairCTg5
 triggerDelegate.get
 triggerPairs.get
@@ -5928,7 +5936,7 @@ $ss17_NativeDictionaryV12ensureUnique02isD08capacityS2b_SitFSS_6PhyKit14PHYTrigg
 $ss17_NativeDictionaryV6resize8capacityySi_tFSS_6PhyKit14PHYTriggerPairCTg5
 $sSD8_VariantV20isUniquelyReferencedSbyFSS_6PhyKit14PHYTriggerPairCTg5
 PhyKit-shared/swift/Triggers/PHYTriggerPair.swift
-$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit12PHYRigidBodyC_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit12PHYRigidBodyC_Tg5
 $sSayxSicir6PhyKit12PHYRigidBodyC_Tg5
 $ss26_forceBridgeFromObjectiveCyxyXl_xmtlF6PhyKit10PHYTriggerC_Tg5
 $sSh12makeIteratorSh0B0Vyx_GyF6PhyKit10PHYTriggerC_Tg5
@@ -5948,14 +5956,10 @@ $sSo10PHYVector3VABSo13CPHYRigidBodyCIegyyg_A2bDIeyByyy_TR
 $s6PhyKit8PHYWorldC7rayCast4from2toSayAA16PHYRaycastResultCGSo10PHYVector3V_AKtFyAK_AKSo13CPHYRigidBodyCtcfU_
 $sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntF6PhyKit16PHYRaycastResultC_Tg5
 $sSp10initialize2toyx_tF6PhyKit16PHYRaycastResultC_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvg6PhyKit16PHYRaycastResultC_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit16PHYRaycastResultC_Tg5
-$ss12_ArrayBufferV5countSivs6PhyKit16PHYRaycastResultC_Tg5
-$ss22_ContiguousArrayBufferV5countSivs6PhyKit16PHYRaycastResultC_Tg5
-$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg6PhyKit16PHYRaycastResultC_Tg5
-$sSa9_getCountSiyF6PhyKit16PHYRaycastResultC_Tg5
-$ss22_ContiguousArrayBufferV5countSivg6PhyKit16PHYRaycastResultC_Tg5
-$ss12_ArrayBufferV9_isNativeSbvg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvg6PhyKit16PHYRaycastResultC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvg6PhyKit16PHYRaycastResultC_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivg6PhyKit16PHYRaycastResultC_Tg5
 PhyKit-shared/swift/Collisions/PHYRaycastResult.swift
 $sSh8IteratorV4nextxSgyF6PhyKit12PHYRigidBodyC_Tg5
 triggers.set
@@ -5985,7 +5989,7 @@ __DATA__TtC6PhyKit23PHYCollisionShapeSphere
 _$s6PhyKit23PHYCollisionShapeSphereCMf
 _symbolic _____ 6PhyKit23PHYCollisionShapeSphereC
 _$s6PhyKit23PHYCollisionShapeSphereCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeSphere.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeSphere.swift
 $s6PhyKit23PHYCollisionShapeSphereCMa
 _$s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZySd_AHypSgtcfU0_
 _$s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZySd_AHypSgtcfU0_TA
@@ -5998,7 +6002,7 @@ _$s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZyS
 _$s6PhyKit9PHYActionC4move_10byFunctionAcA12PHYRigidBodyC_So10PHYVector3VyctFZySd_AGypSgtcfU0_TA
 _$s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZypSgAHcfU_
 _symbolic _____Iegd_ So10PHYVector3V
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction+Move.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Actions/PHYAction+Move.swift
 $s6PhyKit9PHYActionC4move_10byFunctionAcA12PHYRigidBodyC_So10PHYVector3VyctFZySd_AGypSgtcfU0_TA
 $s6PhyKit9PHYActionC4move_10byFunctionAcA12PHYRigidBodyC_So10PHYVector3VyctFZySd_AGypSgtcfU0_
 $s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZySd_AHypSgtcfU0_TA
@@ -6007,10 +6011,10 @@ move
 $s6PhyKit9PHYActionC4move_2by8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZySd_AHypSgtcfU0_
 $s6PhyKit9PHYActionC4move_2by8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZypSgAHcfU_
 $s6PhyKit9PHYActionC4move_2to8durationAcA12PHYRigidBodyC_So10PHYVector3VSdtFZySd_AHypSgtcfU0_
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-ios/swift/PHYSCNFloat.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-ios/swift/PHYSCNFloat.swift
 _symbolic $s6PhyKit23PHYWorldTriggerDelegateP
 _$s6PhyKit23PHYWorldTriggerDelegate_pMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldTriggerDelegate.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/World/PHYWorldTriggerDelegate.swift
 _$s6PhyKit16PHYRigidBodyTypeOSQAASQ2eeoiySbx_xtFZTW
 ___swift_memcpy5_4
 _$s6PhyKit16PHYRigidBodyTypeOwet
@@ -6018,12 +6022,12 @@ _$s6PhyKit16PHYRigidBodyTypeOwst
 _$s6PhyKit16PHYRigidBodyTypeOwug
 _$s6PhyKit16PHYRigidBodyTypeOwup
 _$s6PhyKit16PHYRigidBodyTypeOwui
+_$s6PhyKit16PHYRigidBodyTypeOSQAAMcMK
 _$s6PhyKit16PHYRigidBodyTypeOWV
 _$s6PhyKit16PHYRigidBodyTypeOMf
 _symbolic Sf4mass_t
 _$s6PhyKit16PHYRigidBodyTypeOMF
-_$s6PhyKit16PHYRigidBodyTypeOSQAAMcMK
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/RigidBodies/PHYRigidBodyType.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/RigidBodies/PHYRigidBodyType.swift
 $s6PhyKit16PHYRigidBodyTypeOMa
 $s6PhyKit16PHYRigidBodyTypeOwui
 $s6PhyKit16PHYRigidBodyTypeOwup
@@ -6035,36 +6039,39 @@ dynamic.get
 isDynamic.get
 mass.get
 _$sSo13CPHYRigidBodyCMa
-_$s6PhyKit10PHYTriggerCfETo
 _$s6PhyKit10PHYTriggerC14collisionShapeACSo013CPHYCollisionE0C_tcfcTo
 _$s6PhyKit10PHYTriggerCACycfcTo
+_$s6PhyKit10PHYTriggerCfETo
 _$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo13CPHYRigidBodyC_Tg5
 _$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo17SCNGeometrySourceC_Tg5Tm
 _$ss12_ArrayBufferV19_getElementSlowPathyyXlSiF6PhyKit12PHYRigidBodyC_Tg5Tm
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo11CPHYPolygonC_Tg5Tm
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5
-_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5Tm
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo11CPHYPolygonC_Tg5Tm
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5
+_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo11CPHYPolygonC_Tg5
+_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10CPHYVertexC_Tg5
+_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo11CPHYPolygonC_Tg5Tm
+_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo8CPHYMeshC_Tg5
+_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit12PHYRigidBodyC_Tg5
 _$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyCSg_Tg5
 _$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo18CPHYCollisionShapeC_Tg5
+_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10PHYVector3V_Tg5Tm
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo10PHYVector3V_Tg5
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit12PHYRigidBodyCSg_Tg5
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo18CPHYCollisionShapeC_Tg5
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10PHYVector3V_Tg5Tf4nnd_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSi_Tg5Tf4nnd_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10CPHYVertexC_Tg5Tf4nnd_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10CPHYVertexC_Tg5Tf4nng_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo11CPHYPolygonC_Tg5Tf4nnd_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo11CPHYPolygonC_Tg5Tf4nng_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10CPHYVertexC_Tg5Tf4nng_nTm
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo8CPHYMeshC_Tg5Tf4nnd_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo8CPHYMeshC_Tg5Tf4nng_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit12PHYRigidBodyCSg_Tg5Tf4nnd_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSi_Tg5Tf4nnd_nTm
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit12PHYRigidBodyC_Tg5Tf4nnd_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit12PHYRigidBodyC_Tg5Tf4nng_n
-_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit16PHYRaycastResultC_Tg5Tf4nng_nTm
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit16PHYRaycastResultC_Tg5Tf4nnd_n
 _$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit16PHYRaycastResultC_Tg5Tf4nng_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo18CPHYCollisionShapeC_Tg5Tf4nnd_n
 _$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10CPHYVertexC_Tg5Tf4nnd_nTm
 _$sSo18CPHYCollisionShapeCMa
+__swift_stdlib_malloc_size
 _$sSo13CPHYRigidBodyCMaTm
 _$sSo13CPHYRigidBodyCML
 __METACLASS_DATA__TtC6PhyKit10PHYTrigger
@@ -6087,135 +6094,158 @@ _symbolic _____y_____G s23_ContiguousArrayStorageC 6PhyKit16PHYRaycastResultC
 _$ss23_ContiguousArrayStorageCy6PhyKit16PHYRaycastResultCGMD
 _symbolic _____ySo8CPHYMeshCG s23_ContiguousArrayStorageC
 _$ss23_ContiguousArrayStorageCySo8CPHYMeshCGMD
-_symbolic _____ySo11CPHYPolygonCG s23_ContiguousArrayStorageC
-_$ss23_ContiguousArrayStorageCySo11CPHYPolygonCGMD
 _symbolic _____ySiG s23_ContiguousArrayStorageC
 _$ss23_ContiguousArrayStorageCySiGMD
+_symbolic _____ySo11CPHYPolygonCG s23_ContiguousArrayStorageC
+_$ss23_ContiguousArrayStorageCySo11CPHYPolygonCGMD
 _symbolic _____y_____G s23_ContiguousArrayStorageC So10PHYVector3V
 _$ss23_ContiguousArrayStorageCySo10PHYVector3VGMD
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Triggers/PHYTrigger.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Triggers/PHYTrigger.swift
 $sSo13CPHYRigidBodyCMa
-$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10CPHYVertexC_Tg5Tf4nnd_n
 _swift_stdlib_malloc_size
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/lib/swift/shims/LibcShims.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/lib/swift/shims/LibcShims.h
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10CPHYVertexC_Tg5Tf4nnd_n
 $ss22_ContiguousArrayBufferVAByxGycfCSo10CPHYVertexC_Tg5
 $ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit16PHYRaycastResultC_Tg5Tf4nng_n
 $ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit16PHYRaycastResultC_Tg5
 $ss12_ArrayBufferV10_typeCheckyySnySiGF6PhyKit16PHYRaycastResultC_Tg5
-$sSnsSxRzSZ6StrideRpzrlE5index5afterxx_tFSi_Tgq5
 $sSp10initialize4from5countySPyxG_SitF6PhyKit16PHYRaycastResultC_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit16PHYRaycastResultC_Tg5
 $ss12_ArrayBufferV21needsElementTypeCheckSbvg6PhyKit16PHYRaycastResultC_Tg5
 $ss12_ArrayBufferV20_isNativeTypeCheckedSbvg6PhyKit16PHYRaycastResultC_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSi_Tg5Tf4nnd_n
 $ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSi_Tg5
 $ss22_ContiguousArrayBufferVAByxGycfCSi_Tg5
-$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10CPHYVertexC_Tg5Tf4nng_n
-$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV10_typeCheckyySnySiGFSo10CPHYVertexC_Tg5
-$sSp10initialize4from5countySPyxG_SitFSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV21needsElementTypeCheckSbvgSo10CPHYVertexC_Tg5
-$ss12_ArrayBufferV20_isNativeTypeCheckedSbvgSo10CPHYVertexC_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10PHYVector3V_Tg5Tf4nnd_n
 $ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSo10PHYVector3V_Tg5
 $ss22_ContiguousArrayBufferVAByxGycfCSo10PHYVector3V_Tg5
-$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo18CPHYCollisionShapeC_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo18CPHYCollisionShapeC_Tg5
 $ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo18CPHYCollisionShapeC_Tg5
 $sSp10initialize4from5countySPyxG_SitFSo18CPHYCollisionShapeC_Tg5
-$ss22_ContiguousArrayBufferV5countSivsSo18CPHYCollisionShapeC_Tg5
-$sSp14moveInitialize4from5countySpyxG_SitFSo18CPHYCollisionShapeC_Tg5
 $ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo18CPHYCollisionShapeC_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitFSo18CPHYCollisionShapeC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSo18CPHYCollisionShapeC_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo18CPHYCollisionShapeC_Tg5
-$ss15ContiguousArrayV9_getCountSiyFSo18CPHYCollisionShapeC_Tg5
 $ss22_ContiguousArrayBufferV5countSivgSo18CPHYCollisionShapeC_Tg5
-$ss15ContiguousArrayV12_getCapacitySiyFSo18CPHYCollisionShapeC_Tg5
 $ss22_ContiguousArrayBufferV8capacitySivgSo18CPHYCollisionShapeC_Tg5
-$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyCSg_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit12PHYRigidBodyCSg_Tg5
 $sSp10initialize4from5countySPyxG_SitF6PhyKit12PHYRigidBodyCSg_Tg5
-$ss22_ContiguousArrayBufferV5countSivs6PhyKit12PHYRigidBodyCSg_Tg5
-$sSp14moveInitialize4from5countySpyxG_SitF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit12PHYRigidBodyCSg_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitF6PhyKit12PHYRigidBodyCSg_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvg6PhyKit12PHYRigidBodyCSg_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit12PHYRigidBodyCSg_Tg5
-$ss15ContiguousArrayV9_getCountSiyF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss22_ContiguousArrayBufferV5countSivg6PhyKit12PHYRigidBodyCSg_Tg5
-$ss15ContiguousArrayV12_getCapacitySiyF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss22_ContiguousArrayBufferV8capacitySivg6PhyKit12PHYRigidBodyCSg_Tg5
-$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10PHYVector3V_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo10PHYVector3V_Tg5
 $ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo10PHYVector3V_Tg5
 $sSp10initialize4from5countySPyxG_SitFSo10PHYVector3V_Tg5
 $sSp14moveInitialize4from5countySpyxG_SitFSo10PHYVector3V_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo10PHYVector3V_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo10PHYVector3V_Tg5
-$ss15ContiguousArrayV12_getCapacitySiyFSo10PHYVector3V_Tg5
-$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5
-$sSa12_getCapacitySiyF6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV8capacitySivg6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivgSo10PHYVector3V_Tg5
+$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo10PHYVector3V_Tg5
 $ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV5countSivs6PhyKit12PHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV5countSivs6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV19firstElementAddressSpyxGvg6PhyKit12PHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit12PHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV8capacitySivg6PhyKit12PHYRigidBodyC_Tg5
-$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo11CPHYPolygonC_Tg5
-$sSa12_getCapacitySiyFSo11CPHYPolygonC_Tg5
-$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSo11CPHYPolygonC_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV10_typeCheckyySnySiGF6PhyKit12PHYRigidBodyC_Tg5
+$sSp10initialize4from5countySPyxG_SitF6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV21needsElementTypeCheckSbvg6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo11CPHYPolygonC_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV10_typeCheckyySnySiGFSo11CPHYPolygonC_Tg5
+$sSp10initialize4from5countySPyxG_SitFSo11CPHYPolygonC_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV21needsElementTypeCheckSbvgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV20_isNativeTypeCheckedSbvgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF6PhyKit16PHYRaycastResultC_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitF6PhyKit16PHYRaycastResultC_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit16PHYRaycastResultC_Tg5
+$ss22_ContiguousArrayBufferV5countSivg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV8capacitySivg6PhyKit16PHYRaycastResultC_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivg6PhyKit16PHYRaycastResultC_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvg6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV5countSivg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV8capacitySivg6PhyKit12PHYRigidBodyC_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSo11CPHYPolygonC_Tg5
 $sSp14moveInitialize4from5countySpyxG_SitFSo11CPHYPolygonC_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo11CPHYPolygonC_Tg5
-$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSi_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV8capacitySivgSo11CPHYPolygonC_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivgSo11CPHYPolygonC_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSi_Tg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSi_Tg5
 $ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSi_Tg5
 $ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSi_Tg5
 $sSp10initialize4from5countySPyxG_SitFSi_Tg5
 $sSp14moveInitialize4from5countySpyxG_SitFSi_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSi_Tg5
 $ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSi_Tg5
-$sSa12_getCapacitySiyFSi_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSi_Tg5
+$ss12_ArrayBufferV8capacitySivgSi_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivgSi_Tg5
 $ss12_ArrayBufferV19_getElementSlowPathyyXlSiF6PhyKit12PHYRigidBodyC_Tg5
 $ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo17SCNGeometrySourceC_Tg5
+$s6PhyKit10PHYTriggerCfETo
 getCollidingRigidBodies
 compactMap
-$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF6PhyKit12PHYRigidBodyC_Tg5
 $sSa034_makeUniqueAndReserveCapacityIfNotB0yyF6PhyKit12PHYRigidBodyC_Tg5
-$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSay6PhyKit12PHYRigidBodyCSgG_Ti5
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSay6PhyKit12PHYRigidBodyCSgG_Tg5
 $ss16IndexingIteratorV4next7ElementQzSgyFSay6PhyKit12PHYRigidBodyCSgG_Tg5
-$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW6PhyKit12PHYRigidBodyCSg_Ti5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa9formIndex5afterySiz_tF6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntF6PhyKit12PHYRigidBodyC_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF6PhyKit12PHYRigidBodyC_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivg6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyF6PhyKit12PHYRigidBodyC_Tg5
 $sSa5countSivg6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV30isMutableAndUniquelyReferencedSbyF6PhyKit12PHYRigidBodyC_Tg5
-$ss12_ArrayBufferV20isUniquelyReferencedSbyF6PhyKit12PHYRigidBodyC_Tg5
-$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit12PHYRigidBodyCSg_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit12PHYRigidBodyCSg_Tg5
 $sSayxSicir6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtF6PhyKit12PHYRigidBodyCSg_Tg5
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufC6PhyKit12PHYRigidBodyCSg_s15ContiguousArrayVyAGGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC6PhyKit12PHYRigidBodyCSg_Tg5
 $ss15ContiguousArrayV6appendyyxnF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntF6PhyKit12PHYRigidBodyCSg_Tg5
 $sSp10initialize2toyx_tF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyF6PhyKit12PHYRigidBodyCSg_Tg5
-$ss15ContiguousArrayV5countSivg6PhyKit12PHYRigidBodyCSg_Tg5
-$ss22_ContiguousArrayBufferV30isMutableAndUniquelyReferencedSbyF6PhyKit12PHYRigidBodyCSg_Tg5
-$ss22_ContiguousArrayBufferV20isUniquelyReferencedSbyF6PhyKit12PHYRigidBodyCSg_Tg5
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyF6PhyKit12PHYRigidBodyCSg_Tg5
 $sSo13CPHYRigidBodyC6PhyKit08PHYRigidB0CSgs5Error_pIggozo_AbFsAG_pIegnrzo_TR
 $s6PhyKit10PHYTriggerC23getCollidingRigidBodiesSayAA12PHYRigidBodyCGyFAFSgSo09CPHYRigidI0CXEfU_
-$sSayxGSlsSly7ElementQz5IndexQzcirTWSo13CPHYRigidBodyC_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo13CPHYRigidBodyC_Tg5
 $sSayxSicirSo13CPHYRigidBodyC_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo13CPHYRigidBodyC_Tg5
-$sSayxGSlsSl8endIndex0B0QzvgTW6PhyKit12PHYRigidBodyCSg_Ti5
+$sSayxGSlsSl8endIndex0B0QzvgTW6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa8endIndexSivg6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa9_getCountSiyF6PhyKit12PHYRigidBodyCSg_Tg5
+$ss12_ArrayBufferV14immutableCountSivg6PhyKit12PHYRigidBodyCSg_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg6PhyKit12PHYRigidBodyCSg_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo13CPHYRigidBodyC_Tg5
+$sSa22_allocateUninitializedySayxG_SpyxGtSiFZ6PhyKit12PHYRigidBodyC_Tg5
+$sSa19_uninitializedCountSayxGSi_tcfC6PhyKit12PHYRigidBodyC_Tg5
+$ss12_ArrayBufferVAByxGycfC6PhyKit12PHYRigidBodyC_Tg5
 $sSa29_hoistableIsNativeTypeCheckedSbyFSo13CPHYRigidBodyC_Tg5
 $ss12_ArrayBufferV32arrayPropertyIsNativeTypeCheckedSbvgSo13CPHYRigidBodyC_Tg5
 $ss12_ArrayBufferV20_isNativeTypeCheckedSbvgSo13CPHYRigidBodyC_Tg5
 $ss15ContiguousArrayV15reserveCapacityyySiF6PhyKit12PHYRigidBodyCSg_Tg5
+$ss15ContiguousArrayV12_endMutationyyF6PhyKit12PHYRigidBodyCSg_Tg5
 $ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtF6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa22_allocateUninitializedySayxG_SpyxGtSiFZ6PhyKit12PHYRigidBodyCSg_Tg5
 $sSa19_uninitializedCountSayxGSi_tcfC6PhyKit12PHYRigidBodyCSg_Tg5
-$sSayxGSlsSl5countSivgTWSo13CPHYRigidBodyC_Ti5
+$sSayxGSlsSl5countSivgTWSo13CPHYRigidBodyC_Tg5
 $sSa5countSivgSo13CPHYRigidBodyC_Tg5
 $sSa9_getCountSiyFSo13CPHYRigidBodyC_Tg5
-$ss22_ContiguousArrayBufferV5countSivgSo13CPHYRigidBodyC_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo13CPHYRigidBodyC_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo13CPHYRigidBodyC_Tg5
+$ss12_ArrayBufferV10_nonNatives06_CocoaA7WrapperVvgSo13CPHYRigidBodyC_Tg5
 $ss12_ArrayBufferV9_isNativeSbvgSo13CPHYRigidBodyC_Tg5
 $s6PhyKit10PHYTriggerCMa
 _$s6PhyKit16PHYRaycastResultC9rigidBodyAA08PHYRigidF0CSgvpACTK
@@ -6234,7 +6264,7 @@ __DATA__TtC6PhyKit16PHYRaycastResult
 _$s6PhyKit16PHYRaycastResultCMf
 _symbolic _____ 6PhyKit16PHYRaycastResultC
 _$s6PhyKit16PHYRaycastResultCMF
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/Collisions/PHYRaycastResult.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/Collisions/PHYRaycastResult.swift
 $s6PhyKit16PHYRaycastResultCMa
 worldNormal.get
 worldPosition.get
@@ -6254,77 +6284,72 @@ _symbolic _____ 6PhyKit25PHYCollisionShapeCompoundC
 _$s6PhyKit25PHYCollisionShapeCompoundCMF
 _symbolic ______p 6PhyKit17PHYCollisionShapeP
 _$s6PhyKit17PHYCollisionShape_pMD
-/Users/adameisfeld/Desktop/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCompound.swift
+/Users/adameisfeld/Desktop/Storage/Mirror/Projects/PhyKit/PhyKit-shared/swift/CollisionShapes/PHYCollisionShapeCompound.swift
 $sSo18CPHYCollisionShapeCMa
 $s6PhyKit17PHYCollisionShape_pWOc
 $s6PhyKit25PHYCollisionShapeCompoundCMa
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufCSo18CPHYCollisionShapeC_s15ContiguousArrayVyAEGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV6appendyyxnFSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFSo18CPHYCollisionShapeC_Tg5
 $sSp10initialize2toyx_tFSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV5countSivgSo18CPHYCollisionShapeC_Tg5
-$ss22_ContiguousArrayBufferV30isMutableAndUniquelyReferencedSbyFSo18CPHYCollisionShapeC_Tg5
-$ss22_ContiguousArrayBufferV20isUniquelyReferencedSbyFSo18CPHYCollisionShapeC_Tg5
+$ss15ContiguousArrayV9_getCountSiyFSo18CPHYCollisionShapeC_Tg5
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyFSo18CPHYCollisionShapeC_Tg5
 $s6PhyKit17PHYCollisionShape_pSo013CPHYCollisionD0Cs5Error_pIgnozo_AaB_pADsAE_pIegnrzo_TR
 $s6PhyKit25PHYCollisionShapeCompoundC15collisionShapes9transform6marginACSayAA0cD0_pG_So10PHYMatrix4VSftcfcSo013CPHYCollisionD0CAaG_pXEfU_
-$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit17PHYCollisionShape_p_Ti5
+$sSayxGSlsSly7ElementQz5IndexQzcirTW6PhyKit17PHYCollisionShape_p_Tg5
 $sSayxSicir6PhyKit17PHYCollisionShape_p_Tg5
 $sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtF6PhyKit17PHYCollisionShape_p_Tg5
-$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg6PhyKit17PHYCollisionShape_p_Tg5
 $ss15ContiguousArrayV15reserveCapacityyySiFSo18CPHYCollisionShapeC_Tg5
 $ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtFSo18CPHYCollisionShapeC_Tg5
-$sSayxGSlsSl5countSivgTW6PhyKit17PHYCollisionShape_p_Ti5
+$sSayxGSlsSl5countSivgTW6PhyKit17PHYCollisionShape_p_Tg5
 $sSa5countSivg6PhyKit17PHYCollisionShape_p_Tg5
 $sSa9_getCountSiyF6PhyKit17PHYCollisionShape_p_Tg5
-$ss22_ContiguousArrayBufferV5countSivg6PhyKit17PHYCollisionShape_p_Tg5
+$ss12_ArrayBufferV14immutableCountSivg6PhyKit17PHYCollisionShape_p_Tg5
 $ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg6PhyKit17PHYCollisionShape_p_Tg5
-__ZN5swift39swift51override_conformsToSwiftProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEN4llvm9StringRefEPFPKNS_35TargetProtocolConformanceDescriptorIS1_EES4_S8_SA_E
-_Swift51Overrides
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51 -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -stdlib=libc++
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk
-iPhoneOS14.2.sdk
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/Overrides.cpp
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/swift-macosx-x86_64
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_RUNTIME_OS_VERSIONING -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -stdlib=libc++
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/Overrides.cpp
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/swift-macosx-x86_64
 _swift_getFunctionReplacement50
 _swift_getOrigOfReplaceable50
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityDynamicReplacements -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/CompatibilityDynamicReplacements -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityDynamicReplacements -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -std=c++14 -MD -MT stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -MF stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o.d -o stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -stdlib=libc++
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityDynamicReplacements -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityDynamicReplacements -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_RUNTIME_OS_VERSIONING -std=c++14 -MD -MT stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -MF stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o.d -o stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
 swift_getOrigOfReplaceable50
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
 /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs
 swift_getFunctionReplacement50
-__ZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_E
 __ZL24registerAddImageCallbackPv
-__Z34_swiftoverride_class_getSuperclassPKN5swift14TargetMetadataINS_9InProcessEEE
 __ZL16addImageCallbackPK11mach_headerl
 __ZZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_EE5token
 __ZL27ProtocolConformancesSection
 _DummyTargetContextDescriptor
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50 -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -stdlib=libc++
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_RUNTIME_OS_VERSIONING -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
 addImageCallback
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
 _getTypeDescriptorLocation
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/ABI/Metadata.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/ABI/Metadata.h
 get
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/Basic/RelativePointer.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/Basic/RelativePointer.h
 getTypeKind
 getTypeReferenceKind
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/ABI/MetadataValues.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/ABI/MetadataValues.h
 applyRelativeOffset<const swift::RelativeDirectPointerImpl<swift::TargetProtocolConformanceDescriptor<swift::InProcess>, false, int>, int>
 registerAddImageCallback
 swift50override_conformsToProtocol
-Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/usr/include/dispatch/once.h
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/dispatch/once.h
 /AppleInternal/BuildRoot
 __ZL29installGetClassHook_untrustedv
 __ZL35getObjCClassByMangledName_untrustedPKcPP10objc_class
-_Swift50Overrides
 __ZL15OldGetClassHook
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50 -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -stdlib=libc++
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_RUNTIME_OS_VERSIONING -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
 getObjCClassByMangledName_untrusted
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
 installGetClassHook_untrusted
 __ZN5swift17getRootSuperclassEv
 __ZN5swift4LazyIN12_GLOBAL__N_116ConformanceStateEE19defaultInitCallbackEPv
@@ -6333,7 +6358,7 @@ __ZN12_GLOBAL__N_116ConformanceState12cacheFailureEPKvPKN5swift24TargetProtocolD
 __ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$_1clEvENUlPvE_8__invokeES6_
 __ZZZN5swift17getRootSuperclassEvENK3$_0clEvENUlPvE_8__invokeES1_
 __ZZZL24getTypeContextDescriptorPKN5swift14TargetMetadataINS_9InProcessEEEENK3$_2clEvENUlPvE_8__invokeES6_
-__ZL25swift_runtime_unreachablePKc
+__ZL17swift_unreachablePKc
 __ZZZL26getExistentialTypeMetadataN5swift23ProtocolClassConstraintEPKNS_14TargetMetadataINS_9InProcessEEEmPKNS_27TargetProtocolDescriptorRefIS2_EEENK3$_3clEvENUlPvE_8__invokeESB_
 __ZN12_GLOBAL__N_122override_equalContextsEPKN5swift23TargetContextDescriptorINS0_9InProcessEEES5_
 __ZN12_GLOBAL__N_116addImageCallbackEPK11mach_header
@@ -6343,16 +6368,16 @@ __ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$
 __ZZZN5swift17getRootSuperclassEvENK3$_0clEvE7TheLazy
 __ZZZL24getTypeContextDescriptorPKN5swift14TargetMetadataINS_9InProcessEEEENK3$_2clEvE7TheLazy
 __ZZZL26getExistentialTypeMetadataN5swift23ProtocolClassConstraintEPKNS_14TargetMetadataINS_9InProcessEEEmPKNS_27TargetProtocolDescriptorRefIS2_EEENK3$_3clEvE7TheLazy
-/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51 -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -mlinker-version=609.8 -stdlib=libc++
-/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/Concurrent.h
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_RUNTIME_OS_VERSIONING -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/Concurrent.h
 ~scope_exit
-Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include/llvm/ADT/ScopeExit.h
+Sources/swiftlang/swiftlang-1300.0.31.1/llvm-project/llvm/include/llvm/ADT/ScopeExit.h
 deallocateFreeList
 clear_and_shrink_to_fit
 operator unsigned long
-Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/atomic
 __cxx_atomic_load<unsigned long>
 end
 begin
@@ -6360,26 +6385,26 @@ store
 __cxx_atomic_store<unsigned long>
 __cxx_atomic_store<swift::overrides::ConcurrentReadableArray<(anonymous namespace)::ConformanceSection>::Storage *>
 copy<(anonymous namespace)::ConformanceSection *, (anonymous namespace)::ConformanceSection *>
-Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/c++/v1/algorithm
 __copy<(anonymous namespace)::ConformanceSection, (anonymous namespace)::ConformanceSection>
 max<unsigned long>
-max<unsigned long, std::__1::__less<unsigned long, unsigned long> >
+max<unsigned long, std::__less<unsigned long> >
 __cxx_atomic_load<swift::overrides::ConcurrentReadableArray<(anonymous namespace)::ConformanceSection>::Storage *>
 override_equalContexts
-Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include/llvm/ADT/StringRef.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include/llvm/ADT/StringRef.h
 compareMemory
 getTypeContextIdentity
 StringRef
 strLen
 hasImportInfo
 getFlag<2>
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/Basic/FlagSet.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/Basic/FlagSet.h
 applyRelativeOffset<const swift::RelativeDirectPointerImpl<const char, false, int>, int>
 applyRelativeOffset<const swift::RelativeIndirectablePointer<const swift::TargetContextDescriptor<swift::InProcess>, true, int, swift::TargetContextDescriptor<swift::InProcess> *>, int>
 isUnique
 __invoke
-swift_runtime_unreachable
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/Runtime/Unreachable.h
+swift_unreachable
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/Basic/Unreachable.h
 cacheFailure
 updateFailureGeneration
 getOrInsert<(anonymous namespace)::ConformanceCacheKey, const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *, unsigned long &>
@@ -6396,23 +6421,21 @@ __cxx_atomic_base_impl
 destroyNode
 compareWithKey
 __cxx_atomic_load<swift::overrides::ConcurrentMapBase<(anonymous namespace)::ConformanceCacheEntry, false>::Node *>
-ConformanceCacheKey
 searchInConformanceCache
 cacheMiss
 cachedFailure
 _swiftoverride_class_getSuperclass
 getObjCClassMetadata
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/Basic/Lazy.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/Basic/Lazy.h
 dyn_cast<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
-Sources/swiftlang/swiftlang-1200.0.45/llvm-project/llvm/include/llvm/Support/Casting.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/include/llvm/Support/Casting.h
 isa<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
 doit
 classof
 getKind
 getEnumeratedMetadataKind
-getSuperclass
 classHasSuperclass
-Sources/swiftlang/swiftlang-1200.0.45/swift/stdlib/toolchain/Compatibility51/../../public/runtime/Private.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/stdlib/toolchain/Compatibility51/../../public/runtime/Private.h
 getClassObject
 cachedSuccess
 getDescription
@@ -6450,7 +6473,7 @@ getSwiftProtocol
 isObjC
 getSuperclassConstraint
 getTrailingObjects<const swift::TargetMetadata<swift::InProcess> *>
-Sources/swiftlang/swiftlang-1200.0.45/swift/include/swift/ABI/TrailingObjects.h
+Sources/swiftlang/swiftlang-1300.0.31.1/swift/include/swift/ABI/TrailingObjects.h
 getTrailingObjectsImpl
 hasSuperclassConstraint
 getProtocols
@@ -6458,7 +6481,6 @@ getTrailingObjects<swift::TargetProtocolDescriptorRef<swift::InProcess> >
 callNumTrailingObjects<const swift::TargetMetadata<swift::InProcess> *>
 numTrailingObjects
 dyn_cast<swift::TargetExistentialTypeMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
-cast<swift::TargetExistentialTypeMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
 isa<swift::TargetExistentialTypeMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
 ConformanceCandidate
 override_getCanonicalTypeMetadata
@@ -6474,7 +6496,6 @@ operator bool
 getAccessFunction
 isGeneric
 dyn_cast<swift::TargetTypeContextDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> >
-cast<swift::TargetTypeContextDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> >
 isa<swift::TargetTypeContextDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> *>
 getTypeDescriptor
 operator swift::TargetContextDescriptor<swift::InProcess> **

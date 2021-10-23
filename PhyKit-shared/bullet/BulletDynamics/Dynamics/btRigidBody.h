@@ -1,6 +1,6 @@
 /*
 Bullet Continuous Collision Detection and Physics Library
-Copyright (c) 2003-2006 Erwin Coumans  http://continuousphysics.com/Bullet/
+Copyright (c) 2003-2006 Erwin Coumans  https://bulletphysics.org
 
 This software is provided 'as-is', without any express or implied warranty.
 In no event will the authors be held liable for any damages arising from the use of this software.
@@ -356,12 +356,12 @@ public:
         }
     }
     
-    btVector3 getPushVelocity()
+    btVector3 getPushVelocity() const
     {
         return m_pushVelocity;
     }
     
-    btVector3 getTurnVelocity()
+    btVector3 getTurnVelocity() const
     {
         return m_turnVelocity;
     }

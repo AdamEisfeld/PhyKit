@@ -9,7 +9,7 @@
 import Foundation
 
 /// A delegate for receiving callbacks as a PHYWorld detects trigger zone interactions in it's simulation
-public protocol PHYWorldTriggerDelegate: class {
+public protocol PHYWorldTriggerDelegate: AnyObject {
     
     func physicsWorld(_ physicsWorld: PHYWorld, triggerDidBeginAtTime time: TimeInterval, with collisionPair: PHYTriggerPair)
     func physicsWorld(_ physicsWorld: PHYWorld, triggerDidContinueAtTime time: TimeInterval, with collisionPair: PHYTriggerPair)

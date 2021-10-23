@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 
 // A delegate for receiving callbacks as a physics scene re-orients it's nodes to their corresponding rigid bodies
-public protocol PHYSceneUpdateDelegate: class {
+public protocol PHYSceneUpdateDelegate: AnyObject {
     
     func physicsSceneWillIterativelyUpdate(_ physicsScene: PHYScene)
     func physicsSceneDidIterativelyUpdate(_ physicsScene: PHYScene)

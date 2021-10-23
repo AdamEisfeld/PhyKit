@@ -1,13 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PhyKit
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PhyKit
 import Foundation
 @_exported import PhyKit
 import SceneKit
 import Swift
+import _Concurrency
 public class PHYAction {
-  public typealias SetupBlock = ((PhyKit.PHYRigidBody) -> (Any?))
-  public typealias ActionBlock = ((Foundation.TimeInterval, PhyKit.PHYRigidBody, Any?) -> ())
+  public typealias SetupBlock = ((_ rigidBody: PhyKit.PHYRigidBody) -> (Any?))
+  public typealias ActionBlock = ((_ percent: Foundation.TimeInterval, _ rigidBody: PhyKit.PHYRigidBody, _ setupInfo: Any?) -> ())
   public var repeatCount: Swift.Int
   public init(rigidBody: PhyKit.PHYRigidBody, duration: Foundation.TimeInterval, setup: PhyKit.PHYAction.SetupBlock? = nil, action: PhyKit.PHYAction.ActionBlock? = nil)
   public func run()
@@ -31,7 +32,7 @@ public class PHYCollisionShapeFromData : PhyKit.PHYCollisionShape {
   public init(serializedData: Foundation.Data)
   @objc deinit
 }
-extension PHYCollisionShape {
+extension PhyKit.PHYCollisionShape {
   public func serialize() -> Foundation.Data
 }
 public class PHYCollisionShapeStaticPlane : PhyKit.PHYCollisionShape {
@@ -48,7 +49,7 @@ public class PHYCollisionPair {
   public init(rigidBodyA: PhyKit.PHYRigidBody, localPositionA: PhyKit.PHYVector3, rigidBodyB: PhyKit.PHYRigidBody, localPositionB: PhyKit.PHYVector3)
   @objc deinit
 }
-extension PHYVector3 {
+extension PhyKit.PHYVector3 {
   public var scnVector3: SceneKit.SCNVector3 {
     get
   }
@@ -64,16 +65,16 @@ extension PHYVector3 {
   public func toRadians() -> PhyKit.PHYVector3
   public func toDegrees() -> PhyKit.PHYVector3
 }
-extension PHYVector4 {
+extension PhyKit.PHYVector4 {
   public init(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float)
   public static func vector(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float, _ w: Swift.Float) -> PhyKit.PHYVector4
 }
-extension SCNVector3 {
+extension SceneKit.SCNVector3 {
   public var bkVector3: PhyKit.PHYVector3 {
     get
   }
 }
-extension SCNVector4 {
+extension SceneKit.SCNVector4 {
   public var PHYVector4: PhyKit.PHYVector4 {
     get
   }
@@ -82,12 +83,12 @@ public enum PHYRotationMetric {
   case radians
   case degrees
   public static func == (a: PhyKit.PHYRotationMetric, b: PhyKit.PHYRotationMetric) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-extension PHYQuaternion {
+extension PhyKit.PHYQuaternion {
   public var scnQuaternion: SceneKit.SCNQuaternion {
     get
   }
@@ -101,17 +102,17 @@ extension PHYQuaternion {
     get
   }
 }
-extension SCNVector4 {
+extension SceneKit.SCNVector4 {
   public var PHYQuaternion: PhyKit.PHYQuaternion {
     get
   }
 }
-extension PHYMatrix4 {
+extension PhyKit.PHYMatrix4 {
   public var scnMatrix: SceneKit.SCNMatrix4 {
     get
   }
 }
-extension SCNMatrix4 {
+extension SceneKit.SCNMatrix4 {
   public var blMatrix: PhyKit.PHYMatrix4 {
     get
   }
@@ -126,7 +127,7 @@ public class PHYTriggerPair {
   public init(rigidBody: PhyKit.PHYRigidBody, trigger: PhyKit.PHYTrigger)
   @objc deinit
 }
-extension PHYAction {
+extension PhyKit.PHYAction {
   public static func orient(_ rigidBody: PhyKit.PHYRigidBody, by delta: PhyKit.PHYQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> PhyKit.PHYAction
   public static func orient(_ rigidBody: PhyKit.PHYRigidBody, to end: PhyKit.PHYQuaternion, duration: Foundation.TimeInterval, longestArc: Swift.Bool = false) -> PhyKit.PHYAction
 }
@@ -146,10 +147,10 @@ public class PHYCollisionShapeGeometry : PhyKit.PHYCollisionShape {
     case convex
     case concave
     public static func == (a: PhyKit.PHYCollisionShapeGeometry.PHYCollisionShapeGeometryType, b: PhyKit.PHYCollisionShapeGeometry.PHYCollisionShapeGeometryType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   final public let internalShape: PhyKit.CPHYCollisionShape
   public init(geometry: PhyKit.PHYGeometry, type: PhyKit.PHYCollisionShapeGeometry.PHYCollisionShapeGeometryType, transform: PhyKit.PHYMatrix4 = PHYMatrix4MakeIdentity(), margin: Swift.Float = 0.04)
@@ -188,8 +189,6 @@ public class PHYCollisionShapeCylinder : PhyKit.PHYCollisionShape {
   final public let type: PhyKit.PHYRigidBodyType
   public init(type: PhyKit.PHYRigidBodyType, shape: PhyKit.PHYCollisionShape)
   @objc deinit
-  @objc override dynamic public init(collisionShape: PhyKit.CPHYCollisionShape, rigidBodyType: PhyKit.CPHYRigidBodyType, mass: Swift.Float)
-  @objc override dynamic public init()
 }
 @objc @_inheritsConvenienceInitializers public class PHYWorld : PhyKit.CPHYWorld {
   weak public var simulationDelegate: PhyKit.PHYWorldSimulationDelegate?
@@ -206,8 +205,8 @@ public class PHYCollisionShapeCylinder : PhyKit.PHYCollisionShape {
   public func reset()
   public func rayCast(from: PhyKit.PHYVector3, to: PhyKit.PHYVector3) -> [PhyKit.PHYRaycastResult]
   @objc override dynamic public func internalCollisionDidOccur(_ internalRigidBodyA: PhyKit.CPHYRigidBody, localPositionA: PhyKit.PHYVector3, internalRigidBodyB: PhyKit.CPHYRigidBody, localPositionB: PhyKit.PHYVector3)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 public class PHYCollisionShapeSphere : PhyKit.PHYCollisionShape {
   final public let internalShape: PhyKit.CPHYCollisionShape
@@ -215,7 +214,7 @@ public class PHYCollisionShapeSphere : PhyKit.PHYCollisionShape {
   required public init(serializedData: Foundation.Data)
   @objc deinit
 }
-extension PHYAction {
+extension PhyKit.PHYAction {
   public static func move(_ rigidBody: PhyKit.PHYRigidBody, to end: PhyKit.PHYVector3, duration: Foundation.TimeInterval) -> PhyKit.PHYAction
   public static func move(_ rigidBody: PhyKit.PHYRigidBody, by dist: PhyKit.PHYVector3, duration: Foundation.TimeInterval) -> PhyKit.PHYAction
   public static func move(_ rigidBody: PhyKit.PHYRigidBody, byFunction distFunction: @escaping () -> (PhyKit.PHYVector3)) -> PhyKit.PHYAction
@@ -231,7 +230,7 @@ public enum PHYRigidBodyType : Swift.Equatable {
   case dynamic(mass: Swift.Float)
   public static func == (lhs: PhyKit.PHYRigidBodyType, rhs: PhyKit.PHYRigidBodyType) -> Swift.Bool
 }
-extension PHYRigidBodyType {
+extension PhyKit.PHYRigidBodyType {
   public var mass: Swift.Float {
     get
   }
@@ -247,8 +246,6 @@ extension PHYRigidBodyType {
   public init(shape: PhyKit.PHYCollisionShape)
   public func getCollidingRigidBodies() -> [PhyKit.PHYRigidBody]
   @objc deinit
-  @objc override dynamic public init(collisionShape: PhyKit.CPHYCollisionShape)
-  @objc override dynamic public init()
 }
 public class PHYRaycastResult {
   weak public var rigidBody: PhyKit.PHYRigidBody?

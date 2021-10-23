@@ -10,7 +10,7 @@ import Foundation
 
 
 /// A delegate for receiving callbacks as a PHYWorld steps forward in it's simulation
-public protocol PHYWorldSimulationDelegate: class {
+public protocol PHYWorldSimulationDelegate: AnyObject {
     
     func physicsWorld(_ physicsWorld: PHYWorld, willSimulateAtTime time: TimeInterval)
     func physicsWorld(_ physicsWorld: PHYWorld, didSimulateAtTime time: TimeInterval)

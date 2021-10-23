@@ -75,6 +75,7 @@ bFile::bFile(const char *filename, const char headerString[7])
 		fseek(fp, 0L, SEEK_SET);
 
 		mFileBuffer = (char *)malloc(mFileLen + 1);
+                memset(mFileBuffer, 0, mFileLen+1);
 		size_t bytesRead;
 		bytesRead = fread(mFileBuffer, mFileLen, 1, fp);
 
@@ -643,8 +644,8 @@ char *bFile::readStruct(char *head, bChunkInd &dataChunk)
 			if ((strcmp(oldType, "btShortIntIndexData") == 0))
 			{
 				int allocLen = 2;
-				char *dataAlloc = new char[(dataChunk.nr * allocLen) + 1];
-				memset(dataAlloc, 0, (dataChunk.nr * allocLen) + 1);
+				char *dataAlloc = new char[(dataChunk.nr * allocLen) + sizeof(void*)];
+				memset(dataAlloc, 0, (dataChunk.nr * allocLen) + sizeof(void*));
 				short *dest = (short *)dataAlloc;
 				const short *src = (short *)head;
 				for (int i = 0; i < dataChunk.nr; i++)
@@ -682,8 +683,8 @@ char *bFile::readStruct(char *head, bChunkInd &dataChunk)
 				// numBlocks * length
 
 				int allocLen = (curLen);
-				char *dataAlloc = new char[(dataChunk.nr * allocLen) + 1];
-				memset(dataAlloc, 0, (dataChunk.nr * allocLen));
+				char *dataAlloc = new char[(dataChunk.nr * allocLen) + sizeof(void*)];
+				memset(dataAlloc, 0, (dataChunk.nr * allocLen) + sizeof(void*));
 
 				// track allocated
 				addDataBlock(dataAlloc);
@@ -719,8 +720,8 @@ char *bFile::readStruct(char *head, bChunkInd &dataChunk)
 #endif  //
 	}
 
-	char *dataAlloc = new char[(dataChunk.len) + 1];
-	memset(dataAlloc, 0, dataChunk.len + 1);
+	char *dataAlloc = new char[(dataChunk.len) + sizeof(void*)];
+	memset(dataAlloc, 0, dataChunk.len + sizeof(void*));
 
 	// track allocated
 	addDataBlock(dataAlloc);
@@ -736,7 +737,7 @@ void bFile::parseStruct(char *strcPtr, char *dtPtr, int old_dna, int new_dna, bo
 	if (new_dna == -1) return;
 
 	//disable this, because we need to fixup pointers/ListBase
-	if (0)  //mFileDNA->flagEqual(old_dna))
+	if (/* DISABLES CODE */ (0))  //mFileDNA->flagEqual(old_dna))
 	{
 		short *strc = mFileDNA->getStruct(old_dna);
 		int len = mFileDNA->getLength(strc[0]);
