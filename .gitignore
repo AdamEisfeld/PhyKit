@@ -4,3 +4,4 @@ Demos/FallingPrimitives/FallingPrimitives.xcodeproj/xcuserdata
 Demos/Demos.xcworkspace/xcuserdata
 ScratchPad/ScratchPad.xcodeproj/xcuserdata
 .swiftpm/*
+.DS_Store

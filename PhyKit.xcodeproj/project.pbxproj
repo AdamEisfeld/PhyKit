@@ -7,6 +7,221 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6475EC227E9077000A6495B /* PhyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A5728025A377F0006D6778 /* PhyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EC327E907D900A6495B /* PHYTriggerPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722625A37773006D6778 /* PHYTriggerPair.swift */; };
+		E6475EC427E907D900A6495B /* PHYCollisionPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722F25A37773006D6778 /* PHYCollisionPair.swift */; };
+		E6475EC527E907D900A6495B /* PHYCollisionShapeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723825A37773006D6778 /* PHYCollisionShapeBox.swift */; };
+		E6475EC627E907D900A6495B /* CPHYTrigger+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D725A37725006D6778 /* CPHYTrigger+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EC727E907D900A6495B /* PHYCollisionShapeStaticPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723A25A37773006D6778 /* PHYCollisionShapeStaticPlane.swift */; };
+		E6475EC827E907D900A6495B /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EC927E907D900A6495B /* PHYCollisionShapeCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723725A37773006D6778 /* PHYCollisionShapeCapsule.swift */; };
+		E6475ECA27E907D900A6495B /* PHYCollisionShapeCylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723E25A37773006D6778 /* PHYCollisionShapeCylinder.swift */; };
+		E6475ECB27E907D900A6495B /* PHYRaycastResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722E25A37773006D6778 /* PHYRaycastResult.swift */; };
+		E6475ECC27E907D900A6495B /* CPHYWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D925A37725006D6778 /* CPHYWorld.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475ECD27E907D900A6495B /* PHYWorldCollisionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722B25A37773006D6778 /* PHYWorldCollisionDelegate.swift */; };
+		E6475ECE27E907D900A6495B /* CPHYVertex.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571E225A37725006D6778 /* CPHYVertex.mm */; };
+		E6475ECF27E907D900A6495B /* PHYRigidBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724425A37773006D6778 /* PHYRigidBody.swift */; };
+		E6475ED027E907D900A6495B /* PHYSceneUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724725A37773006D6778 /* PHYSceneUpdateDelegate.swift */; };
+		E6475ED127E907D900A6495B /* CPHYMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571E525A37725006D6778 /* CPHYMesh.mm */; };
+		E6475ED227E907D900A6495B /* CPHYRigidBody.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571EC25A37725006D6778 /* CPHYRigidBody.mm */; };
+		E6475ED327E907D900A6495B /* CPHYStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D225A37725006D6778 /* CPHYStructs.mm */; };
+		E6475ED427E907D900A6495B /* CPHYGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571E925A37725006D6778 /* CPHYGeometry.mm */; };
+		E6475ED527E907D900A6495B /* CPHYCollisionShape.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DF25A37725006D6778 /* CPHYCollisionShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475ED627E907D900A6495B /* CPHYPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E725A37725006D6778 /* CPHYPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475ED727E907D900A6495B /* PHYCollisionShapeFromData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723925A37773006D6778 /* PHYCollisionShapeFromData.swift */; };
+		E6475ED827E907D900A6495B /* PHYWorldSimulationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722925A37773006D6778 /* PHYWorldSimulationDelegate.swift */; };
+		E6475ED927E907D900A6495B /* NSValue+CPHYStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D325A37725006D6778 /* NSValue+CPHYStructs.mm */; };
+		E6475EDA27E907D900A6495B /* PHYCollisionShapeCompound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723B25A37773006D6778 /* PHYCollisionShapeCompound.swift */; };
+		E6475EDB27E907D900A6495B /* CPHYRigidBody+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571EB25A37725006D6778 /* CPHYRigidBody+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EDC27E907D900A6495B /* PHYAction+Orient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723325A37773006D6778 /* PHYAction+Orient.swift */; };
+		E6475EDD27E907D900A6495B /* PHYCollisionShapeGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723F25A37773006D6778 /* PHYCollisionShapeGeometry.swift */; };
+		E6475EDE27E907D900A6495B /* PHYRigidBodyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724325A37773006D6778 /* PHYRigidBodyType.swift */; };
+		E6475EDF27E907D900A6495B /* PHYCollisionShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723D25A37773006D6778 /* PHYCollisionShape.swift */; };
+		E6475EE027E907D900A6495B /* CPHYTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D525A37725006D6778 /* CPHYTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE127E907D900A6495B /* CPHYMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E125A37725006D6778 /* CPHYMesh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE227E907D900A6495B /* CPHYRigidBody.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571ED25A37725006D6778 /* CPHYRigidBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE327E907D900A6495B /* CPHYDependencies+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DA25A37725006D6778 /* CPHYDependencies+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE427E907D900A6495B /* PHYTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722725A37773006D6778 /* PHYTrigger.swift */; };
+		E6475EE527E907D900A6495B /* PHYScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724625A37773006D6778 /* PHYScene.swift */; };
+		E6475EE627E907D900A6495B /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE727E907D900A6495B /* CPHYGeometry+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E825A37725006D6778 /* CPHYGeometry+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE827E907D900A6495B /* PHYAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723525A37773006D6778 /* PHYAction.swift */; };
+		E6475EE927E907D900A6495B /* CPHYGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E425A37725006D6778 /* CPHYGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EEA27E907D900A6495B /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EEB27E907D900A6495B /* PHYWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722C25A37773006D6778 /* PHYWorld.swift */; };
+		E6475EEC27E907D900A6495B /* CPHYWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571DB25A37725006D6778 /* CPHYWorld.mm */; };
+		E6475EED27E907D900A6495B /* PHYStructConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723125A37773006D6778 /* PHYStructConversions.swift */; };
+		E6475EEE27E907D900A6495B /* PHYWorldTriggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722A25A37773006D6778 /* PHYWorldTriggerDelegate.swift */; };
+		E6475EEF27E907D900A6495B /* CPHYTrigger.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D625A37725006D6778 /* CPHYTrigger.mm */; };
+		E6475EF027E907D900A6495B /* PHYAction+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723425A37773006D6778 /* PHYAction+Move.swift */; };
+		E6475EF127E907D900A6495B /* PHYCollisionShapeSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723C25A37773006D6778 /* PHYCollisionShapeSphere.swift */; };
+		E6475EF227E907D900A6495B /* CPHYCollisionShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571DD25A37725006D6778 /* CPHYCollisionShape.mm */; };
+		E6475EF327E907D900A6495B /* PHYGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724125A37773006D6778 /* PHYGeometry.swift */; };
+		E6475EF427E907D900A6495B /* CPHYPolygon.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571E325A37725006D6778 /* CPHYPolygon.mm */; };
+		E6475EF527E907D900A6495B /* CPHYVertex.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E625A37725006D6778 /* CPHYVertex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EF627E907D900A6495B /* CPHYCollisionShape+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DE25A37725006D6778 /* CPHYCollisionShape+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EF727E9081700A6495B /* btThreadSupportWin32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B325A37A05006D6778 /* btThreadSupportWin32.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EF827E9081700A6495B /* btTaskScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B425A37A05006D6778 /* btTaskScheduler.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EF927E9081700A6495B /* btQuickprof.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572A925A37A05006D6778 /* btQuickprof.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFA27E9081700A6495B /* btThreadSupportPosix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B225A37A05006D6778 /* btThreadSupportPosix.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFB27E9081700A6495B /* btPolarDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572C925A37A05006D6778 /* btPolarDecomposition.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFC27E9081700A6495B /* btVector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572CB25A37A05006D6778 /* btVector3.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFD27E9081700A6495B /* btGeometryUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572C825A37A05006D6778 /* btGeometryUtil.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFE27E9081700A6495B /* btSerializer64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572AC25A37A05006D6778 /* btSerializer64.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475EFF27E9081700A6495B /* btSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572C625A37A05006D6778 /* btSerializer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0027E9081700A6495B /* btConvexHullComputer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B925A37A05006D6778 /* btConvexHullComputer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0127E9081700A6495B /* btThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572C325A37A05006D6778 /* btThreads.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0227E908C900A6495B /* gim_memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FC925A37692006D6778 /* gim_memory.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0327E908C900A6495B /* btCollisionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9D25A37692006D6778 /* btCollisionObject.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0427E908C900A6495B /* btCompoundCompoundCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9825A37692006D6778 /* btCompoundCompoundCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0527E908C900A6495B /* btUniversalConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713B25A376C4006D6778 /* btUniversalConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0627E908C900A6495B /* btDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3D25A37692006D6778 /* btDispatcher.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0727E908C900A6495B /* btBatchedConstraints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713725A376C4006D6778 /* btBatchedConstraints.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0827E908C900A6495B /* SphereTriangleDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8225A37692006D6778 /* SphereTriangleDetector.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0927E908C900A6495B /* btConeTwistConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713125A376C4006D6778 /* btConeTwistConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0A27E908C900A6495B /* btDiscreteDynamicsWorldMt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570EE25A376C3006D6778 /* btDiscreteDynamicsWorldMt.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0B27E908C900A6495B /* btCollisionDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8325A37692006D6778 /* btCollisionDispatcher.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0C27E908C900A6495B /* btGImpactShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FC825A37692006D6778 /* btGImpactShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0D27E908C900A6495B /* btGjkConvexCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5025A37692006D6778 /* btGjkConvexCast.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0E27E908C900A6495B /* btMultiBodyWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571BD25A3770B006D6778 /* btMultiBodyWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F0F27E908C900A6495B /* btInternalEdgeUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F6925A37692006D6778 /* btInternalEdgeUtility.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1027E908C900A6495B /* btOverlappingPairCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3825A37692006D6778 /* btOverlappingPairCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1127E908C900A6495B /* btRaycastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F6025A37692006D6778 /* btRaycastCallback.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1227E908C900A6495B /* gim_contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FA725A37692006D6778 /* gim_contact.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1327E908C900A6495B /* btMultiBodyConstraintSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710625A376C4006D6778 /* btMultiBodyConstraintSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1427E908C900A6495B /* btBroadphaseProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3E25A37692006D6778 /* btBroadphaseProxy.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1527E908C900A6495B /* btReducedVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572D625A37A05006D6778 /* btReducedVector.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1627E908C900A6495B /* btCompoundCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8E25A37692006D6778 /* btCompoundCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1727E908C900A6495B /* btEmptyCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9425A37692006D6778 /* btEmptyCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1827E908C900A6495B /* btGeneric6DofSpring2Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713F25A376C4006D6778 /* btGeneric6DofSpring2Constraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1927E908C900A6495B /* btPolyhedralContactClipping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5D25A37692006D6778 /* btPolyhedralContactClipping.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1A27E908C900A6495B /* btGImpactBvh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FC025A37692006D6778 /* btGImpactBvh.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1B27E908C900A6495B /* btKinematicCharacterController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570F825A376C4006D6778 /* btKinematicCharacterController.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1C27E908C900A6495B /* btBoxBoxCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9C25A37692006D6778 /* btBoxBoxCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1D27E908C900A6495B /* btBox2dBox2dCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F6525A37692006D6778 /* btBox2dBox2dCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1E27E908C900A6495B /* btBulletWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571C225A3770B006D6778 /* btBulletWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F1F27E908C900A6495B /* btCollisionWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7E25A37692006D6778 /* btCollisionWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2027E908C900A6495B /* btDiscreteDynamicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570E925A376C3006D6778 /* btDiscreteDynamicsWorld.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2127E908C900A6495B /* btSequentialImpulseConstraintSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5712F25A376C4006D6778 /* btSequentialImpulseConstraintSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2227E908C900A6495B /* btContactConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5712C25A376C4006D6778 /* btContactConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2327E908C900A6495B /* bFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571A525A376E6006D6778 /* bFile.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2427E908C900A6495B /* btDbvtBroadphase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3925A37692006D6778 /* btDbvtBroadphase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2527E908C900A6495B /* btFixedConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5714325A376C4006D6778 /* btFixedConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2627E908C900A6495B /* btCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F4025A37692006D6778 /* btCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2727E908C900A6495B /* btCollisionDispatcherMt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7A25A37692006D6778 /* btCollisionDispatcherMt.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2827E908C900A6495B /* btPersistentManifold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5525A37692006D6778 /* btPersistentManifold.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2927E908C900A6495B /* btSimulationIslandManagerMt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570E425A376C3006D6778 /* btSimulationIslandManagerMt.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2A27E908C900A6495B /* btMultiBodySliderConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710325A376C4006D6778 /* btMultiBodySliderConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2B27E908C900A6495B /* btGenericPoolAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FB925A37692006D6778 /* btGenericPoolAllocator.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2C27E908C900A6495B /* btMultiBodyMLCPConstraintSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710725A376C4006D6778 /* btMultiBodyMLCPConstraintSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2D27E908C900A6495B /* btMultiBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710D25A376C4006D6778 /* btMultiBody.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2E27E908C900A6495B /* btContinuousConvexCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5125A37692006D6778 /* btContinuousConvexCollision.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F2F27E908C900A6495B /* btSphereBoxCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7825A37692006D6778 /* btSphereBoxCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3027E908C900A6495B /* btDefaultCollisionConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8625A37692006D6778 /* btDefaultCollisionConfiguration.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3127E908C900A6495B /* btConvexConcaveCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8725A37692006D6778 /* btConvexConcaveCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3227E908C900A6495B /* btLemkeAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5711825A376C4006D6778 /* btLemkeAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3327E908C900A6495B /* btRigidBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570EC25A376C3006D6778 /* btRigidBody.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3427E908C900A6495B /* bDNA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571AB25A376E6006D6778 /* bDNA.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3527E908C900A6495B /* btConvexHull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572D725A37A05006D6778 /* btConvexHull.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3627E908C900A6495B /* btSphereTriangleCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7425A37692006D6778 /* btSphereTriangleCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3727E908C900A6495B /* btContactProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FAD25A37692006D6778 /* btContactProcessing.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3827E908C900A6495B /* btMultiBodyConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5711225A376C4006D6778 /* btMultiBodyConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3927E908C900A6495B /* btConvexCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F4A25A37692006D6778 /* btConvexCast.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3A27E908C900A6495B /* btGjkPairDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F4925A37692006D6778 /* btGjkPairDetector.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3B27E908C900A6495B /* btDantzigLCP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5712225A376C4006D6778 /* btDantzigLCP.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3C27E908C900A6495B /* btBulletFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571A625A376E6006D6778 /* btBulletFile.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3D27E908C900A6495B /* btQuantizedBvh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F2E25A37692006D6778 /* btQuantizedBvh.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3E27E908C900A6495B /* btSequentialImpulseConstraintSolverMt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5714225A376C4006D6778 /* btSequentialImpulseConstraintSolverMt.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F3F27E908C900A6495B /* btDbvt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3025A37692006D6778 /* btDbvt.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4027E908C900A6495B /* btWheelInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570F125A376C3006D6778 /* btWheelInfo.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4127E908C900A6495B /* gim_box_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FAE25A37692006D6778 /* gim_box_set.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4227E908C900A6495B /* btGeneric6DofSpringConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5714C25A376C4006D6778 /* btGeneric6DofSpringConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4327E908C900A6495B /* btBoxBoxDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9725A37692006D6778 /* btBoxBoxDetector.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4427E908C900A6495B /* btMultiBodyFixedConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570FE25A376C4006D6778 /* btMultiBodyFixedConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4527E908C900A6495B /* btRaycastVehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570F025A376C3006D6778 /* btRaycastVehicle.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4627E908C900A6495B /* btGeneric6DofConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713A25A376C4006D6778 /* btGeneric6DofConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4727E908C900A6495B /* btSphereSphereCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9625A37692006D6778 /* btSphereSphereCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4827E908C900A6495B /* btMLCPSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5711F25A376C4006D6778 /* btMLCPSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4927E908C900A6495B /* btVoronoiSimplexSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5925A37692006D6778 /* btVoronoiSimplexSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4A27E908C900A6495B /* btMultiBodyJointMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710B25A376C4006D6778 /* btMultiBodyJointMotor.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4B27E908C900A6495B /* btAlignedAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572D825A37A05006D6778 /* btAlignedAllocator.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4C27E908C900A6495B /* btSliderConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713425A376C4006D6778 /* btSliderConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4D27E908C900A6495B /* btSubSimplexConvexCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5F25A37692006D6778 /* btSubSimplexConvexCast.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4E27E908C900A6495B /* btTypedConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713225A376C4006D6778 /* btTypedConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F4F27E908C900A6495B /* btMultiBodyJointLimitConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5711325A376C4006D6778 /* btMultiBodyJointLimitConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5027E908C900A6495B /* btGhostObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7225A37692006D6778 /* btGhostObject.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5127E908C900A6495B /* btGjkEpaPenetrationDepthSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5C25A37692006D6778 /* btGjkEpaPenetrationDepthSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5227E908C900A6495B /* btSimulationIslandManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7625A37692006D6778 /* btSimulationIslandManager.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5327E908C900A6495B /* btActivatingCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8025A37692006D6778 /* btActivatingCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5427E908C900A6495B /* btMultiBodyGearConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5711525A376C4006D6778 /* btMultiBodyGearConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5527E908C900A6495B /* btHashedSimplePairCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9225A37692006D6778 /* btHashedSimplePairCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5627E908C900A6495B /* btAxisSweep3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3425A37692006D6778 /* btAxisSweep3.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5727E908C900A6495B /* btGjkEpa2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F5425A37692006D6778 /* btGjkEpa2.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5827E908C900A6495B /* btMinkowskiPenetrationDepthSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F4825A37692006D6778 /* btMinkowskiPenetrationDepthSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5927E908C900A6495B /* btConvexPlaneCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8925A37692006D6778 /* btConvexPlaneCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5A27E908C900A6495B /* btSimpleDynamicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570ED25A376C3006D6778 /* btSimpleDynamicsWorld.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5B27E908C900A6495B /* btGearConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5712A25A376C4006D6778 /* btGearConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5C27E908C900A6495B /* btSolve2LinearConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713D25A376C4006D6778 /* btSolve2LinearConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5D27E908C900A6495B /* btConvex2dConvex2dAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F8125A37692006D6778 /* btConvex2dConvex2dAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5E27E908C900A6495B /* btNNCGConstraintSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5714625A376C4006D6778 /* btNNCGConstraintSolver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F5F27E908C900A6495B /* btWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571BF25A3770B006D6778 /* btWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6027E908C900A6495B /* btHingeConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713525A376C4006D6778 /* btHingeConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6127E908C900A6495B /* btGImpactCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FC325A37692006D6778 /* btGImpactCollisionAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6227E908C900A6495B /* btMultiBodyPoint2Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710A25A376C4006D6778 /* btMultiBodyPoint2Point.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6327E908C900A6495B /* btPoint2PointConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5714125A376C4006D6778 /* btPoint2PointConstraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6427E908C900A6495B /* btConvexConvexAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F9125A37692006D6778 /* btConvexConvexAlgorithm.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6527E908C900A6495B /* gim_tri_collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FA225A37692006D6778 /* gim_tri_collision.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6627E908C900A6495B /* btGImpactQuantizedBvh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FA625A37692006D6778 /* btGImpactQuantizedBvh.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6727E908C900A6495B /* bChunk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571A925A376E6006D6778 /* bChunk.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6827E908C900A6495B /* btUnionFind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F6D25A37692006D6778 /* btUnionFind.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6927E908C900A6495B /* btManifoldResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F7C25A37692006D6778 /* btManifoldResult.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6A27E908C900A6495B /* btMultiBodyDynamicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A570FF25A376C4006D6778 /* btMultiBodyDynamicsWorld.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6B27E908C900A6495B /* btHinge2Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5713E25A376C4006D6778 /* btHinge2Constraint.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6C27E908C900A6495B /* btCollisionWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F6E25A37692006D6778 /* btCollisionWorld.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6D27E908C900A6495B /* btSimpleBroadphase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56F3C25A37692006D6778 /* btSimpleBroadphase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6E27E908C900A6495B /* btMultiBodySphericalJointMotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5710225A376C4006D6778 /* btMultiBodySphericalJointMotor.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F6F27E908C900A6495B /* btTriangleShapeEx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FB225A37692006D6778 /* btTriangleShapeEx.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7027E908EB00A6495B /* btBvhTriangleMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FFB25A37692006D6778 /* btBvhTriangleMeshShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7127E908EB00A6495B /* btBox2dShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FDF25A37692006D6778 /* btBox2dShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7227E908EB00A6495B /* btTriangleCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FDE25A37692006D6778 /* btTriangleCallback.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7327E908EB00A6495B /* btTriangleIndexVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FD825A37692006D6778 /* btTriangleIndexVertexArray.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7427E908EB00A6495B /* btTriangleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FF925A37692006D6778 /* btTriangleBuffer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7527E908EB00A6495B /* btTriangleMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FF125A37692006D6778 /* btTriangleMesh.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7627E908EB00A6495B /* btShapeHull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE225A37692006D6778 /* btShapeHull.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7727E908EB00A6495B /* btCapsuleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FFF25A37692006D6778 /* btCapsuleShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7827E908EB00A6495B /* btConvexPolyhedron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700125A37692006D6778 /* btConvexPolyhedron.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7927E908EB00A6495B /* btOptimizedBvh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FFD25A37692006D6778 /* btOptimizedBvh.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7A27E908EB00A6495B /* btMultimaterialTriangleMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FEA25A37692006D6778 /* btMultimaterialTriangleMeshShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7B27E908EB00A6495B /* btConvex2dShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FD425A37692006D6778 /* btConvex2dShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7C27E908EB00A6495B /* btCylinderShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE425A37692006D6778 /* btCylinderShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7D27E908EB00A6495B /* btCollisionShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE525A37692006D6778 /* btCollisionShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7E27E908EB00A6495B /* btConvexTriangleMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FD025A37692006D6778 /* btConvexTriangleMeshShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F7F27E908EB00A6495B /* btCompoundShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE325A37692006D6778 /* btCompoundShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8027E908EB00A6495B /* btMinkowskiSumShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FF725A37692006D6778 /* btMinkowskiSumShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8127E908EB00A6495B /* btTriangleMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FF425A37692006D6778 /* btTriangleMeshShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8227E908EB00A6495B /* btMultiSphereShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FCC25A37692006D6778 /* btMultiSphereShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8327E908EB00A6495B /* btConeShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE125A37692006D6778 /* btConeShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8427E908EB00A6495B /* btStaticPlaneShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE625A37692006D6778 /* btStaticPlaneShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8527E908EB00A6495B /* btTetrahedronShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FEC25A37692006D6778 /* btTetrahedronShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8627E908EB00A6495B /* btConcaveShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FED25A37692006D6778 /* btConcaveShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8727E908EB00A6495B /* btConvexShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FD625A37692006D6778 /* btConvexShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8827E908EB00A6495B /* btConvexInternalShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FEF25A37692006D6778 /* btConvexInternalShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8927E908EB00A6495B /* btSdfCollisionShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FD325A37692006D6778 /* btSdfCollisionShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8A27E908EB00A6495B /* btStridingMeshInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FF825A37692006D6778 /* btStridingMeshInterface.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8B27E908EB00A6495B /* btSphereShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FFC25A37692006D6778 /* btSphereShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8C27E908FF00A6495B /* btMiniSDF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700A25A37692006D6778 /* btMiniSDF.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8D27E908FF00A6495B /* btBoxShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700E25A37692006D6778 /* btBoxShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8E27E908FF00A6495B /* btPolyhedralConvexShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5701825A37692006D6778 /* btPolyhedralConvexShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F8F27E908FF00A6495B /* btHeightfieldTerrainShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5701325A37692006D6778 /* btHeightfieldTerrainShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9027E908FF00A6495B /* btUniformScalingShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700825A37692006D6778 /* btUniformScalingShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9127E908FF00A6495B /* btConvexHullShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700C25A37692006D6778 /* btConvexHullShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9227E908FF00A6495B /* btScaledBvhTriangleMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700625A37692006D6778 /* btScaledBvhTriangleMeshShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9327E908FF00A6495B /* btConvexPointCloudShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5701925A37692006D6778 /* btConvexPointCloudShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9427E908FF00A6495B /* btEmptyShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5700925A37692006D6778 /* btEmptyShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9527E908FF00A6495B /* btTriangleIndexVertexMaterialArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A5701125A37692006D6778 /* btTriangleIndexVertexMaterialArray.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E6475F9927E9099600A6495B /* PhyKit_osUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6475F9627E9099600A6495B /* PhyKit_osUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475F9D27E916D100A6495B /* PHYDisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6475F9C27E916D100A6495B /* PHYDisplayLink.swift */; };
+		E6475F9F27E916D600A6495B /* PHYSCNFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6475F9E27E916D600A6495B /* PHYSCNFloat.swift */; };
 		F3A560EA25A36A91006D6778 /* PhyKit_osUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A560E825A36A91006D6778 /* PhyKit_osUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A560F825A36AA9006D6778 /* PhyKit_osUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A560F625A36AA9006D6778 /* PhyKit_osUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A5701B25A376A8006D6778 /* btStaticPlaneShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A56FE625A37692006D6778 /* btStaticPlaneShape.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -301,8 +516,8 @@
 		F3A571CA25A37711006D6778 /* btMultiBodyWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571BD25A3770B006D6778 /* btMultiBodyWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F3A571EE25A37725006D6778 /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571EF25A37725006D6778 /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3A571F025A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; };
-		F3A571F125A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; };
+		F3A571F025A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3A571F125A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571F225A37725006D6778 /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571F325A37725006D6778 /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571F425A37725006D6778 /* CPHYStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D225A37725006D6778 /* CPHYStructs.mm */; };
@@ -440,6 +655,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhyKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6475F9627E9099600A6495B /* PhyKit_osUmbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhyKit_osUmbrella.h; sourceTree = "<group>"; };
+		E6475F9827E9099600A6495B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6475F9C27E916D100A6495B /* PHYDisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHYDisplayLink.swift; sourceTree = "<group>"; };
+		E6475F9E27E916D600A6495B /* PHYSCNFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHYSCNFloat.swift; sourceTree = "<group>"; };
 		F3A560E525A36A90006D6778 /* PhyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A560E825A36A91006D6778 /* PhyKit_osUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhyKit_osUmbrella.h; sourceTree = "<group>"; };
 		F3A560E925A36A91006D6778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -908,6 +1128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E6475EA827E9070600A6495B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A560E225A36A90006D6778 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -925,12 +1152,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6475EAC27E9070600A6495B /* PhyKit-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E6475FA027E916EB00A6495B /* swift */,
+				E6475F9827E9099600A6495B /* Info.plist */,
+				E6475F9627E9099600A6495B /* PhyKit_osUmbrella.h */,
+			);
+			path = "PhyKit-tvOS";
+			sourceTree = "<group>";
+		};
+		E6475FA027E916EB00A6495B /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				E6475F9E27E916D600A6495B /* PHYSCNFloat.swift */,
+				E6475F9C27E916D100A6495B /* PHYDisplayLink.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
 		F3A560D925A36A5D006D6778 = {
 			isa = PBXGroup;
 			children = (
 				F3A560FE25A36ABE006D6778 /* PhyKit-shared */,
 				F3A560E725A36A91006D6778 /* PhyKit-ios */,
 				F3A560F525A36AA9006D6778 /* PhyKit-macos */,
+				E6475EAC27E9070600A6495B /* PhyKit-tvOS */,
 				F3A560E625A36A90006D6778 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -940,6 +1187,7 @@
 			children = (
 				F3A560E525A36A90006D6778 /* PhyKit.framework */,
 				F3A560F425A36AA9006D6778 /* PhyKit.framework */,
+				E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1735,6 +1983,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E6475EA627E9070600A6495B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6475EDB27E907D900A6495B /* CPHYRigidBody+Internal.h in Headers */,
+				E6475EC627E907D900A6495B /* CPHYTrigger+Internal.h in Headers */,
+				E6475EE327E907D900A6495B /* CPHYDependencies+Internal.h in Headers */,
+				E6475EE727E907D900A6495B /* CPHYGeometry+Internal.h in Headers */,
+				E6475F9927E9099600A6495B /* PhyKit_osUmbrella.h in Headers */,
+				E6475EF627E907D900A6495B /* CPHYCollisionShape+Internal.h in Headers */,
+				E6475EF527E907D900A6495B /* CPHYVertex.h in Headers */,
+				E6475ECC27E907D900A6495B /* CPHYWorld.h in Headers */,
+				E6475EE627E907D900A6495B /* NSValue+CPHYStructs.h in Headers */,
+				E6475ED627E907D900A6495B /* CPHYPolygon.h in Headers */,
+				E6475EC827E907D900A6495B /* CPHYStructs+Internal.h in Headers */,
+				E6475EE127E907D900A6495B /* CPHYMesh.h in Headers */,
+				E6475EC227E9077000A6495B /* PhyKit.h in Headers */,
+				E6475EE927E907D900A6495B /* CPHYGeometry.h in Headers */,
+				E6475EE027E907D900A6495B /* CPHYTrigger.h in Headers */,
+				E6475ED527E907D900A6495B /* CPHYCollisionShape.h in Headers */,
+				E6475EE227E907D900A6495B /* CPHYRigidBody.h in Headers */,
+				E6475EEA27E907D900A6495B /* CPHYStructs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A560E025A36A90006D6778 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1788,6 +2061,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E6475EAA27E9070600A6495B /* PhyKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6475EC027E9070700A6495B /* Build configuration list for PBXNativeTarget "PhyKit-tvOS" */;
+			buildPhases = (
+				E6475EA627E9070600A6495B /* Headers */,
+				E6475EA727E9070600A6495B /* Sources */,
+				E6475EA827E9070600A6495B /* Frameworks */,
+				E6475EA927E9070600A6495B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PhyKit-tvOS";
+			productName = "PhyKit-tvOS";
+			productReference = E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F3A560E425A36A90006D6778 /* PhyKit-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3A560EB25A36A91006D6778 /* Build configuration list for PBXNativeTarget "PhyKit-ios" */;
@@ -1830,8 +2121,12 @@
 		F3A560DA25A36A5D006D6778 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					E6475EAA27E9070600A6495B = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					F3A560E425A36A90006D6778 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -1855,11 +2150,19 @@
 			targets = (
 				F3A560E425A36A90006D6778 /* PhyKit-ios */,
 				F3A560F325A36AA9006D6778 /* PhyKit-macos */,
+				E6475EAA27E9070600A6495B /* PhyKit-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E6475EA927E9070600A6495B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A560E325A36A90006D6778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1877,6 +2180,210 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E6475EA727E9070600A6495B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6475F6727E908C900A6495B /* bChunk.cpp in Sources */,
+				E6475F1127E908C900A6495B /* btRaycastCallback.cpp in Sources */,
+				E6475F8127E908EB00A6495B /* btTriangleMeshShape.cpp in Sources */,
+				E6475F6627E908C900A6495B /* btGImpactQuantizedBvh.cpp in Sources */,
+				E6475F2F27E908C900A6495B /* btSphereBoxCollisionAlgorithm.cpp in Sources */,
+				E6475F5E27E908C900A6495B /* btNNCGConstraintSolver.cpp in Sources */,
+				E6475EED27E907D900A6495B /* PHYStructConversions.swift in Sources */,
+				E6475F0427E908C900A6495B /* btCompoundCompoundCollisionAlgorithm.cpp in Sources */,
+				E6475F0727E908C900A6495B /* btBatchedConstraints.cpp in Sources */,
+				E6475F6427E908C900A6495B /* btConvexConvexAlgorithm.cpp in Sources */,
+				E6475F7027E908EB00A6495B /* btBvhTriangleMeshShape.cpp in Sources */,
+				E6475F1A27E908C900A6495B /* btGImpactBvh.cpp in Sources */,
+				E6475F4527E908C900A6495B /* btRaycastVehicle.cpp in Sources */,
+				E6475F1927E908C900A6495B /* btPolyhedralContactClipping.cpp in Sources */,
+				E6475F7A27E908EB00A6495B /* btMultimaterialTriangleMeshShape.cpp in Sources */,
+				E6475F2327E908C900A6495B /* bFile.cpp in Sources */,
+				E6475F5B27E908C900A6495B /* btGearConstraint.cpp in Sources */,
+				E6475F1427E908C900A6495B /* btBroadphaseProxy.cpp in Sources */,
+				E6475EFE27E9081700A6495B /* btSerializer64.cpp in Sources */,
+				E6475F0A27E908C900A6495B /* btDiscreteDynamicsWorldMt.cpp in Sources */,
+				E6475ECD27E907D900A6495B /* PHYWorldCollisionDelegate.swift in Sources */,
+				E6475F7F27E908EB00A6495B /* btCompoundShape.cpp in Sources */,
+				E6475F0327E908C900A6495B /* btCollisionObject.cpp in Sources */,
+				E6475EFF27E9081700A6495B /* btSerializer.cpp in Sources */,
+				E6475EF027E907D900A6495B /* PHYAction+Move.swift in Sources */,
+				E6475F7227E908EB00A6495B /* btTriangleCallback.cpp in Sources */,
+				E6475F1027E908C900A6495B /* btOverlappingPairCache.cpp in Sources */,
+				E6475EF127E907D900A6495B /* PHYCollisionShapeSphere.swift in Sources */,
+				E6475F5327E908C900A6495B /* btActivatingCollisionAlgorithm.cpp in Sources */,
+				E6475F3227E908C900A6495B /* btLemkeAlgorithm.cpp in Sources */,
+				E6475F5627E908C900A6495B /* btAxisSweep3.cpp in Sources */,
+				E6475F3127E908C900A6495B /* btConvexConcaveCollisionAlgorithm.cpp in Sources */,
+				E6475F8A27E908EB00A6495B /* btStridingMeshInterface.cpp in Sources */,
+				E6475F8327E908EB00A6495B /* btConeShape.cpp in Sources */,
+				E6475EE427E907D900A6495B /* PHYTrigger.swift in Sources */,
+				E6475F9427E908FF00A6495B /* btEmptyShape.cpp in Sources */,
+				E6475F6D27E908C900A6495B /* btSimpleBroadphase.cpp in Sources */,
+				E6475ED927E907D900A6495B /* NSValue+CPHYStructs.mm in Sources */,
+				E6475F3327E908C900A6495B /* btRigidBody.cpp in Sources */,
+				E6475F5427E908C900A6495B /* btMultiBodyGearConstraint.cpp in Sources */,
+				E6475F6B27E908C900A6495B /* btHinge2Constraint.cpp in Sources */,
+				E6475ED727E907D900A6495B /* PHYCollisionShapeFromData.swift in Sources */,
+				E6475F9327E908FF00A6495B /* btConvexPointCloudShape.cpp in Sources */,
+				E6475ECB27E907D900A6495B /* PHYRaycastResult.swift in Sources */,
+				E6475F6127E908C900A6495B /* btGImpactCollisionAlgorithm.cpp in Sources */,
+				E6475F6227E908C900A6495B /* btMultiBodyPoint2Point.cpp in Sources */,
+				E6475F4F27E908C900A6495B /* btMultiBodyJointLimitConstraint.cpp in Sources */,
+				E6475ECF27E907D900A6495B /* PHYRigidBody.swift in Sources */,
+				E6475F3027E908C900A6495B /* btDefaultCollisionConfiguration.cpp in Sources */,
+				E6475EDE27E907D900A6495B /* PHYRigidBodyType.swift in Sources */,
+				E6475F7E27E908EB00A6495B /* btConvexTriangleMeshShape.cpp in Sources */,
+				E6475ED827E907D900A6495B /* PHYWorldSimulationDelegate.swift in Sources */,
+				E6475F6027E908C900A6495B /* btHingeConstraint.cpp in Sources */,
+				E6475F0C27E908C900A6495B /* btGImpactShape.cpp in Sources */,
+				E6475F5727E908C900A6495B /* btGjkEpa2.cpp in Sources */,
+				E6475EE527E907D900A6495B /* PHYScene.swift in Sources */,
+				E6475F9D27E916D100A6495B /* PHYDisplayLink.swift in Sources */,
+				E6475F3E27E908C900A6495B /* btSequentialImpulseConstraintSolverMt.cpp in Sources */,
+				E6475F8F27E908FF00A6495B /* btHeightfieldTerrainShape.cpp in Sources */,
+				E6475F9F27E916D600A6495B /* PHYSCNFloat.swift in Sources */,
+				E6475EDC27E907D900A6495B /* PHYAction+Orient.swift in Sources */,
+				E6475F6E27E908C900A6495B /* btMultiBodySphericalJointMotor.cpp in Sources */,
+				E6475F8427E908EB00A6495B /* btStaticPlaneShape.cpp in Sources */,
+				E6475F4627E908C900A6495B /* btGeneric6DofConstraint.cpp in Sources */,
+				E6475F0127E9081700A6495B /* btThreads.cpp in Sources */,
+				E6475F5927E908C900A6495B /* btConvexPlaneCollisionAlgorithm.cpp in Sources */,
+				E6475F2C27E908C900A6495B /* btMultiBodyMLCPConstraintSolver.cpp in Sources */,
+				E6475F2427E908C900A6495B /* btDbvtBroadphase.cpp in Sources */,
+				E6475F7527E908EB00A6495B /* btTriangleMesh.cpp in Sources */,
+				E6475F0027E9081700A6495B /* btConvexHullComputer.cpp in Sources */,
+				E6475EF727E9081700A6495B /* btThreadSupportWin32.cpp in Sources */,
+				E6475EC527E907D900A6495B /* PHYCollisionShapeBox.swift in Sources */,
+				E6475F5D27E908C900A6495B /* btConvex2dConvex2dAlgorithm.cpp in Sources */,
+				E6475F7727E908EB00A6495B /* btCapsuleShape.cpp in Sources */,
+				E6475EFD27E9081700A6495B /* btGeometryUtil.cpp in Sources */,
+				E6475F6C27E908C900A6495B /* btCollisionWorld.cpp in Sources */,
+				E6475F8D27E908FF00A6495B /* btBoxShape.cpp in Sources */,
+				E6475F0E27E908C900A6495B /* btMultiBodyWorldImporter.cpp in Sources */,
+				E6475EDD27E907D900A6495B /* PHYCollisionShapeGeometry.swift in Sources */,
+				E6475F0627E908C900A6495B /* btDispatcher.cpp in Sources */,
+				E6475F4727E908C900A6495B /* btSphereSphereCollisionAlgorithm.cpp in Sources */,
+				E6475F3C27E908C900A6495B /* btBulletFile.cpp in Sources */,
+				E6475F9227E908FF00A6495B /* btScaledBvhTriangleMeshShape.cpp in Sources */,
+				E6475F2B27E908C900A6495B /* btGenericPoolAllocator.cpp in Sources */,
+				E6475EC327E907D900A6495B /* PHYTriggerPair.swift in Sources */,
+				E6475F1527E908C900A6495B /* btReducedVector.cpp in Sources */,
+				E6475F5527E908C900A6495B /* btHashedSimplePairCache.cpp in Sources */,
+				E6475F9027E908FF00A6495B /* btUniformScalingShape.cpp in Sources */,
+				E6475F7427E908EB00A6495B /* btTriangleBuffer.cpp in Sources */,
+				E6475F7627E908EB00A6495B /* btShapeHull.cpp in Sources */,
+				E6475F7327E908EB00A6495B /* btTriangleIndexVertexArray.cpp in Sources */,
+				E6475F7127E908EB00A6495B /* btBox2dShape.cpp in Sources */,
+				E6475ECE27E907D900A6495B /* CPHYVertex.mm in Sources */,
+				E6475F0527E908C900A6495B /* btUniversalConstraint.cpp in Sources */,
+				E6475F8727E908EB00A6495B /* btConvexShape.cpp in Sources */,
+				E6475F2027E908C900A6495B /* btDiscreteDynamicsWorld.cpp in Sources */,
+				E6475F8927E908EB00A6495B /* btSdfCollisionShape.cpp in Sources */,
+				E6475F7B27E908EB00A6495B /* btConvex2dShape.cpp in Sources */,
+				E6475ED427E907D900A6495B /* CPHYGeometry.mm in Sources */,
+				E6475F3B27E908C900A6495B /* btDantzigLCP.cpp in Sources */,
+				E6475F0D27E908C900A6495B /* btGjkConvexCast.cpp in Sources */,
+				E6475F4027E908C900A6495B /* btWheelInfo.cpp in Sources */,
+				E6475EFC27E9081700A6495B /* btVector3.cpp in Sources */,
+				E6475F4927E908C900A6495B /* btVoronoiSimplexSolver.cpp in Sources */,
+				E6475F0227E908C900A6495B /* gim_memory.cpp in Sources */,
+				E6475F4827E908C900A6495B /* btMLCPSolver.cpp in Sources */,
+				E6475F5C27E908C900A6495B /* btSolve2LinearConstraint.cpp in Sources */,
+				E6475F3627E908C900A6495B /* btSphereTriangleCollisionAlgorithm.cpp in Sources */,
+				E6475F2D27E908C900A6495B /* btMultiBody.cpp in Sources */,
+				E6475F1D27E908C900A6495B /* btBox2dBox2dCollisionAlgorithm.cpp in Sources */,
+				E6475EFA27E9081700A6495B /* btThreadSupportPosix.cpp in Sources */,
+				E6475F3D27E908C900A6495B /* btQuantizedBvh.cpp in Sources */,
+				E6475F4E27E908C900A6495B /* btTypedConstraint.cpp in Sources */,
+				E6475F1E27E908C900A6495B /* btBulletWorldImporter.cpp in Sources */,
+				E6475F1327E908C900A6495B /* btMultiBodyConstraintSolver.cpp in Sources */,
+				E6475F6527E908C900A6495B /* gim_tri_collision.cpp in Sources */,
+				E6475F8527E908EB00A6495B /* btTetrahedronShape.cpp in Sources */,
+				E6475EEE27E907D900A6495B /* PHYWorldTriggerDelegate.swift in Sources */,
+				E6475F3727E908C900A6495B /* btContactProcessing.cpp in Sources */,
+				E6475F2927E908C900A6495B /* btSimulationIslandManagerMt.cpp in Sources */,
+				E6475F3527E908C900A6495B /* btConvexHull.cpp in Sources */,
+				E6475ED127E907D900A6495B /* CPHYMesh.mm in Sources */,
+				E6475EC427E907D900A6495B /* PHYCollisionPair.swift in Sources */,
+				E6475F8827E908EB00A6495B /* btConvexInternalShape.cpp in Sources */,
+				E6475F4327E908C900A6495B /* btBoxBoxDetector.cpp in Sources */,
+				E6475F1227E908C900A6495B /* gim_contact.cpp in Sources */,
+				E6475F5F27E908C900A6495B /* btWorldImporter.cpp in Sources */,
+				E6475F5027E908C900A6495B /* btGhostObject.cpp in Sources */,
+				E6475EDF27E907D900A6495B /* PHYCollisionShape.swift in Sources */,
+				E6475F0927E908C900A6495B /* btConeTwistConstraint.cpp in Sources */,
+				E6475F2827E908C900A6495B /* btPersistentManifold.cpp in Sources */,
+				E6475F2E27E908C900A6495B /* btContinuousConvexCollision.cpp in Sources */,
+				E6475F1727E908C900A6495B /* btEmptyCollisionAlgorithm.cpp in Sources */,
+				E6475F2727E908C900A6495B /* btCollisionDispatcherMt.cpp in Sources */,
+				E6475ED027E907D900A6495B /* PHYSceneUpdateDelegate.swift in Sources */,
+				E6475EEC27E907D900A6495B /* CPHYWorld.mm in Sources */,
+				E6475F5A27E908C900A6495B /* btSimpleDynamicsWorld.cpp in Sources */,
+				E6475F6F27E908C900A6495B /* btTriangleShapeEx.cpp in Sources */,
+				E6475F2127E908C900A6495B /* btSequentialImpulseConstraintSolver.cpp in Sources */,
+				E6475F6827E908C900A6495B /* btUnionFind.cpp in Sources */,
+				E6475EF827E9081700A6495B /* btTaskScheduler.cpp in Sources */,
+				E6475EF427E907D900A6495B /* CPHYPolygon.mm in Sources */,
+				E6475ECA27E907D900A6495B /* PHYCollisionShapeCylinder.swift in Sources */,
+				E6475F3F27E908C900A6495B /* btDbvt.cpp in Sources */,
+				E6475F8627E908EB00A6495B /* btConcaveShape.cpp in Sources */,
+				E6475F4427E908C900A6495B /* btMultiBodyFixedConstraint.cpp in Sources */,
+				E6475F3927E908C900A6495B /* btConvexCast.cpp in Sources */,
+				E6475F3427E908C900A6495B /* bDNA.cpp in Sources */,
+				E6475F7827E908EB00A6495B /* btConvexPolyhedron.cpp in Sources */,
+				E6475F1827E908C900A6495B /* btGeneric6DofSpring2Constraint.cpp in Sources */,
+				E6475EFB27E9081700A6495B /* btPolarDecomposition.cpp in Sources */,
+				E6475F1627E908C900A6495B /* btCompoundCollisionAlgorithm.cpp in Sources */,
+				E6475F4A27E908C900A6495B /* btMultiBodyJointMotor.cpp in Sources */,
+				E6475F9127E908FF00A6495B /* btConvexHullShape.cpp in Sources */,
+				E6475F3827E908C900A6495B /* btMultiBodyConstraint.cpp in Sources */,
+				E6475F8027E908EB00A6495B /* btMinkowskiSumShape.cpp in Sources */,
+				E6475F5127E908C900A6495B /* btGjkEpaPenetrationDepthSolver.cpp in Sources */,
+				E6475F2227E908C900A6495B /* btContactConstraint.cpp in Sources */,
+				E6475F6A27E908C900A6495B /* btMultiBodyDynamicsWorld.cpp in Sources */,
+				E6475F4B27E908C900A6495B /* btAlignedAllocator.cpp in Sources */,
+				E6475F3A27E908C900A6495B /* btGjkPairDetector.cpp in Sources */,
+				E6475F2627E908C900A6495B /* btCollisionAlgorithm.cpp in Sources */,
+				E6475EF227E907D900A6495B /* CPHYCollisionShape.mm in Sources */,
+				E6475ED327E907D900A6495B /* CPHYStructs.mm in Sources */,
+				E6475F1F27E908C900A6495B /* btCollisionWorldImporter.cpp in Sources */,
+				E6475EC927E907D900A6495B /* PHYCollisionShapeCapsule.swift in Sources */,
+				E6475F4127E908C900A6495B /* gim_box_set.cpp in Sources */,
+				E6475F7C27E908EB00A6495B /* btCylinderShape.cpp in Sources */,
+				E6475F8227E908EB00A6495B /* btMultiSphereShape.cpp in Sources */,
+				E6475F4C27E908C900A6495B /* btSliderConstraint.cpp in Sources */,
+				E6475F0827E908C900A6495B /* SphereTriangleDetector.cpp in Sources */,
+				E6475F6927E908C900A6495B /* btManifoldResult.cpp in Sources */,
+				E6475F8C27E908FF00A6495B /* btMiniSDF.cpp in Sources */,
+				E6475F1B27E908C900A6495B /* btKinematicCharacterController.cpp in Sources */,
+				E6475F1C27E908C900A6495B /* btBoxBoxCollisionAlgorithm.cpp in Sources */,
+				E6475F8B27E908EB00A6495B /* btSphereShape.cpp in Sources */,
+				E6475F7927E908EB00A6495B /* btOptimizedBvh.cpp in Sources */,
+				E6475F5827E908C900A6495B /* btMinkowskiPenetrationDepthSolver.cpp in Sources */,
+				E6475F0F27E908C900A6495B /* btInternalEdgeUtility.cpp in Sources */,
+				E6475F6327E908C900A6495B /* btPoint2PointConstraint.cpp in Sources */,
+				E6475F9527E908FF00A6495B /* btTriangleIndexVertexMaterialArray.cpp in Sources */,
+				E6475F4D27E908C900A6495B /* btSubSimplexConvexCast.cpp in Sources */,
+				E6475F4227E908C900A6495B /* btGeneric6DofSpringConstraint.cpp in Sources */,
+				E6475F2A27E908C900A6495B /* btMultiBodySliderConstraint.cpp in Sources */,
+				E6475EF327E907D900A6495B /* PHYGeometry.swift in Sources */,
+				E6475EDA27E907D900A6495B /* PHYCollisionShapeCompound.swift in Sources */,
+				E6475EF927E9081700A6495B /* btQuickprof.cpp in Sources */,
+				E6475F2527E908C900A6495B /* btFixedConstraint.cpp in Sources */,
+				E6475F7D27E908EB00A6495B /* btCollisionShape.cpp in Sources */,
+				E6475EE827E907D900A6495B /* PHYAction.swift in Sources */,
+				E6475EC727E907D900A6495B /* PHYCollisionShapeStaticPlane.swift in Sources */,
+				E6475F5227E908C900A6495B /* btSimulationIslandManager.cpp in Sources */,
+				E6475EEB27E907D900A6495B /* PHYWorld.swift in Sources */,
+				E6475EEF27E907D900A6495B /* CPHYTrigger.mm in Sources */,
+				E6475ED227E907D900A6495B /* CPHYRigidBody.mm in Sources */,
+				E6475F0B27E908C900A6495B /* btCollisionDispatcher.cpp in Sources */,
+				E6475F8E27E908FF00A6495B /* btPolyhedralConvexShape.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3A560E125A36A90006D6778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2288,6 +2795,128 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		E6475EBC27E9070700A6495B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/PhyKit-shared/bullet\"/**",
+					"\"$(SRCROOT)/PhyKit-shared/objc\"/**",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "adameisfeld.PhyKit-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E6475EBD27E9070700A6495B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/PhyKit-shared/bullet\"/**",
+					"\"$(SRCROOT)/PhyKit-shared/objc\"/**",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "adameisfeld.PhyKit-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F3A560DE25A36A5D006D6778 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2319,6 +2948,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -2353,6 +2983,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -2694,6 +3325,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E6475EC027E9070700A6495B /* Build configuration list for PBXNativeTarget "PhyKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6475EBC27E9070700A6495B /* Debug */,
+				E6475EBD27E9070700A6495B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3A560DD25A36A5D006D6778 /* Build configuration list for PBXProject "PhyKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
