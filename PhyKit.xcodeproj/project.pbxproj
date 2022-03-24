@@ -11,9 +11,9 @@
 		E6475EC327E907D900A6495B /* PHYTriggerPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722625A37773006D6778 /* PHYTriggerPair.swift */; };
 		E6475EC427E907D900A6495B /* PHYCollisionPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722F25A37773006D6778 /* PHYCollisionPair.swift */; };
 		E6475EC527E907D900A6495B /* PHYCollisionShapeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723825A37773006D6778 /* PHYCollisionShapeBox.swift */; };
-		E6475EC627E907D900A6495B /* CPHYTrigger+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D725A37725006D6778 /* CPHYTrigger+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EC627E907D900A6495B /* CPHYTrigger+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D725A37725006D6778 /* CPHYTrigger+Internal.h */; };
 		E6475EC727E907D900A6495B /* PHYCollisionShapeStaticPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723A25A37773006D6778 /* PHYCollisionShapeStaticPlane.swift */; };
-		E6475EC827E907D900A6495B /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EC827E907D900A6495B /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; };
 		E6475EC927E907D900A6495B /* PHYCollisionShapeCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723725A37773006D6778 /* PHYCollisionShapeCapsule.swift */; };
 		E6475ECA27E907D900A6495B /* PHYCollisionShapeCylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723E25A37773006D6778 /* PHYCollisionShapeCylinder.swift */; };
 		E6475ECB27E907D900A6495B /* PHYRaycastResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722E25A37773006D6778 /* PHYRaycastResult.swift */; };
@@ -32,7 +32,7 @@
 		E6475ED827E907D900A6495B /* PHYWorldSimulationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722925A37773006D6778 /* PHYWorldSimulationDelegate.swift */; };
 		E6475ED927E907D900A6495B /* NSValue+CPHYStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D325A37725006D6778 /* NSValue+CPHYStructs.mm */; };
 		E6475EDA27E907D900A6495B /* PHYCollisionShapeCompound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723B25A37773006D6778 /* PHYCollisionShapeCompound.swift */; };
-		E6475EDB27E907D900A6495B /* CPHYRigidBody+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571EB25A37725006D6778 /* CPHYRigidBody+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EDB27E907D900A6495B /* CPHYRigidBody+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571EB25A37725006D6778 /* CPHYRigidBody+Internal.h */; };
 		E6475EDC27E907D900A6495B /* PHYAction+Orient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723325A37773006D6778 /* PHYAction+Orient.swift */; };
 		E6475EDD27E907D900A6495B /* PHYCollisionShapeGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723F25A37773006D6778 /* PHYCollisionShapeGeometry.swift */; };
 		E6475EDE27E907D900A6495B /* PHYRigidBodyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724325A37773006D6778 /* PHYRigidBodyType.swift */; };
@@ -40,11 +40,11 @@
 		E6475EE027E907D900A6495B /* CPHYTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D525A37725006D6778 /* CPHYTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6475EE127E907D900A6495B /* CPHYMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E125A37725006D6778 /* CPHYMesh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6475EE227E907D900A6495B /* CPHYRigidBody.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571ED25A37725006D6778 /* CPHYRigidBody.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6475EE327E907D900A6495B /* CPHYDependencies+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DA25A37725006D6778 /* CPHYDependencies+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE327E907D900A6495B /* CPHYDependencies+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DA25A37725006D6778 /* CPHYDependencies+Internal.h */; };
 		E6475EE427E907D900A6495B /* PHYTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5722725A37773006D6778 /* PHYTrigger.swift */; };
 		E6475EE527E907D900A6495B /* PHYScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724625A37773006D6778 /* PHYScene.swift */; };
 		E6475EE627E907D900A6495B /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6475EE727E907D900A6495B /* CPHYGeometry+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E825A37725006D6778 /* CPHYGeometry+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EE727E907D900A6495B /* CPHYGeometry+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E825A37725006D6778 /* CPHYGeometry+Internal.h */; };
 		E6475EE827E907D900A6495B /* PHYAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5723525A37773006D6778 /* PHYAction.swift */; };
 		E6475EE927E907D900A6495B /* CPHYGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E425A37725006D6778 /* CPHYGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6475EEA27E907D900A6495B /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,7 +59,7 @@
 		E6475EF327E907D900A6495B /* PHYGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5724125A37773006D6778 /* PHYGeometry.swift */; };
 		E6475EF427E907D900A6495B /* CPHYPolygon.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571E325A37725006D6778 /* CPHYPolygon.mm */; };
 		E6475EF527E907D900A6495B /* CPHYVertex.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571E625A37725006D6778 /* CPHYVertex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6475EF627E907D900A6495B /* CPHYCollisionShape+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DE25A37725006D6778 /* CPHYCollisionShape+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6475EF627E907D900A6495B /* CPHYCollisionShape+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571DE25A37725006D6778 /* CPHYCollisionShape+Internal.h */; };
 		E6475EF727E9081700A6495B /* btThreadSupportWin32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B325A37A05006D6778 /* btThreadSupportWin32.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E6475EF827E9081700A6495B /* btTaskScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572B425A37A05006D6778 /* btTaskScheduler.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E6475EF927E9081700A6495B /* btQuickprof.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A572A925A37A05006D6778 /* btQuickprof.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -516,8 +516,8 @@
 		F3A571CA25A37711006D6778 /* btMultiBodyWorldImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A571BD25A3770B006D6778 /* btMultiBodyWorldImporter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F3A571EE25A37725006D6778 /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571EF25A37725006D6778 /* CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571CF25A37725006D6778 /* CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3A571F025A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3A571F125A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3A571F025A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; };
+		F3A571F125A37725006D6778 /* CPHYStructs+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D025A37725006D6778 /* CPHYStructs+Internal.h */; };
 		F3A571F225A37725006D6778 /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571F325A37725006D6778 /* NSValue+CPHYStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A571D125A37725006D6778 /* NSValue+CPHYStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3A571F425A37725006D6778 /* CPHYStructs.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A571D225A37725006D6778 /* CPHYStructs.mm */; };
@@ -655,7 +655,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhyKit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6475EAB27E9070600A6495B /* PhyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6475F9627E9099600A6495B /* PhyKit_osUmbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhyKit_osUmbrella.h; sourceTree = "<group>"; };
 		E6475F9827E9099600A6495B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6475F9C27E916D100A6495B /* PHYDisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHYDisplayLink.swift; sourceTree = "<group>"; };
@@ -1187,7 +1187,7 @@
 			children = (
 				F3A560E525A36A90006D6778 /* PhyKit.framework */,
 				F3A560F425A36AA9006D6778 /* PhyKit.framework */,
-				E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */,
+				E6475EAB27E9070600A6495B /* PhyKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2076,7 +2076,7 @@
 			);
 			name = "PhyKit-tvOS";
 			productName = "PhyKit-tvOS";
-			productReference = E6475EAB27E9070600A6495B /* PhyKit_tvOS.framework */;
+			productReference = E6475EAB27E9070600A6495B /* PhyKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F3A560E425A36A90006D6778 /* PhyKit-ios */ = {
@@ -2802,7 +2802,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2845,7 +2845,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "adameisfeld.PhyKit-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = PhyKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2866,7 +2866,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2902,7 +2902,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "adameisfeld.PhyKit-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = PhyKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
